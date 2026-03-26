@@ -31,7 +31,8 @@ class Config:
     INPUT_FILE  = BASE_DIR / "paste.txt"
     OUTPUT_FILE = BASE_DIR / "live_ok.txt"
     CONFIG_FILE = BASE_DIR / "config.json"
-    CACHE_FILE  = BASE_DIR / "speed_cache.json"  # ✅ 新增：测试结果缓存文件
+    CACHE_FILE  = BASE_DIR / "speed_cache.json"
+    STATS_FILE  = BASE_DIR / "stats.json"
 
     ENABLE_WEB_FETCH    = True  # 是否启用自动爬取新增网络直播源的功能
     ENABLE_WEB_CHECK    = True  # 是否启用拉取并检测预设网络源的功能
@@ -146,6 +147,19 @@ class Config:
     CATEGORY_ORDER = ["4K 專區", "央衛頻道", "體育賽事", "少兒動漫", "音樂頻道", "影視劇集", "港澳台頻", "其他頻道"]
 
     MAX_SOURCES_PER_DOMAIN = 0
+    WEB_SOURCES: List[str] = []       # 从 config.json 动态加载
+    ALL_WEB_SOURCES: List[str] = [   # 合并预制源 + config.json 源，去重后共 ~34 个
+        "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u",
+        "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt",
+        "https://raw.githubusercontent.com/iptv-org/iptv/master/countries/cn.m3u",
+        "https://iptv-org.github.io/iptv/countries/hk.m3u",
+        "https://iptv-org.github.io/iptv/countries/tw.m3u",
+        "https://live.zbds.top/tv/iptv4.m3u",
+        "https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E5%8F%B0%E6%B9%BE%E9%A6%99%E6%B8%AF%E6%BE%B3%E9%97%A8202506.m3u",
+        "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/HongKong.m3u8",
+        "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/TaiWan.m3u8",
+        "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/Macao.m3u8",
+    ]
 
     UA_POOL = [
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36',
@@ -189,6 +203,9 @@ class Config:
             for key, value in config.items():
                 if key in cls.SAVEABLE_KEYS and hasattr(cls, key):
                     setattr(cls, key, value)
+            # 加载 config.json 中的 web_sources
+            if 'web_sources' in config and isinstance(config['web_sources'], list):
+                cls.WEB_SOURCES = config['web_sources']
             print(f"✅ 加载配置文件：{cls.CONFIG_FILE}")
         except Exception as e:
             print(f"⚠️ 加载配置文件失败：{e}")

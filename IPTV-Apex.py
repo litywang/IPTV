@@ -50,7 +50,7 @@ class Config:
     MAX_LINKS_PER_NAME  = 3      # 每个频道保留的最大有效链接数
     FILTER_PRIVATE_IP   = True   # 内网IP过滤开关
     REMOVE_REDUNDANT_PARAMS = False  # URL冗余参数清理开关
-    ENABLE_QUALITY_FILTER   = True   # 质量过滤开关
+    ENABLE_QUALITY_FILTER   = False  # 质量过滤开关（建议关闭：ffprobe 已做流级别验证，无需二次筛选）
     MIN_QUALITY_SCORE       = 60     # 最低质量评分阈值
     PROXY = None                     # 请求使用代理配置
 
@@ -1016,8 +1016,9 @@ class IPTVChecker:
                     channels.sort(key=lambda x: x.get('quality', 0), reverse=True)
                     grouped: Dict[str, List[Dict]] = defaultdict(list)
                     for ch in channels:
-                        # ✅ ffprobe 验证通过的源（fallback 未设置/None）：跳过质量过滤，直接放行
-                        #    HTTP 降级源（fallback=True）：走质量阈值过滤
+                        # ✅ ffprobe 验证通过的源（fallback 未设置）：跳过质量过滤
+                        #    HTTP 降级源（fallback=True）：可走质量阈值过滤
+                        #    建议关闭 ENABLE_QUALITY_FILTER，因为 ffprobe 已做流级别验证，无需二次筛选
                         if Config.ENABLE_QUALITY_FILTER and ch.get('fallback') is True:
                             if ch.get('quality', 0) < Config.MIN_QUALITY_SCORE:
                                 continue

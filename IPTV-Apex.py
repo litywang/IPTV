@@ -106,6 +106,15 @@ class Config:
         "CNN", "BBC", "NHK", "KBS", "SBS", "MBC", "DISCOVERY", "国家地理",
         "HBO", "STAR", "AXN", "KIX", "VIU", "NOW", "FOX", "ESPN", "BEIN",
     }
+    # ✅ 借鉴 Apex111：ffprobe stderr 致命错误关键字（命中则判定失效）
+    FATAL_ERROR_KEYWORDS = {
+        "404 not found", "403 forbidden", "500 internal server error",
+        "connection timed out", "could not resolve host", "connection refused",
+        "no route to host", "network unreachable", "name or service not known",
+        "unable to open file", "invalid url", "protocol not found",
+        "server returned 404", "server returned 403", "server returned 500",
+        "host unreachable", "dns resolution failed", "empty reply from server",
+    }
 
     CATEGORY_RULES_COMPILED: Dict = {}
 
@@ -668,32 +677,44 @@ class StreamChecker:
                             proxy: Optional[str], overseas: bool) -> Optional[Dict]:
         start = time.time()
         domain = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
-        headers = f'User-Agent: {random.choice(Config.UA_POOL)}\r\nReferer: {domain}\r\n'
+        ua = random.choice(Config.UA_POOL)
+        headers = f'User-Agent: {ua}\r\nReferer: {domain}\r\n'
         cmd = [
             'ffprobe', '-headers', headers, '-v', 'error',
-            '-select_streams', 'v:0',
             '-show_entries', 'stream=codec_type,width,height:format=duration,format_name',
             '-probesize', '5000000', '-analyzeduration', '10000000',
             '-timeout', str(int(timeout * 1_000_000)),
+            '-err_detect', 'ignore_err',          # ✅ 借鉴：忽略非致命错误
+            '-reconnect', '1', '-reconnect_streamed', '1', '-reconnect_delay_max', '2',  # ✅ 借鉴：支持断流重连
+            '-fflags', 'nobuffer+flush_packets',  # ✅ 借鉴：低延迟模式
+            '-user_agent', ua,
             '-of', 'csv=p=0',
         ]
         if proxy:
             cmd.extend(['-http_proxy', proxy])
         cmd.append(url)
+        proc = None
         try:
             proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
             stdout, stderr = proc.communicate(timeout=timeout + 2)
-            if stdout and (b'video' in stdout or b'audio' in stdout):
+            stdout_text = stdout.decode('utf-8', errors='ignore')
+            stderr_text = stderr.decode('utf-8', errors='ignore').lower()
+            # ✅ 借鉴：检查 stderr 致命错误关键字
+            has_fatal = any(kw in stderr_text for kw in Config.FATAL_ERROR_KEYWORDS)
+            has_stream = 'codec_type=video' in stdout_text or 'codec_type=audio' in stdout_text
+            if not has_fatal and has_stream:
                 lat = round(time.time() - start, 2)
                 result = {"status": "有效", "name": name, "url": url, "lat": lat,
                           "overseas": overseas, "quality": self._calc_quality(lat, 0)}
                 # ✅ 合并分辨率检测：解析 ffprobe 输出
-                parts = stdout.decode().strip().split(',')
+                parts = stdout_text.strip().split(',')
                 if len(parts) >= 3 and parts[0] == 'video':
                     result['resolution'] = f"{parts[1]}x{parts[2]}"
                 return result
-        except:
-            pass
+        except Exception:
+            if proc:
+                try: proc.kill()
+                except: pass
         return None
 
     def _check_with_http(self, url: str, name: str, timeout: int,
@@ -701,21 +722,23 @@ class StreamChecker:
         if Config.REQUEST_JITTER:
             time.sleep(random.uniform(0.05, 0.3))
         start = time.time()
-        headers = {'User-Agent': random.choice(Config.UA_POOL)}
+        domain = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
+        headers = {'User-Agent': random.choice(Config.UA_POOL), 'Referer': domain}
         proxies = {'http': proxy, 'https': proxy} if proxy else None
         try:
             resp = self.session.head(url, headers=headers, timeout=timeout // 2,
                                      allow_redirects=True, proxies=proxies)
-            if resp.status_code in (200, 206, 301, 302):
+            if resp.status_code in (200, 206, 301, 302, 304):
                 lat = round(time.time() - start, 2)
-                # ✅ 降级源给默认 1MB/s 基准速度（避免 quality=0 速度=0 导致分数过低被过滤）
                 default_speed = 1.0 if fallback else 0
                 return {"status": "有效", "name": name, "url": url, "lat": lat,
                         "overseas": overseas, "quality": self._calc_quality(lat, default_speed),
                         "fallback": fallback}
-        except:
-            pass
-        return {"status": "失效", "name": name, "url": url}
+            return {"status": "失效", "name": name, "url": url, "overseas": overseas,
+                    "reason": f"HTTP{resp.status_code}"}
+        except Exception:
+            return {"status": "失效", "name": name, "url": url, "overseas": overseas,
+                    "reason": "检测超时"}
 
     def _test_speed(self, url: str, proxy: Optional[str] = None) -> float:
         """✅ 增强：下载速度检测，含稳定性窗口（借鉴 Guovin）"""

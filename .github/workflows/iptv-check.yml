@@ -23,7 +23,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'  # 修复了拼写错误
+          python-version: '3.10'
 
       - name: Install dependencies
         run: pip install requests httpx zhconv tqdm m3u8
@@ -39,7 +39,7 @@ jobs:
         run: |
           if [ -f live_ok.txt ]; then
             count=$(wc -l < live_ok.txt)
-            echo "当前已有源: $count 条"
+            echo "当前已有源：$count 条"
             echo "count=$count" >> "$GITHUB_OUTPUT"
             if [ "$count" -lt 600 ]; then
               echo "is_low=true" >> "$GITHUB_OUTPUT"
@@ -122,32 +122,61 @@ jobs:
       - name: Post-check results
         id: post_check
         run: |
-          if [ -f live_ok.txt ]; then  # 修复了文件名中的空格
+          if [ -f live_ok.txt ]; then
             lines=$(wc -l < live_ok.txt)
-            echo "最终 live_ok.txt: $lines 条"
+            echo "检查前 live_ok.txt: $lines 条"
             echo "final_count=$lines" >> "$GITHUB_OUTPUT"
           else
+            echo "final_count=0" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ========== 新增：限制源数量不超过 2000 个 ==========
+      - name: Limit sources to 2000
+        id: limit_check
+        run: |
+          MAX_SOURCES=2000
+          if [ -f live_ok.txt ]; then
+            count=$(wc -l < live_ok.txt)
+            echo "当前源数量：$count 条"
+            if [ "$count" -gt "$MAX_SOURCES" ]; then
+              echo "⚠️ 源数量超过 $MAX_SOURCES，正在截取前 $MAX_SOURCES 条..."
+              head -n "$MAX_SOURCES" live_ok.txt > live_ok_temp.txt
+              mv live_ok_temp.txt live_ok.txt
+              echo "已截取至 $MAX_SOURCES 条"
+              echo "limited=true" >> "$GITHUB_OUTPUT"
+              echo "final_count=$MAX_SOURCES" >> "$GITHUB_OUTPUT"
+            else
+              echo "✓ 源数量未超过限制，无需截取"
+              echo "limited=false" >> "$GITHUB_OUTPUT"
+              echo "final_count=$count" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "live_ok.txt 不存在"
+            echo "limited=false" >> "$GITHUB_OUTPUT"
             echo "final_count=0" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Generate M3U file
         run: |
           if [ -f live_ok.txt ]; then
-            python -c "
-            import sys
-            with open('live_ok.txt','r',encoding='utf-8') as f:
+            python3 << 'PYEOF'
+          import sys
+          with open('live_ok.txt','r',encoding='utf-8') as f:
               lines=[l.strip() for l in f if ',' in l]
-            with open('live_ok.m3u','w',encoding='utf-8') as f:
+          with open('live_ok.m3u','w',encoding='utf-8') as f:
               f.write('#EXTM3U\n\n')
               for line in lines:
-                parts=line.split(',',1)
-                if len(parts)==2:
-                  name,url=parts
-                  safe_name=name.replace('\"','\"')
-                  f.write('#EXTINF:-1 tvg-name=\"{}\",{}\n'.format(safe_name,safe_name))
-                  f.write(url+'\n')
-            print('Generated live_ok.m3u with {} channels'.format(len(lines)))
-            "
+                  parts=line.split(',',1)
+                  if len(parts)==2:
+                      name,url=parts
+                      safe_name=name.replace('"','"')
+                      f.write('#EXTINF:-1 tvg-name="{}",{}\n'.format(safe_name,safe_name))
+                      f.write(url+'\n')
+          print('Generated live_ok.m3u with {} channels'.format(len(lines)))
+          PYEOF
+            echo "M3U 文件生成完成"
+          else
+            echo "live_ok.txt 不存在，跳过 M3U 生成"
           fi
 
       - name: Commit and push results
@@ -164,7 +193,7 @@ jobs:
             git push || echo "Push failed"
           fi
 
-  sync-to-gist:  # 修复了缩进，现在与iptv-check同级
+  sync-to-gist:
     needs: iptv-check
     runs-on: ubuntu-latest
     steps:
@@ -177,14 +206,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: |
           if [ -f live_ok.txt ]; then
-            python -c "
-            import json,subprocess,os
-            with open('live_ok.txt','r',encoding='utf-8') as f: c=f.read()
-            cnt=len([l for l in c.splitlines() if l.strip()])
-            payload=json.dumps({'description':'IPTV | {} sources'.format(cnt),'files':{'IPTV.txt':{'content':c}}})
-            subprocess.run(['curl','-s','-X','PATCH','-H','Authorization: token '+os.environ['GH_TOKEN'],'-H','Content-Type: application/json','https://api.github.com/gists/dc272a4f2e95ffbd41e7e31d27ef3d76','-d',payload])
-            print('Gist synced: {} sources'.format(cnt))
-            "
+            python3 << 'PYEOF'
+          import json,subprocess,os
+          with open('live_ok.txt','r',encoding='utf-8') as f: c=f.read()
+          cnt=len([l for l in c.splitlines() if l.strip()])
+          payload=json.dumps({'description':'IPTV | {} sources'.format(cnt),'files':{'IPTV.txt':{'content':c}}})
+          subprocess.run(['curl','-s','-X','PATCH','-H','Authorization: token '+os.environ['GH_TOKEN'],'-H','Content-Type: application/json','https://api.github.com/gists/dc272a4f2e95ffbd41e7e31d27ef3d76','-d',payload])
+          print('Gist synced: {} sources'.format(cnt))
+          PYEOF
           fi
 
       - name: Create Release
@@ -193,13 +222,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="v$(date +'%Y%m%d-%H%M')"
-          python -c "
+          python3 << 'PYEOF'
           import json,subprocess,os
           repo='${{ github.repository }}'
           token=os.environ['GH_TOKEN']
           cnt='${{ needs.iptv-check.outputs.final_count }}'
-          body='自动更新 | {} sources\n\n影视仓: https://raw.githubusercontent.com/{}/master/live_ok.txt'.format(cnt,repo)
+          body='自动更新 | {} sources\n\n影视仓：https://raw.githubusercontent.com/{}/master/live_ok.txt'.format(cnt,repo)
           payload=json.dumps({'tag_name':TAG,'name':'IPTV {}'.format(TAG),'body':body,'draft':False})
           subprocess.run(['curl','-s','-X','POST','-H','Authorization: token '+token,'-H','Content-Type: application/json','https://api.github.com/repos/'+repo+'/releases','-d',payload])
           print('Release created: {}'.format(TAG))
-          "
+          PYEOF

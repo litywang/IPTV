@@ -2,17 +2,23 @@ name: IPTV Auto Check
 
 on:
   schedule:
-    # 每6小时自动运行一次
-    - cron: '0 */6 * * *'
+    # 每两天自动运行一次（北京时间凌晨2点）
+    - cron: '0 18 */2 * *'
   workflow_dispatch:  # 支持手动触发
   push:
     branches:
       - master
 
 jobs:
+  # ==============================================================
+  # 任务1: IPTV 直播源检测（主任务）
+  # ==============================================================
   iptv-check:
     runs-on: ubuntu-latest
-    
+    outputs:
+      source_count: ${{ steps.check.outputs.count }}
+      is_low: ${{ steps.check.outputs.is_low }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,6 +39,34 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
+
+      - name: Pre-check existing source count
+        id: check
+        run: |
+          if [ -f live_ok.txt ]; then
+            count=$(wc -l < live_ok.txt)
+            echo "当前已有源: $count 条"
+            echo "count=$count" >> $GITHUB_OUTPUT
+            if [ "$count" -lt 600 ]; then
+              echo "is_low=true" >> $GITHUB_OUTPUT
+              echo "源数量 < 600，触发自动补充模式"
+            else
+              echo "is_low=false" >> $GITHUB_OUTPUT
+              echo "源数量 >= 600，跳过自动补充"
+            fi
+          else
+            echo "count=0" >> $GITHUB_OUTPUT
+            echo "is_low=true" >> $GITHUB_OUTPUT
+            echo "无现有源文件，触发自动补充"
+          fi
+
+      - name: Run auto1000 supplementary if needed
+        if: steps.check.outputs.is_low == 'true'
+        run: |
+          echo "============================================"
+          echo "源数量不足600条，运行 auto1000.py 补充源..."
+          echo "============================================"
+          python auto1000.py
 
       - name: Update optimized config
         run: |
@@ -101,20 +135,20 @@ jobs:
           }
           EOF
 
-      - name: Run IPTV check with async crawl
+      - name: Run IPTV check with async crawl (3 modes full open)
         run: python IPTV-Apex-dzh.py --async-crawl
         env:
           TZ: Asia/Shanghai
 
-      - name: Check results
+      - name: Post-check results
+        id: post_check
         run: |
           if [ -f live_ok.txt ]; then
             lines=$(wc -l < live_ok.txt)
-            echo "live_ok.txt: $lines lines"
-            echo "::set-output name=source_count::$lines"
+            echo "最终 live_ok.txt: $lines 条"
+            echo "final_count=$lines" >> $GITHUB_OUTPUT
           else
-            echo "live_ok.txt not found"
-            echo "::set-output name=source_count::0"
+            echo "final_count=0" >> $GITHUB_OUTPUT
           fi
 
       - name: Generate M3U file
@@ -129,7 +163,8 @@ jobs:
                     parts = line.split(',', 1)
                     if len(parts) == 2:
                         name, url = parts
-                        f.write('#EXTINF:-1 tvg-name="{}",{}\n'.format(name, name))
+                        safe_name = name.replace('"', "'")
+                        f.write('#EXTINF:-1 tvg-name="{}",{}\n'.format(safe_name, safe_name))
                         f.write(url + '\n')
             print('Generated live_ok.m3u with {} channels'.format(len(lines)))
             PYEOF
@@ -144,6 +179,65 @@ jobs:
           if git diff --staged --quiet; then
             echo "无需更新"
           else
-            git commit -m "chore: auto-update $(date +'%Y-%m-%d %H:%M') [skip ci]"
+            count=$(wc -l < live_ok.txt 2>/dev/null || echo 0)
+            git commit -m "chore: auto-update $(date +'%Y-%m-%d %H:%M') sources=$count [skip ci]"
             git push || echo "Push failed, will retry next run"
           fi
+
+  # ==============================================================
+  # 任务2: 同步到 Gist（独立任务，依赖任务1）
+  # ==============================================================
+  sync-to-gist:
+    needs: iptv-check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Sync live_ok.txt to Gist
+        env:
+          GH_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GIST_ID: dc272a4f2e95ffbd41e7e31d27ef3d76
+        run: |
+          if [ -f live_ok.txt ]; then
+            echo "============================================"
+            echo "同步 live_ok.txt 到 Gist..."
+            echo "============================================"
+            CONTENT=$(cat live_ok.txt)
+            curl -s -X PATCH \
+              -H "Authorization: token $GH_TOKEN" \
+              -H "Content-Type: application/json" \
+              https://api.github.com/gists/$GIST_ID \
+              -d "{\"description\":\"IPTV 影视仓可用源 $(date +'%Y-%m-%d %H:%M') | $(wc -l < live_ok.txt) sources\",\"files\":{\"IPTV.txt\":{\"content\":\"$CONTENT\"}}}"
+            echo ""
+            echo "Gist 同步完成!"
+          else
+            echo "live_ok.txt 不存在，跳过 Gist 同步"
+          fi
+
+      - name: Create GitHub Release
+        if: needs.iptv-check.outputs.final_count != '0' && needs.iptv-check.outputs.final_count != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          count=${{ needs.iptv-check.outputs.final_count }}
+          echo "发布 Release，当前源: $count 条"
+          tag="v$(date +'%Y%m%d')"
+          # 创建 tag
+          git tag $tag 2>/dev/null || true
+          # 创建 Release
+          curl -s -X POST \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Content-Type: application/json" \
+            https://api.github.com/repos/${{ github.repository }}/releases \
+            -d "{
+              \"tag_name\": \"$tag\",
+              \"name\": \"IPTV 影视仓源库 $(date +'%Y-%m-%d')\",
+              \"body\": \"自动更新: $(date +'%Y-%m-%d %H:%M:%S')\\n\\n## 本次更新\\n- 可用源: **$count 条**\\n- 更新方式: GitHub Actions 全自动检测\\n\\n## 影视仓使用\\n直接导入: https://raw.githubusercontent.com/${{ github.repository }}/master/live_ok.txt\\n\\n## Gist 直链\\nhttps://gist.githubusercontent.com/${{ github.actor }}/dc272a4f2e95ffbd41e7e31d27ef3d76/raw/IPTV.txt\",
+              \"draft\": false
+            }"
+          echo ""
+          echo "Release 创建完成: $tag"

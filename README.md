@@ -156,8 +156,8 @@ python IPTV-Apex-dzh.py --proxy http://127.0.0.1:7890
 | httpx | ✅ | 异步 HTTP |
 | zhconv | ✅ | 繁简转换 |
 | tqdm | ✅ | 进度条 |
-| m3u8 | ❌ | M3U8 解析（推荐安装） |
-| ffprobe | ❌ | 流检测（推荐安装） |
+| m3u8 | ✅ | M3U8 解析（推荐安装） |
+| ffprobe | ✅ | 流检测（推荐安装，Actions 已自动安装） |
 
 ---
 

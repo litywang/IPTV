@@ -4,10 +4,13 @@ on:
   schedule:
     # 每两天自动运行一次（北京时间凌晨2点）
     - cron: '0 18 */2 * *'
-  workflow_dispatch:  # 支持手动触发
+  workflow_dispatch:
   push:
     branches:
       - master
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   # ==============================================================
@@ -16,8 +19,8 @@ jobs:
   iptv-check:
     runs-on: ubuntu-latest
     outputs:
-      source_count: ${{ steps.check.outputs.count }}
-      is_low: ${{ steps.check.outputs.is_low }}
+      final_count: ${{ steps.post_check.outputs.final_count }}
+      is_low: ${{ steps.pre_check.outputs.is_low }}
 
     steps:
       - name: Checkout repository
@@ -32,46 +35,43 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests httpx zhconv tqdm
-          pip install m3u8
+          pip install requests httpx zhconv tqdm m3u8
 
       - name: Install FFmpeg
         run: |
-          sudo apt-get update
+          sudo apt-get update -qq
           sudo apt-get install -y ffmpeg
-          ffmpeg -version
+          ffmpeg -version | head -1
 
       - name: Pre-check existing source count
-        id: check
+        id: pre_check
         run: |
           if [ -f live_ok.txt ]; then
             count=$(wc -l < live_ok.txt)
             echo "当前已有源: $count 条"
-            echo "count=$count" >> $GITHUB_OUTPUT
+            echo "count=$count" >> "$GITHUB_OUTPUT"
             if [ "$count" -lt 600 ]; then
-              echo "is_low=true" >> $GITHUB_OUTPUT
+              echo "is_low=true" >> "$GITHUB_OUTPUT"
               echo "源数量 < 600，触发自动补充模式"
             else
-              echo "is_low=false" >> $GITHUB_OUTPUT
+              echo "is_low=false" >> "$GITHUB_OUTPUT"
               echo "源数量 >= 600，跳过自动补充"
             fi
           else
-            echo "count=0" >> $GITHUB_OUTPUT
-            echo "is_low=true" >> $GITHUB_OUTPUT
+            echo "count=0" >> "$GITHUB_OUTPUT"
+            echo "is_low=true" >> "$GITHUB_OUTPUT"
             echo "无现有源文件，触发自动补充"
           fi
 
       - name: Run auto1000 supplementary if needed
-        if: steps.check.outputs.is_low == 'true'
+        if: steps.pre_check.outputs.is_low == 'true'
         run: |
-          echo "============================================"
           echo "源数量不足600条，运行 auto1000.py 补充源..."
-          echo "============================================"
           python auto1000.py
 
       - name: Update optimized config
         run: |
-          cat > config.json << 'EOF'
+          cat > config.json << 'JSONEOF'
           {
             "ENABLE_WEB_CHECK": true,
             "ENABLE_WEB_FETCH": true,
@@ -81,11 +81,11 @@ jobs:
             "DEBUG_MODE": false,
             "AUTO_BACKUP": false,
             "ARCHIVE_FAIL": true,
-            "MAX_WORKERS": 100,
-            "FETCH_WORKERS": 16,
-            "TIMEOUT_CN": 10,
-            "TIMEOUT_OVERSEAS": 20,
-            "RETRY_COUNT": 2,
+            "MAX_WORKERS": 120,
+            "FETCH_WORKERS": 20,
+            "TIMEOUT_CN": 8,
+            "TIMEOUT_OVERSEAS": 15,
+            "RETRY_COUNT": 1,
             "MAX_LINKS_PER_NAME": 5,
             "MAX_SOURCES_PER_DOMAIN": 0,
             "FILTER_PRIVATE_IP": true,
@@ -96,7 +96,6 @@ jobs:
             "ENABLE_IPV6_OPTIMIZE": true,
             "IPV6_DEFAULT_DELAY": 0.05,
             "IPV6_DEFAULT_SPEED": 20.0,
-            "ENABLE_CACHE": true,
             "CACHE_TTL_HOURS": 24,
             "ENABLE_RESOLUTION_FILTER": false,
             "FFPROBE_PROBESIZE": 2000000,
@@ -130,13 +129,12 @@ jobs:
               "https://live.hacks.tools/tv/ipv4/categories/taiwan.m3u",
               "https://live.hacks.tools/tv/ipv4/categories/%E7%94%B5%E5%BD%B1%E9%A2%91%E9%81%93.m3u",
               "https://live.hacks.tools/iptv/languages/zho.m3u",
-              "https://imDazui.github.io/tv/tv.m3u",
               "https://raw.githubusercontent.com/yuanzhouxia/zhwzczp/main/IPTV"
             ]
           }
-          EOF
+          JSONEOF
 
-      - name: Run IPTV check with async crawl (3 modes full open)
+      - name: Run IPTV check (async crawl + web + local all enabled)
         run: python IPTV-Apex-dzh.py --async-crawl
         env:
           TZ: Asia/Shanghai
@@ -147,28 +145,29 @@ jobs:
           if [ -f live_ok.txt ]; then
             lines=$(wc -l < live_ok.txt)
             echo "最终 live_ok.txt: $lines 条"
-            echo "final_count=$lines" >> $GITHUB_OUTPUT
+            echo "final_count=$lines" >> "$GITHUB_OUTPUT"
           else
-            echo "final_count=0" >> $GITHUB_OUTPUT
+            echo "final_count=0" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Generate M3U file
         run: |
           if [ -f live_ok.txt ]; then
-            python << 'PYEOF'
-            with open('live_ok.txt', 'r', encoding='utf-8') as f:
-                lines = [l.strip() for l in f if ',' in l]
-            with open('live_ok.m3u', 'w', encoding='utf-8') as f:
-                f.write('#EXTM3U\n\n')
-                for line in lines:
-                    parts = line.split(',', 1)
-                    if len(parts) == 2:
-                        name, url = parts
-                        safe_name = name.replace('"', "'")
-                        f.write('#EXTINF:-1 tvg-name="{}",{}\n'.format(safe_name, safe_name))
-                        f.write(url + '\n')
-            print('Generated live_ok.m3u with {} channels'.format(len(lines)))
-            PYEOF
+            python - << 'PYEOF'
+import sys
+with open('live_ok.txt', 'r', encoding='utf-8') as f:
+    lines = [l.strip() for l in f if ',' in l]
+with open('live_ok.m3u', 'w', encoding='utf-8') as f:
+    f.write('#EXTM3U\n\n')
+    for line in lines:
+        parts = line.split(',', 1)
+        if len(parts) == 2:
+            name, url = parts
+            safe_name = name.replace('"', "'")
+            f.write('#EXTINF:-1 tvg-name="{}",{}\n'.format(safe_name, safe_name))
+            f.write(url + '\n')
+print('Generated live_ok.m3u with {} channels'.format(len(lines)))
+PYEOF
           fi
 
       - name: Commit and push results
@@ -181,12 +180,12 @@ jobs:
             echo "无需更新"
           else
             count=$(wc -l < live_ok.txt 2>/dev/null || echo 0)
-            git commit -m "chore: auto-update $(date +'%Y-%m-%d %H:%M') sources=$count [skip ci]"
+            git commit -m "chore: auto-update $(date +'%Y-%m-%d %H:%M') sources=${count} [skip ci]"
             git push || echo "Push failed, will retry next run"
           fi
 
   # ==============================================================
-  # 任务2: 同步到 Gist（独立任务，依赖任务1）
+  # 任务2: 同步到 Gist（依赖任务1）
   # ==============================================================
   sync-to-gist:
     needs: iptv-check
@@ -203,42 +202,81 @@ jobs:
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
           GIST_ID: dc272a4f2e95ffbd41e7e31d27ef3d76
         run: |
-          if [ -f live_ok.txt ]; then
-            echo "============================================"
-            echo "同步 live_ok.txt 到 Gist..."
-            echo "============================================"
-            CONTENT=$(cat live_ok.txt)
-            curl -s -X PATCH \
-              -H "Authorization: token $GH_TOKEN" \
-              -H "Content-Type: application/json" \
-              https://api.github.com/gists/$GIST_ID \
-              -d "{\"description\":\"IPTV 影视仓可用源 $(date +'%Y-%m-%d %H:%M') | $(wc -l < live_ok.txt) sources\",\"files\":{\"IPTV.txt\":{\"content\":\"$CONTENT\"}}}"
-            echo ""
-            echo "Gist 同步完成!"
-          else
+          if [ ! -f live_ok.txt ]; then
             echo "live_ok.txt 不存在，跳过 Gist 同步"
+            exit 0
           fi
+          echo "同步 live_ok.txt 到 Gist..."
+          COUNT=$(wc -l < live_ok.txt)
+          # 用 python 构造 JSON，避免 shell 转义问题
+          python - << 'PYEOF'
+import json, os, subprocess, sys
+with open('live_ok.txt', 'r', encoding='utf-8') as f:
+    content = f.read()
+count = len([l for l in content.splitlines() if l.strip()])
+payload = {
+    "description": "IPTV 影视仓可用源 | {} sources".format(count),
+    "files": {
+        "IPTV.txt": {"content": content}
+    }
+}
+payload_str = json.dumps(payload)
+gist_id = os.environ.get('GIST_ID', '')
+token = os.environ.get('GH_TOKEN', '')
+result = subprocess.run([
+    'curl', '-s', '-X', 'PATCH',
+    '-H', 'Authorization: token ' + token,
+    '-H', 'Content-Type: application/json',
+    'https://api.github.com/gists/' + gist_id,
+    '-d', payload_str
+], capture_output=True, text=True)
+if '"id"' in result.stdout:
+    print('Gist 同步成功! 源数量:', count)
+else:
+    print('Gist 同步响应:', result.stdout[:200])
+    sys.exit(1)
+PYEOF
 
       - name: Create GitHub Release
-        if: needs.iptv-check.outputs.final_count != '0' && needs.iptv-check.outputs.final_count != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FINAL_COUNT: ${{ needs.iptv-check.outputs.final_count }}
         run: |
-          count=${{ needs.iptv-check.outputs.final_count }}
-          echo "发布 Release，当前源: $count 条"
-          tag="v$(date +'%Y%m%d')"
-          # 创建 tag
-          git tag $tag 2>/dev/null || true
-          # 创建 Release
-          curl -s -X POST \
-            -H "Authorization: token $GH_TOKEN" \
-            -H "Content-Type: application/json" \
-            https://api.github.com/repos/${{ github.repository }}/releases \
-            -d "{
-              \"tag_name\": \"$tag\",
-              \"name\": \"IPTV 影视仓源库 $(date +'%Y-%m-%d')\",
-              \"body\": \"自动更新: $(date +'%Y-%m-%d %H:%M:%S')\\n\\n## 本次更新\\n- 可用源: **$count 条**\\n- 更新方式: GitHub Actions 全自动检测\\n\\n## 影视仓使用\\n直接导入: https://raw.githubusercontent.com/${{ github.repository }}/master/live_ok.txt\\n\\n## Gist 直链\\nhttps://gist.githubusercontent.com/${{ github.actor }}/dc272a4f2e95ffbd41e7e31d27ef3d76/raw/IPTV.txt\",
-              \"draft\": false
-            }"
-          echo ""
-          echo "Release 创建完成: $tag"
+          if [ -z "$FINAL_COUNT" ] || [ "$FINAL_COUNT" = "0" ]; then
+            echo "无有效源数量，跳过 Release"
+            exit 0
+          fi
+          TAG="v$(date +'%Y%m%d-%H%M')"
+          REPO="${{ github.repository }}"
+          ACTOR="${{ github.actor }}"
+          BODY="自动更新: $(date +'%Y-%m-%d %H:%M:%S')\n\n## 本次更新\n- 可用源: **${FINAL_COUNT} 条**\n- 更新方式: GitHub Actions 全自动检测\n\n## 影视仓使用\n直接导入:\nhttps://raw.githubusercontent.com/${REPO}/master/live_ok.txt\n\n## Gist 直链\nhttps://gist.githubusercontent.com/${ACTOR}/dc272a4f2e95ffbd41e7e31d27ef3d76/raw/IPTV.txt"
+          python - << PYEOF
+import json, os, subprocess
+tag = os.environ.get('TAG', 'v0')
+repo = os.environ.get('REPO', '')
+token = os.environ.get('GH_TOKEN', '')
+count = os.environ.get('FINAL_COUNT', '0')
+body = os.environ.get('BODY', '')
+payload = json.dumps({
+    "tag_name": tag,
+    "name": "IPTV 影视仓源库 {}".format(tag),
+    "body": body,
+    "draft": False
+})
+result = subprocess.run([
+    'curl', '-s', '-X', 'POST',
+    '-H', 'Authorization: token ' + token,
+    '-H', 'Content-Type: application/json',
+    'https://api.github.com/repos/' + repo + '/releases',
+    '-d', payload
+], capture_output=True, text=True)
+if '"id"' in result.stdout:
+    print('Release 创建成功:', tag)
+else:
+    print('Release 响应:', result.stdout[:300])
+PYEOF
+        env:
+          TAG: "v$(date +'%Y%m%d-%H%M')"
+          REPO: ${{ github.repository }}
+          ACTOR: ${{ github.actor }}
+          FINAL_COUNT: ${{ needs.iptv-check.outputs.final_count }}

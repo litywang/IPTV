@@ -1,10 +1,10 @@
-name: IPTV Check
+name: IPTV Auto Check
 
 on:
   schedule:
-    # 每天早上6点自动运行
-    - cron: '0 6 * * *'
-  workflow_dispatch:  # 手动触发
+    # 每6小时自动运行一次
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # 支持手动触发
   push:
     branches:
       - master
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          lfs: true  # 支持大文件存储
+          lfs: false
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,75 +34,116 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Update config with network sources
+      - name: Update optimized config
         run: |
           cat > config.json << 'EOF'
           {
             "ENABLE_WEB_CHECK": true,
-            "ENABLE_WEB_FETCH": false,
+            "ENABLE_WEB_FETCH": true,
             "ENABLE_LOCAL_CHECK": true,
             "ENABLE_SPEED_CHECK": false,
             "ENABLE_CACHE": true,
             "DEBUG_MODE": false,
             "AUTO_BACKUP": false,
             "ARCHIVE_FAIL": true,
-            "MAX_WORKERS": 10,
-            "FETCH_WORKERS": 8,
-            "TIMEOUT_CN": 15,
-            "TIMEOUT_OVERSEAS": 30,
+            "MAX_WORKERS": 100,
+            "FETCH_WORKERS": 16,
+            "TIMEOUT_CN": 10,
+            "TIMEOUT_OVERSEAS": 20,
             "RETRY_COUNT": 2,
-            "MAX_LINKS_PER_NAME": 3,
+            "MAX_LINKS_PER_NAME": 5,
+            "MAX_SOURCES_PER_DOMAIN": 0,
             "FILTER_PRIVATE_IP": true,
             "ENABLE_QUALITY_FILTER": true,
-            "MIN_QUALITY_SCORE": 15,
-            "MIN_SPEED_MBPS": 0.005,
+            "MIN_QUALITY_SCORE": 5,
+            "MIN_SPEED_MBPS": 0.001,
+            "SPEED_CHECK_BYTES": 16384,
             "ENABLE_IPV6_OPTIMIZE": true,
-            "IPV6_DEFAULT_DELAY": 0.1,
-            "IPV6_DEFAULT_SPEED": 10.0,
+            "IPV6_DEFAULT_DELAY": 0.05,
+            "IPV6_DEFAULT_SPEED": 20.0,
             "ENABLE_CACHE": true,
             "CACHE_TTL_HOURS": 24,
             "ENABLE_RESOLUTION_FILTER": false,
-            "WEB_SOURCES": [
-              "https://live.zbds.top/tv/iptv4.m3u",
-              "https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/台湾港澳.m3u",
-              "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/HongKong.m3u8",
+            "FFPROBE_PROBESIZE": 2000000,
+            "FFPROBE_ANALYZEDURATION": 5000000,
+            "MAX_NEW_PLAYLISTS": 200,
+            "PLAYLIST_QUALITY_SCORE": true,
+            "web_sources": [
+              "https://iptv-org.github.io/iptv/index.m3u",
+              "https://iptv-org.github.io/iptv/countries/cn.m3u",
+              "https://iptv-org.github.io/iptv/countries/tw.m3u",
+              "https://iptv-org.github.io/iptv/countries/hk.m3u",
+              "https://iptv-org.github.io/iptv/countries/mo.m3u",
               "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/TaiWan.m3u8",
+              "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/HongKong.m3u8",
+              "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/Macao.m3u8",
               "https://raw.githubusercontent.com/MichaelJorky/Free-IPTV-M3U-Playlist/main/iptv-hongkong.m3u",
+              "https://live.zbds.top/tv/iptv4.m3u",
               "https://peterhchina.github.io/iptv/CNTV-V4.m3u",
+              "https://dsj-1312694395.cos.ap-guangzhou.myqcloud.com/dsj10.1.txt",
+              "https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
+              "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt",
+              "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u",
               "https://raw.githubusercontent.com/zxmlxw520/5566/refs/heads/main/fhtv.txt",
               "https://raw.githubusercontent.com/nianxinmj/nxpz/refs/heads/main/lib/live.txt",
               "https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u",
               "https://live.264788.xyz/sub/02RvO5i5Zn1LSQUCr56kkUp2I9xa9A/txt",
-              "https://dsj-1312694395.cos.ap-guangzhou.myqcloud.com/dsj10.1.txt",
-              "https://iptv-org.github.io/iptv/countries/hk.m3u",
-              "https://iptv-org.github.io/iptv/countries/tw.m3u",
-              "https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
-              "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt",
-              "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u",
-              "https://iptv-org.github.io/iptv/countries/cn.m3u",
-              "https://iptv-org.github.io/iptv/countries/mo.m3u",
-              "https://iptv-org.github.io/iptv/index.m3u"
+              "https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/%E6%B8%AF%E5%8F%B0%E5%A4%A7%E9%99%86",
+              "https://raw.githubusercontent.com/judy-gotv/iptv/main/litv.m3u",
+              "https://live.hacks.tools/tv/ipv4/categories/hong_kong.m3u",
+              "https://live.hacks.tools/tv/ipv4/categories/macau.m3u",
+              "https://live.hacks.tools/tv/ipv4/categories/taiwan.m3u",
+              "https://live.hacks.tools/tv/ipv4/categories/%E7%94%B5%E5%BD%B1%E9%A2%91%E9%81%93.m3u",
+              "https://live.hacks.tools/iptv/languages/zho.m3u",
+              "https://imDazui.github.io/tv/tv.m3u",
+              "https://raw.githubusercontent.com/yuanzhouxia/zhwzczp/main/IPTV"
             ]
           }
           EOF
 
-      - name: Run IPTV check
-        run: python IPTV-Apex-dzh.py
+      - name: Run IPTV check with async crawl
+        run: python IPTV-Apex-dzh.py --async-crawl
         env:
           TZ: Asia/Shanghai
 
-      - name: Count live_ok lines
+      - name: Check results
         run: |
           if [ -f live_ok.txt ]; then
             lines=$(wc -l < live_ok.txt)
             echo "live_ok.txt: $lines lines"
+            echo "::set-output name=source_count::$lines"
+          else
+            echo "live_ok.txt not found"
+            echo "::set-output name=source_count::0"
           fi
 
-      - name: Commit results
+      - name: Generate M3U file
+        run: |
+          if [ -f live_ok.txt ]; then
+            python << 'PYEOF'
+            with open('live_ok.txt', 'r', encoding='utf-8') as f:
+                lines = [l.strip() for l in f if ',' in l]
+            with open('live_ok.m3u', 'w', encoding='utf-8') as f:
+                f.write('#EXTM3U\n\n')
+                for line in lines:
+                    parts = line.split(',', 1)
+                    if len(parts) == 2:
+                        name, url = parts
+                        f.write('#EXTINF:-1 tvg-name="{}",{}\n'.format(name, name))
+                        f.write(url + '\n')
+            print('Generated live_ok.m3u with {} channels'.format(len(lines)))
+            PYEOF
+          fi
+
+      - name: Commit and push results
         if: success()
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add live_ok.txt live_ok_fail.txt config.json .iptv_stats.json paste.txt 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "chore: 自动更新检测结果 $(date +'%Y-%m-%d %H:%M')"
-          git push 2>/dev/null || echo "无需更新"
+          git add live_ok.txt live_ok.m3u config.json .iptv_stats.json .iptv_cache.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "无需更新"
+          else
+            git commit -m "chore: auto-update $(date +'%Y-%m-%d %H:%M') [skip ci]"
+            git push || echo "Push failed, will retry next run"
+          fi

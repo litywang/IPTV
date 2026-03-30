@@ -27,7 +27,7 @@ https://raw.githubusercontent.com/litywang/IPTV/master/live_ok.m3u
 
 | 指标 | 数据 |
 |------|------|
-| 可用源总数 | **506+** |
+| 可用源总数 | **1137+** |
 | 频道分类 | 10+ 大类 |
 | 数据格式 | `.txt` / `.m3u` |
 | 更新方式 | GitHub Actions 自动更新 |

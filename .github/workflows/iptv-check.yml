@@ -39,93 +39,28 @@ jobs:
           if [ -f live_ok.txt ]; then
             count=$(wc -l < live_ok.txt | tr -d ' ')
             echo "count=$count" >> "$GITHUB_OUTPUT"
-            echo "Current sources: $count"
           else
             echo "count=0" >> "$GITHUB_OUTPUT"
-            echo "No existing file"
           fi
 
       - name: Stage 1: Local sources only
         id: stage1
         run: |
-          cat > /tmp/stage1.py << 'ENDPY'
-import json
-config = {
-    "ENABLE_WEB_CHECK": False,
-    "ENABLE_WEB_FETCH": False,
-    "ENABLE_LOCAL_CHECK": True,
-    "ENABLE_SPEED_CHECK": False,
-    "ENABLE_CACHE": True,
-    "MAX_WORKERS": 80,
-    "TIMEOUT_CN": 8,
-    "TIMEOUT_OVERSEAS": 15,
-    "RETRY_COUNT": 1,
-    "MAX_LINKS_PER_NAME": 3,
-    "FILTER_PRIVATE_IP": True,
-    "ENABLE_QUALITY_FILTER": True,
-    "MIN_QUALITY_SCORE": 10,
-    "MIN_SPEED_MBPS": 0.001,
-    "ENABLE_IPV6_OPTIMIZE": True,
-    "ENABLE_RESOLUTION_FILTER": False,
-    "MAX_NEW_PLAYLISTS": 0,
-    "PLAYLIST_QUALITY_SCORE": True
-}
-with open('config.json', 'w') as f:
-    json.dump(config, f, indent=2)
-print("Stage 1 config written")
-ENDPY
-          python3 /tmp/stage1.py
+          printf '{"ENABLE_WEB_CHECK": false, "ENABLE_WEB_FETCH": false, "ENABLE_LOCAL_CHECK": true, "ENABLE_SPEED_CHECK": false, "ENABLE_CACHE": true, "MAX_WORKERS": 80, "TIMEOUT_CN": 8, "TIMEOUT_OVERSEAS": 15, "RETRY_COUNT": 1, "MAX_LINKS_PER_NAME": 3, "FILTER_PRIVATE_IP": true, "ENABLE_QUALITY_FILTER": true, "MIN_QUALITY_SCORE": 10, "MIN_SPEED_MBPS": 0.001, "ENABLE_IPV6_OPTIMIZE": true, "ENABLE_RESOLUTION_FILTER": false, "MAX_NEW_PLAYLISTS": 0, "PLAYLIST_QUALITY_SCORE": true}' > config.json
           python IPTV-Apex-dzh.py 2>&1 | tee stage1.log
           STAGE1_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
           echo "stage1_count=$STAGE1_COUNT" >> "$GITHUB_OUTPUT"
-          echo "Stage1 done: $STAGE1_COUNT sources"
 
       - name: Stage 2: Add preset sources if needed
         id: stage2
         run: |
           STAGE1=${{ steps.stage1.outputs.stage1_count }}
           if [ "$STAGE1" -lt 800 ]; then
-            cat > /tmp/stage2.py << 'ENDPY'
-import json
-config = {
-    "ENABLE_WEB_CHECK": True,
-    "ENABLE_WEB_FETCH": True,
-    "ENABLE_LOCAL_CHECK": True,
-    "ENABLE_SPEED_CHECK": False,
-    "ENABLE_CACHE": True,
-    "MAX_WORKERS": 100,
-    "TIMEOUT_CN": 8,
-    "TIMEOUT_OVERSEAS": 15,
-    "RETRY_COUNT": 1,
-    "MAX_LINKS_PER_NAME": 3,
-    "FILTER_PRIVATE_IP": True,
-    "ENABLE_QUALITY_FILTER": True,
-    "MIN_QUALITY_SCORE": 8,
-    "MIN_SPEED_MBPS": 0.001,
-    "ENABLE_IPV6_OPTIMIZE": True,
-    "ENABLE_RESOLUTION_FILTER": False,
-    "MAX_NEW_PLAYLISTS": 50,
-    "PLAYLIST_QUALITY_SCORE": True,
-    "web_sources": [
-        "https://iptv-org.github.io/iptv/index.m3u",
-        "https://iptv-org.github.io/iptv/countries/cn.m3u",
-        "https://iptv-org.github.io/iptv/countries/tw.m3u",
-        "https://iptv-org.github.io/iptv/countries/hk.m3u",
-        "https://iptv-org.github.io/iptv/countries/mo.m3u",
-        "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u",
-        "https://dsj-1312694395.cos.ap-guangzhou.myqcloud.com/dsj10.1.txt"
-    ]
-}
-with open('config.json', 'w') as f:
-    json.dump(config, f, indent=2)
-print("Stage 2 config written")
-ENDPY
-            python3 /tmp/stage2.py
+            printf '{"ENABLE_WEB_CHECK": true, "ENABLE_WEB_FETCH": true, "ENABLE_LOCAL_CHECK": true, "ENABLE_SPEED_CHECK": false, "ENABLE_CACHE": true, "MAX_WORKERS": 100, "TIMEOUT_CN": 8, "TIMEOUT_OVERSEAS": 15, "RETRY_COUNT": 1, "MAX_LINKS_PER_NAME": 3, "FILTER_PRIVATE_IP": true, "ENABLE_QUALITY_FILTER": true, "MIN_QUALITY_SCORE": 8, "MIN_SPEED_MBPS": 0.001, "ENABLE_IPV6_OPTIMIZE": true, "ENABLE_RESOLUTION_FILTER": false, "MAX_NEW_PLAYLISTS": 50, "PLAYLIST_QUALITY_SCORE": true, "web_sources": ["https://iptv-org.github.io/iptv/index.m3u", "https://iptv-org.github.io/iptv/countries/cn.m3u", "https://iptv-org.github.io/iptv/countries/tw.m3u", "https://iptv-org.github.io/iptv/countries/hk.m3u", "https://iptv-org.github.io/iptv/countries/mo.m3u", "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u", "https://dsj-1312694395.cos.ap-guangzhou.myqcloud.com/dsj10.1.txt"]}' > config.json
             python IPTV-Apex-dzh.py 2>&1 | tee stage2.log
             STAGE2_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
             echo "stage2_count=$STAGE2_COUNT" >> "$GITHUB_OUTPUT"
           else
-            echo "Stage1 has $STAGE1 >= 800, skip Stage2"
             echo "stage2_count=$STAGE1" >> "$GITHUB_OUTPUT"
           fi
 
@@ -134,51 +69,11 @@ ENDPY
         run: |
           STAGE2=${{ steps.stage2.outputs.stage2_count }}
           if [ "$STAGE2" -lt 800 ]; then
-            cat > /tmp/stage3.py << 'ENDPY'
-import json
-config = {
-    "ENABLE_WEB_CHECK": True,
-    "ENABLE_WEB_FETCH": True,
-    "ENABLE_LOCAL_CHECK": True,
-    "ENABLE_SPEED_CHECK": False,
-    "ENABLE_CACHE": True,
-    "MAX_WORKERS": 120,
-    "FETCH_WORKERS": 20,
-    "TIMEOUT_CN": 8,
-    "TIMEOUT_OVERSEAS": 15,
-    "RETRY_COUNT": 1,
-    "MAX_LINKS_PER_NAME": 3,
-    "FILTER_PRIVATE_IP": True,
-    "ENABLE_QUALITY_FILTER": True,
-    "MIN_QUALITY_SCORE": 5,
-    "MIN_SPEED_MBPS": 0.001,
-    "ENABLE_IPV6_OPTIMIZE": True,
-    "ENABLE_RESOLUTION_FILTER": False,
-    "MAX_NEW_PLAYLISTS": 100,
-    "PLAYLIST_QUALITY_SCORE": True,
-    "web_sources": [
-        "https://iptv-org.github.io/iptv/index.m3u",
-        "https://iptv-org.github.io/iptv/countries/cn.m3u",
-        "https://iptv-org.github.io/iptv/countries/tw.m3u",
-        "https://iptv-org.github.io/iptv/countries/hk.m3u",
-        "https://iptv-org.github.io/iptv/countries/mo.m3u",
-        "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u",
-        "https://dsj-1312694395.cos.ap-guangzhou.myqcloud.com/dsj10.1.txt",
-        "https://live.hacks.tools/iptv/languages/zho.m3u",
-        "https://live.hacks.tools/tv/ipv4/categories/taiwan.m3u",
-        "https://live.hacks.tools/tv/ipv4/categories/hong_kong.m3u"
-    ]
-}
-with open('config.json', 'w') as f:
-    json.dump(config, f, indent=2)
-print("Stage 3 config written")
-ENDPY
-            python3 /tmp/stage3.py
+            printf '{"ENABLE_WEB_CHECK": true, "ENABLE_WEB_FETCH": true, "ENABLE_LOCAL_CHECK": true, "ENABLE_SPEED_CHECK": false, "ENABLE_CACHE": true, "MAX_WORKERS": 120, "FETCH_WORKERS": 20, "TIMEOUT_CN": 8, "TIMEOUT_OVERSEAS": 15, "RETRY_COUNT": 1, "MAX_LINKS_PER_NAME": 3, "FILTER_PRIVATE_IP": true, "ENABLE_QUALITY_FILTER": true, "MIN_QUALITY_SCORE": 5, "MIN_SPEED_MBPS": 0.001, "ENABLE_IPV6_OPTIMIZE": true, "ENABLE_RESOLUTION_FILTER": false, "MAX_NEW_PLAYLISTS": 100, "PLAYLIST_QUALITY_SCORE": true, "web_sources": ["https://iptv-org.github.io/iptv/index.m3u", "https://iptv-org.github.io/iptv/countries/cn.m3u", "https://iptv-org.github.io/iptv/countries/tw.m3u", "https://iptv-org.github.io/iptv/countries/hk.m3u", "https://iptv-org.github.io/iptv/countries/mo.m3u", "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u", "https://dsj-1312694395.cos.ap-guangzhou.myqcloud.com/dsj10.1.txt", "https://live.hacks.tools/iptv/languages/zho.m3u"]}' > config.json
             python IPTV-Apex-dzh.py --async-crawl 2>&1 | tee stage3.log
             STAGE3_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
             echo "stage3_count=$STAGE3_COUNT" >> "$GITHUB_OUTPUT"
           else
-            echo "Stage2 has $STAGE2 >= 800, skip Stage3"
             echo "stage3_count=$STAGE2" >> "$GITHUB_OUTPUT"
           fi
 
@@ -191,69 +86,46 @@ ENDPY
             STAGE4_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
             echo "stage4_count=$STAGE4_COUNT" >> "$GITHUB_OUTPUT"
           else
-            echo "Stage3 has $STAGE3 >= 800, skip Stage4"
             echo "stage4_count=$STAGE3" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Post-process: Chinese priority + dedup
-        run: |
-          cat > /tmp/postprocess.py << 'ENDPY'
+      - name: Post-process
+        run: python3 -c "
 import os
-if not os.path.exists('live_ok.txt'):
-    print("No source file")
-    exit(0)
+if not os.path.exists('live_ok.txt'): exit(0)
 with open('live_ok.txt', 'r', encoding='utf-8') as f:
     lines = [l.strip() for l in f if ',' in l.strip()]
 channels = {}
 for line in lines:
     parts = line.split(',', 1)
-    if len(parts) != 2:
-        continue
+    if len(parts) != 2: continue
     name, url = parts
-    name = name.strip()
-    if name not in channels:
-        channels[name] = []
-    if len(channels[name]) < 3:
-        channels[name].append((name, url))
+    if name not in channels: channels[name] = []
+    if len(channels[name]) < 3: channels[name].append((name, url))
 def chinese_priority(name):
-    cn_kw = ['CCTV', 'TVB', 'ATV', 'News', 'Sports', 'Kids', 'Movie', 'Drama']
-    for kw in cn_kw:
-        if kw.lower() in name.lower():
-            return 0
+    for kw in ['CCTV', 'TVB', 'News', 'Sports', 'Kids', 'Movie']:
+        if kw.lower() in name.lower(): return 0
     return 1
-all_sources = []
-for name, urls in channels.items():
-    for name2, url in urls:
-        all_sources.append((chinese_priority(name2), name2, url))
+all_sources = [(chinese_priority(n), n, u) for n, urls in channels.items() for n, u in urls]
 all_sources.sort(key=lambda x: (x[0], x[1]))
-MAX = 2000
-final = all_sources[:MAX]
 with open('live_ok.txt', 'w', encoding='utf-8') as f:
-    for _, name, url in final:
-        f.write(f"{name},{url}\n")
-print(f"Final: {len(final)} sources")
-ENDPY
-          python3 /tmp/postprocess.py
+    for _, n, u in all_sources[:2000]: f.write(f'{n},{u}\n')
+print(f'Final: {len(all_sources[:2000])} sources')
+"
 
       - name: Limit to 2000
         id: limit_check
         run: |
-          MAX_SOURCES=2000
           if [ -f live_ok.txt ]; then
             count=$(wc -l < live_ok.txt | tr -d ' ')
-            if [ "$count" -gt "$MAX_SOURCES" ]; then
-              head -n $MAX_SOURCES live_ok.txt > live_ok_temp.txt
-              mv live_ok_temp.txt live_ok.txt
-            fi
+            if [ "$count" -gt 2000 ]; then head -n 2000 live_ok.txt > live_ok_temp.txt && mv live_ok_temp.txt live_ok.txt; fi
             echo "final_count=$(wc -l < live_ok.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
           else
             echo "final_count=0" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Generate M3U
-        run: |
-          if [ -f live_ok.txt ]; then
-            python3 << 'ENDPY'
+        run: python3 -c "
 import os
 if os.path.exists('live_ok.txt'):
     with open('live_ok.txt','r',encoding='utf-8') as f:
@@ -262,19 +134,16 @@ if os.path.exists('live_ok.txt'):
         f.write('#EXTM3U\n\n')
         for line in lines:
             parts=line.split(',',1)
-            if len(parts)==2:
-                name,url=parts
-                f.write(f'#EXTINF:-1 tvg-name="{name}",{name}\n{url}\n')
-    print('M3U: {} channels'.format(len(lines)))
-ENDPY
-          fi
+            if len(parts)==2: f.write(f'#EXTINF:-1 tvg-name=\"{parts[0]}\",{parts[0]}\n{parts[1]}\n')
+    print('M3U done')
+"
 
       - name: Commit and push
         if: success()
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add live_ok.txt live_ok.m3u config*.json .iptv_stats.json .iptv_cache.json 2>/dev/null || true
+          git add live_ok.txt live_ok.m3u config.json .iptv_stats.json .iptv_cache.json 2>/dev/null || true
           if ! git diff --staged --quiet; then
             count=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
             git commit -m "chore: auto-update sources=${count}"
@@ -295,21 +164,16 @@ ENDPY
       - name: Sync to Gist
         env:
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
-        run: |
-          if [ -f live_ok.txt ]; then
-            python3 << 'ENDPY'
+        run: python3 -c "
 import os, requests
-with open('live_ok.txt','r',encoding='utf-8') as f:
-    content = f.read()
-cnt = len([l for l in content.splitlines() if l.strip()])
-gist_id = 'dc272a4f2e95ffbd41e7e31d27ef3d76'
-url = 'https://api.github.com/gists/' + gist_id
-headers = {'Authorization': 'token ' + os.environ['GH_TOKEN'], 'Content-Type': 'application/json'}
-payload = {'description': 'IPTV | {} sources'.format(cnt), 'files': {'IPTV.txt': {'content': content}}}
-r = requests.patch(url, headers=headers, json=payload)
-print('Gist: {} sources'.format(cnt) if r.status_code == 200 else 'Gist failed')
-ENDPY
-          fi
+if os.path.exists('live_ok.txt'):
+    with open('live_ok.txt','r',encoding='utf-8') as f: c = f.read()
+    cnt = len([l for l in c.splitlines() if l.strip()])
+    r = requests.patch('https://api.github.com/gists/dc272a4f2e95ffbd41e7e31d27ef3d76',
+        headers={'Authorization': 'token ' + os.environ['GH_TOKEN'], 'Content-Type': 'application/json'},
+        json={'description': 'IPTV | {} sources'.format(cnt), 'files': {'IPTV.txt': {'content': c}}})
+    print('Gist: {} sources'.format(cnt) if r.status_code == 200 else 'Failed')
+"
 
       - name: Wait cache
         run: sleep 30
@@ -317,14 +181,12 @@ ENDPY
       - name: Create Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 << 'ENDPY'
+        run: python3 -c "
 import os, requests
-tag = "v" + str(os.environ.get('GITHUB_RUN_ID', 'manual'))
-repo = 'litywang/IPTV'
+tag = 'v' + str(os.environ.get('GITHUB_RUN_ID', 'manual'))
 cnt = os.environ.get('FINAL_COUNT', '0')
-url = 'https://api.github.com/repos/' + repo + '/releases'
-headers = {'Authorization': 'token ' + os.environ['GH_TOKEN'], 'Content-Type': 'application/json'}
-payload = {'tag_name': tag, 'name': 'IPTV ' + tag, 'body': 'Auto | {} sources'.format(cnt), 'draft': False}
-r = requests.post(url, headers=headers, json=payload)
+r = requests.post('https://api.github.com/repos/litywang/IPTV/releases',
+    headers={'Authorization': 'token ' + os.environ['GH_TOKEN'], 'Content-Type': 'application/json'},
+    json={'tag_name': tag, 'name': 'IPTV ' + tag, 'body': 'Auto | {} sources'.format(cnt), 'draft': False})
 print('Release:', tag)
-ENDPY
+"

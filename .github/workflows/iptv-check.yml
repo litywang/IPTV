@@ -251,6 +251,7 @@ jobs:
           if ! git diff --staged --quiet; then
             count=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
             git commit -m "chore: auto-update sources=${count}"
+            git pull --rebase https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master || true
             git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
           fi
 

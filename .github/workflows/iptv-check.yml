@@ -43,51 +43,141 @@ jobs:
             echo "count=0" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Stage 1: Local sources only
+      - name: Write Stage1 config
+        run: |
+          cat > config.json << 'EOF'
+          {
+            "ENABLE_WEB_CHECK": false,
+            "ENABLE_WEB_FETCH": false,
+            "ENABLE_LOCAL_CHECK": true,
+            "ENABLE_SPEED_CHECK": false,
+            "ENABLE_CACHE": true,
+            "MAX_WORKERS": 80,
+            "TIMEOUT_CN": 8,
+            "TIMEOUT_OVERSEAS": 15,
+            "RETRY_COUNT": 1,
+            "MAX_LINKS_PER_NAME": 3,
+            "FILTER_PRIVATE_IP": true,
+            "ENABLE_QUALITY_FILTER": true,
+            "MIN_QUALITY_SCORE": 10,
+            "MIN_SPEED_MBPS": 0.001,
+            "ENABLE_IPV6_OPTIMIZE": true,
+            "ENABLE_RESOLUTION_FILTER": false,
+            "MAX_NEW_PLAYLISTS": 0,
+            "PLAYLIST_QUALITY_SCORE": true
+          }
+          EOF
+
+      - name: Run Stage1
         id: stage1
         run: |
-          printf '{"ENABLE_WEB_CHECK": false, "ENABLE_WEB_FETCH": false, "ENABLE_LOCAL_CHECK": true, "ENABLE_SPEED_CHECK": false, "ENABLE_CACHE": true, "MAX_WORKERS": 80, "TIMEOUT_CN": 8, "TIMEOUT_OVERSEAS": 15, "RETRY_COUNT": 1, "MAX_LINKS_PER_NAME": 3, "FILTER_PRIVATE_IP": true, "ENABLE_QUALITY_FILTER": true, "MIN_QUALITY_SCORE": 10, "MIN_SPEED_MBPS": 0.001, "ENABLE_IPV6_OPTIMIZE": true, "ENABLE_RESOLUTION_FILTER": false, "MAX_NEW_PLAYLISTS": 0, "PLAYLIST_QUALITY_SCORE": true}' > config.json
           python IPTV-Apex-dzh.py 2>&1 | tee stage1.log
           STAGE1_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
           echo "stage1_count=$STAGE1_COUNT" >> "$GITHUB_OUTPUT"
 
-      - name: Stage 2: Add preset sources if needed
+      - name: Write Stage2 config if needed
+        if: steps.stage1.outputs.stage1_count < 800
+        run: |
+          cat > config.json << 'EOF'
+          {
+            "ENABLE_WEB_CHECK": true,
+            "ENABLE_WEB_FETCH": true,
+            "ENABLE_LOCAL_CHECK": true,
+            "ENABLE_SPEED_CHECK": false,
+            "ENABLE_CACHE": true,
+            "MAX_WORKERS": 100,
+            "TIMEOUT_CN": 8,
+            "TIMEOUT_OVERSEAS": 15,
+            "RETRY_COUNT": 1,
+            "MAX_LINKS_PER_NAME": 3,
+            "FILTER_PRIVATE_IP": true,
+            "ENABLE_QUALITY_FILTER": true,
+            "MIN_QUALITY_SCORE": 8,
+            "MIN_SPEED_MBPS": 0.001,
+            "ENABLE_IPV6_OPTIMIZE": true,
+            "ENABLE_RESOLUTION_FILTER": false,
+            "MAX_NEW_PLAYLISTS": 50,
+            "PLAYLIST_QUALITY_SCORE": true,
+            "web_sources": [
+              "https://iptv-org.github.io/iptv/index.m3u",
+              "https://iptv-org.github.io/iptv/countries/cn.m3u",
+              "https://iptv-org.github.io/iptv/countries/tw.m3u",
+              "https://iptv-org.github.io/iptv/countries/hk.m3u",
+              "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u"
+            ]
+          }
+          EOF
+
+      - name: Run Stage2
         id: stage2
+        if: steps.stage1.outputs.stage1_count < 800
         run: |
-          STAGE1=${{ steps.stage1.outputs.stage1_count }}
-          if [ "$STAGE1" -lt 800 ]; then
-            printf '{"ENABLE_WEB_CHECK": true, "ENABLE_WEB_FETCH": true, "ENABLE_LOCAL_CHECK": true, "ENABLE_SPEED_CHECK": false, "ENABLE_CACHE": true, "MAX_WORKERS": 100, "TIMEOUT_CN": 8, "TIMEOUT_OVERSEAS": 15, "RETRY_COUNT": 1, "MAX_LINKS_PER_NAME": 3, "FILTER_PRIVATE_IP": true, "ENABLE_QUALITY_FILTER": true, "MIN_QUALITY_SCORE": 8, "MIN_SPEED_MBPS": 0.001, "ENABLE_IPV6_OPTIMIZE": true, "ENABLE_RESOLUTION_FILTER": false, "MAX_NEW_PLAYLISTS": 50, "PLAYLIST_QUALITY_SCORE": true, "web_sources": ["https://iptv-org.github.io/iptv/index.m3u", "https://iptv-org.github.io/iptv/countries/cn.m3u", "https://iptv-org.github.io/iptv/countries/tw.m3u", "https://iptv-org.github.io/iptv/countries/hk.m3u", "https://iptv-org.github.io/iptv/countries/mo.m3u", "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u", "https://dsj-1312694395.cos.ap-guangzhou.myqcloud.com/dsj10.1.txt"]}' > config.json
-            python IPTV-Apex-dzh.py 2>&1 | tee stage2.log
-            STAGE2_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
-            echo "stage2_count=$STAGE2_COUNT" >> "$GITHUB_OUTPUT"
-          else
-            echo "stage2_count=$STAGE1" >> "$GITHUB_OUTPUT"
-          fi
+          python IPTV-Apex-dzh.py 2>&1 | tee stage2.log
+          STAGE2_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
+          echo "stage2_count=$STAGE2_COUNT" >> "$GITHUB_OUTPUT"
 
-      - name: Stage 3: Enable async crawl if needed
+      - name: Stage2 skip output
+        id: stage2_skip
+        if: steps.stage1.outputs.stage1_count >= 800
+        run: echo "stage2_count=${{ steps.stage1.outputs.stage1_count }}" >> "$GITHUB_OUTPUT"
+
+      - name: Write Stage3 config if needed
+        if: steps.stage2.outputs.stage2_count < 800
+        run: |
+          cat > config.json << 'EOF'
+          {
+            "ENABLE_WEB_CHECK": true,
+            "ENABLE_WEB_FETCH": true,
+            "ENABLE_LOCAL_CHECK": true,
+            "ENABLE_SPEED_CHECK": false,
+            "ENABLE_CACHE": true,
+            "MAX_WORKERS": 120,
+            "FETCH_WORKERS": 20,
+            "TIMEOUT_CN": 8,
+            "TIMEOUT_OVERSEAS": 15,
+            "RETRY_COUNT": 1,
+            "MAX_LINKS_PER_NAME": 3,
+            "FILTER_PRIVATE_IP": true,
+            "ENABLE_QUALITY_FILTER": true,
+            "MIN_QUALITY_SCORE": 5,
+            "MIN_SPEED_MBPS": 0.001,
+            "ENABLE_IPV6_OPTIMIZE": true,
+            "ENABLE_RESOLUTION_FILTER": false,
+            "MAX_NEW_PLAYLISTS": 100,
+            "PLAYLIST_QUALITY_SCORE": true,
+            "web_sources": [
+              "https://iptv-org.github.io/iptv/index.m3u",
+              "https://iptv-org.github.io/iptv/countries/cn.m3u",
+              "https://iptv-org.github.io/iptv/countries/tw.m3u",
+              "https://live.hacks.tools/iptv/languages/zho.m3u"
+            ]
+          }
+          EOF
+
+      - name: Run Stage3
         id: stage3
+        if: steps.stage2.outputs.stage2_count < 800
         run: |
-          STAGE2=${{ steps.stage2.outputs.stage2_count }}
-          if [ "$STAGE2" -lt 800 ]; then
-            printf '{"ENABLE_WEB_CHECK": true, "ENABLE_WEB_FETCH": true, "ENABLE_LOCAL_CHECK": true, "ENABLE_SPEED_CHECK": false, "ENABLE_CACHE": true, "MAX_WORKERS": 120, "FETCH_WORKERS": 20, "TIMEOUT_CN": 8, "TIMEOUT_OVERSEAS": 15, "RETRY_COUNT": 1, "MAX_LINKS_PER_NAME": 3, "FILTER_PRIVATE_IP": true, "ENABLE_QUALITY_FILTER": true, "MIN_QUALITY_SCORE": 5, "MIN_SPEED_MBPS": 0.001, "ENABLE_IPV6_OPTIMIZE": true, "ENABLE_RESOLUTION_FILTER": false, "MAX_NEW_PLAYLISTS": 100, "PLAYLIST_QUALITY_SCORE": true, "web_sources": ["https://iptv-org.github.io/iptv/index.m3u", "https://iptv-org.github.io/iptv/countries/cn.m3u", "https://iptv-org.github.io/iptv/countries/tw.m3u", "https://iptv-org.github.io/iptv/countries/hk.m3u", "https://iptv-org.github.io/iptv/countries/mo.m3u", "https://raw.githubusercontent.com/fanmingming/live/main/tv.m3u", "https://dsj-1312694395.cos.ap-guangzhou.myqcloud.com/dsj10.1.txt", "https://live.hacks.tools/iptv/languages/zho.m3u"]}' > config.json
-            python IPTV-Apex-dzh.py --async-crawl 2>&1 | tee stage3.log
-            STAGE3_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
-            echo "stage3_count=$STAGE3_COUNT" >> "$GITHUB_OUTPUT"
-          else
-            echo "stage3_count=$STAGE2" >> "$GITHUB_OUTPUT"
-          fi
+          python IPTV-Apex-dzh.py --async-crawl 2>&1 | tee stage3.log
+          STAGE3_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
+          echo "stage3_count=$STAGE3_COUNT" >> "$GITHUB_OUTPUT"
 
-      - name: Stage 4: Run auto1000 if needed
+      - name: Stage3 skip output
+        id: stage3_skip
+        if: steps.stage2.outputs.stage2_count >= 800
+        run: echo "stage3_count=${{ steps.stage2.outputs.stage2_count }}" >> "$GITHUB_OUTPUT"
+
+      - name: Run Stage4 if needed
         id: stage4
+        if: steps.stage3.outputs.stage3_count < 800
         run: |
-          STAGE3=${{ steps.stage3.outputs.stage3_count }}
-          if [ "$STAGE3" -lt 800 ]; then
-            python auto1000.py 2>&1 | tee stage4.log
-            STAGE4_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
-            echo "stage4_count=$STAGE4_COUNT" >> "$GITHUB_OUTPUT"
-          else
-            echo "stage4_count=$STAGE3" >> "$GITHUB_OUTPUT"
-          fi
+          python auto1000.py 2>&1 | tee stage4.log
+          STAGE4_COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
+          echo "stage4_count=$STAGE4_COUNT" >> "$GITHUB_OUTPUT"
+
+      - name: Stage4 skip output
+        if: steps.stage3.outputs.stage3_count >= 800
+        run: echo "stage4_count=${{ steps.stage3.outputs.stage3_count }}" >> "$GITHUB_OUTPUT"
 
       - name: Post-process
         run: python3 -c "

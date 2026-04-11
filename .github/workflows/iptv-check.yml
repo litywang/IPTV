@@ -1,0 +1,122 @@
+name: IPTV Auto Check
+
+on:
+  schedule:
+    - cron: '0 18 */2 * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - 'paste.txt'
+      - 'config.json'
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  iptv-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      final_count: ${{ steps.finalize.outputs.count }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-iptv-v2
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install requests httpx zhconv tqdm m3u8
+
+      - name: Install FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Cache IPTV results
+        uses: actions/cache@v4
+        with:
+          path: |
+            .iptv_cache.json
+            .iptv_stats.json
+          key: iptv-cache-${{ github.run_number }}
+          restore-keys: iptv-cache-
+
+      - name: Run IPTV check
+        id: check
+        env:
+          # 代理配置：拉取订阅源走代理（绕 GFW/境外封禁）
+          # 频道测活直连不过代理（过滤大陆可直通的源）
+          # 如果你有境外代理（如 Clash 订阅），取消下面两行注释并填入地址
+          # HTTPS_PROXY: http://your-proxy:port
+          # HTTP_PROXY:  http://your-proxy:port
+        run: |
+          python IPTV-Apex-dzh.py 2>&1 | tee check.log
+          COUNT=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "检测完成：$COUNT 条有效源"
+
+      - name: Post-process
+        run: python scripts/post_process.py
+
+      - name: Generate M3U
+        run: python scripts/generate_m3u.py
+
+      - name: Limit to 2500 sources
+        id: finalize
+        run: |
+          if [ -f live_ok.txt ]; then
+            count=$(wc -l < live_ok.txt | tr -d ' ')
+            if [ "$count" -gt 2500 ]; then
+              head -n 2500 live_ok.txt > live_ok_temp.txt && mv live_ok_temp.txt live_ok.txt
+              python scripts/generate_m3u.py
+            fi
+            final=$(wc -l < live_ok.txt | tr -d ' ')
+            echo "count=$final" >> "$GITHUB_OUTPUT"
+            echo "📊 最终数量：$final 条"
+          else
+            echo "count=0" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push
+        if: success()
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add live_ok.txt live_ok.m3u .iptv_cache.json .iptv_stats.json 2>/dev/null || true
+          if ! git diff --staged --quiet; then
+            count=$(wc -l < live_ok.txt 2>/dev/null | tr -d ' ' || echo 0)
+            git commit -m "chore: auto-update sources=${count}"
+            git pull --rebase origin master || true
+            git push origin master
+          fi
+
+      - name: Sync to Gist
+        if: success() && steps.finalize.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: python scripts/sync_to_gist.py
+
+      - name: Create summary
+        run: |
+          echo "## 📊 IPTV 检测报告" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| 指标 | 数值 |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|------|" >> $GITHUB_STEP_SUMMARY
+          echo "| 有效源数量 | $(wc -l < live_ok.txt 2>/dev/null | tr -d ' ') |" >> $GITHUB_STEP_SUMMARY
+          echo "| 运行时间 | $(date -u '+%Y-%m-%d %H:%M UTC') |" >> $GITHUB_STEP_SUMMARY
+          echo "| 触发方式 | ${{ github.event_name }} |" >> $GITHUB_STEP_SUMMARY

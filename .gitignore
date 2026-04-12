@@ -23,3 +23,6 @@ Karing/
 test_*.py
 
 env_config.bat
+
+# IPTV full tokens (use live_ok_git.txt in git)
+live_ok.txt

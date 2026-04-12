@@ -1884,14 +1884,19 @@ class IPTVChecker:
                         ordered_keys = sorted(grouped.keys(),
                             key=lambda n: max(ch['quality'] for ch in grouped[n]), reverse=True)
                     cat_count = 0
+                    _wrote_genre = False  # 每分类只写一次 #genre# 分隔行
                     for name in ordered_keys:
                         if _total_written >= output_limit:
                             break
+                        # 写分类分隔行（首次进入该分类时）
+                        if not _wrote_genre:
+                            f.write(f"{cat},#genre#\n")
+                            _wrote_genre = True
                         chs = sorted(grouped[name], key=lambda x: x['quality'], reverse=True)
                         for ch in chs[:max_links]:
                             if _total_written >= output_limit:
                                 break
-                            f.write(f"{cat}|{ch['name']},{ch['url']}\n")
+                            f.write(f"{ch['name']},{ch['url']}\n")
                             _total_written += 1
                             cat_count += 1
                     self.stats['by_category'][cat] = cat_count

@@ -23,3 +23,6 @@ Karing/
 test_*.py
 
 env_config.bat
+
+# IPTV: live_ok.txt has tokens, track live_ok_git.txt instead
+live_ok.txt

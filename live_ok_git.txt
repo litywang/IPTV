@@ -1,0 +1,1413 @@
+4K 專區,#genre#
+cctv8k,https://live.ottiptv.cc/mcp/cctv8k.m3u8
+纪实科教8K,http://111.31.106.140/downflv.brtvcloud.com/8klive/8kliveok.m3u8
+cctv4k,https://live.ottiptv.cc/mcp/cctv4k.m3u8
+四川卫视4K,http://39.152.103.17:8089/tsfile/live/1044_1.m3u8
+东方卫视4K,https://bp-resource-dfl.bestv.cn/148/3/video.m3u8
+苏州4K,https://tylive.kan0512.com/norecord/csztv4k_4k.m3u8
+欢笑剧场4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=SUUmND
+北京卫视4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pWPaxn
+CCTV-16奥林匹克4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=gL7FWg
+广东卫视4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uFe51z
+CCTV-4K超高清,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dcf8eW
+江苏卫视4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pFLJcy
+湖南卫视4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=01RBk6
+山东卫视4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=QDTzO8
+浙江卫视4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XhWfxB
+深圳卫视4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fSBH0N
+4K高清岳云鹏,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0QO94Y
+光明DJ4K,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mLid1n
+港澳台頻,#genre#
+经典香港电影,https://mgtv.ottiptv.cc/mg/625703337.m3u8
+无线星河,https://cdn6.101.qzz.io/163189/tvbxh
+靖天映画,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?id=4gtv-4gtv055
+CTi News,https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV28.m3u8
+靖天戏剧,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?id=4gtv-4gtv058
+广西玉林大容山莲花山顶,https://gcalic.v.myalicdn.com/gc/drs01_1/index.m3u8
+福建漳州醉美沙滩翡翠湾,https://gcalic.v.myalicdn.com/gc/fcw03_1/index.m3u8
+ViuTV (1080p) [Geo-blocked],https://cdn.hklive.tv/xxxx/99/index.m3u8
+TVB Finance and Sport Channel (720p),https://cdn.hklive.tv/xxxx/85/index.m3u8
+TVB J2 (720p),https://cdn.hklive.tv/xxxx/82/index.m3u8
+TVB News Channel (720p),https://cdn.hklive.tv/xxxx/83/index.m3u8
+FTV News,https://ythls.armelin.one/channel/UC2VmWn8dAqkzlQqvy02E1PA.m3u8
+Good 2,https://live.streamingfast.net/osmflivech2.m3u8
+Good TV,https://live.streamingfast.net/osmflivech1.m3u8
+HOY TV (720p),http://media.fantv.hk/m3u8/archive/channel2.m3u8
+TTV News,https://ythls.armelin.one/channel/UC8ROUUjHzEQm-ndb69CX8Ww.m3u8
+TVB功夫(国),http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Uosk5F
+TVB翡翠台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=huSRh6
+Now爆谷台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=G5U37p
+凤凰中文台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=WJwPRr
+TVB Plus,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=C2rXqm
+TVB星河,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=w1Y0Jd
+Now爆谷(国),http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eOPNK5
+TVB千禧经典台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=z5nqtK
+凤凰香港台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=wsz9I1
+Now星影台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=v92ryC
+无线新闻台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KCep61
+翡翠台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=C8GNyX
+美亚电影(台湾),http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IVaEeF
+TVB生活台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=LBx3a5
+东森财经台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xclZck
+小公视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=aV3Ueq
+Now新聞台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=NKqtlf
+Now星影(国),http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=vWmjmM
+無綫新聞台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=poEpSb
+TVBS HD,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OXoZ9V
+香港卫视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=yBYc9j
+公视台语台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XGseeg
+中视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ldxFcB
+民视台湾台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=K40h7R
+中视菁采,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dDcVXj
+Now財經台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MVa7qH
+寰宇台湾台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1clxDn
+TVB戏曲台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4Tu1vM
+HOY 國際財經台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=QWWtnc
+环球电视台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mH29ZR
+AXN电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HmtdHG
+HOY TV,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=d3DOW5
+华视新闻资讯,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=icXUR6
+台视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fFwaCY
+ViuTV,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=m60Cav
+ViuTVSix_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=aPX3iN
+香港环球卫视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=q0wBWZ
+民视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4dmDLB
+华视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XetPZd
+HOY 資訊台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=vTT1OY
+翡翠台_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=VHcaJn
+NowSports,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YPISjm
+TVB PLUS_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Fi1kpR
+台视新闻,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=X2hWM0
+华视教育体育文化,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=z3VNL9
+ROCK综艺,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6DZK8b
+莲花卫视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IPAWkN
+东森新闻台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=nkaRgE
+台视综合,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=5yW9Kf
+凤凰资讯台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=sz0hY1
+Now直播台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ATgg5h
+民视第一台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fsSarq
+东森电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=lcBSVn
+中视新闻台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=7iUri0
+明珠台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ekcTaE
+中天新闻台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fd6hI7
+HOY资讯台_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=J6e9N4
+中视经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=x7eFFp
+ViuTVsix,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=rFurVx
+中视新闻,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tB3RGY
+寰宇新闻台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8Z5JXe
+黄金翡翠台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8pb6PS
+龙祥时代,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YEGfBs
+民视新闻台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=VCKkC6
+无线新闻台_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=jRvfrJ
+公视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=wtIry4
+民视综艺台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qmfKCe
+明珠台_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zDIbss
+台视财经,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=nRbBTN
+华文卫视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=7Ej9aK
+八度空间_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1rLKNE
+Astro AOD_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BmeURE
+Astro QJ_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=rcy05R
+华丽翡翠台_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=a5R9lm
+Astro欢喜台_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6syHOW
+ViuTV_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=x5ddqq
+TVB娱乐新闻台_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fpIG1a
+凤凰中文,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=yzJqJE
+Astro AEC_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=629P4l
+TVB星河_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qEAjk5
+环球旅游,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=EjigOf
+萨马兰奇杯 U12第23场 澳門維他奶星苗 VS 温州华奥 清流播出 18:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uFhSOw
+NBL 香港金牛VS盐南苏科雄狮 解说 16:50,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=7yk6WK
+萨马兰奇杯 U12第42场 澳門維他奶星苗 VS 石狮草根 清流播出 17:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BwCRZB
+NBL 香港金牛VS盐南苏科雄狮 现场原声 16:50,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dpFcM8
+萨马兰奇杯 U12第24场 石狮草根 VS 香港東方 清流播出 19:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=2wZWc9
+东亚超级联赛 香港东方VS宇都宫王道 清流播出3 20:05,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eDpSl9
+宇宙探索飞船,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HFqV8H
+影視劇集,#genre#
+CCTV8电视剧,https://mgtv.ottiptv.cc/mg/624878356.m3u8
+辽宁广播电视台影视剧频道,https://mgtv.ottiptv.cc/mg/962067517.m3u8
+上视东方影视,https://mgtv.ottiptv.cc/mg/617290047.m3u8
+南方影视,https://mgtv.ottiptv.cc/mg/614961829.m3u8
+风云剧场,https://live.ottiptv.cc/mcp/fyjc.m3u8
+CCTV第一剧场,https://epg.pw/stream/6d7bf281e3d739806a73f5373acaa6e01988ec9739f5ac1355ce54b47a928472.m3u8
+抗战经典影片,https://mgtv.ottiptv.cc/mg/617432318.m3u8
+AMC电影,http://61.221.215.25:8800/hls/43/index.m3u8
+都市剧场,https://satellitepull.cnr.cn/live/wxcqxwgb/playlist.m3u8
+甘肃都市,https://satellitepull.cnr.cn/live/wxgsdstb/playlist.m3u8
+龙华电影,https://cdn8.163189.xyz/live/lhdy/stream.m3u8
+哈尔滨影视,http://stream.hrbtv.net/yspd/sd/live.m3u8
+安徽影视,https://www.ahtv.cn/folder9000/folder20193?channelIndex=3
+句容影院,http://jrlive.jrntv.com/live/_definst_/yingshis/chunklist_w1994429382.m3u8
+无锡都市资讯,http://stream.thmz.com/wxtv3/playlist.m3u8
+CHC电影,http://183.237.95.108:9901/tsfile/live/1008_1.m3u8?playlive=0&authid=0
+韩国电影1,https://stream.ads.ottera.tv/playlist.m3u8?network_id=595
+韩国电影2,https://stream.ads.ottera.tv/playlist.m3u8?network_id=743
+电影漩涡,https://goodiptv.club/douyu/8706350
+撩电影8,https://goodiptv.club/douyu/9351043
+邵氏影院,http://www.goodiptv.club/douyu/4246519
+同同电影,https://goodiptv.club/douyu/10155359
+经典电影,https://yylunbo.ottiptv.cc/yy/1414812324
+华语影视,http://www.goodiptv.club/douyu/3928
+CHC家庭影院,https://mgtv.ottiptv.cc/mg/644368373.m3u8
+CHC影迷电影,https://mgtv.ottiptv.cc/mg/952383261.m3u8
+陕西都市青春频道,https://mgtv.ottiptv.cc/mg/956909358.m3u8
+CHC动作电影,https://mgtv.ottiptv.cc/mg/644368714.m3u8
+怀旧剧场,https://live.ottiptv.cc/mcp/hjjc.m3u8
+cctv6,https://live.ottiptv.cc/mcp/cctv6.m3u8
+CCTV怀旧剧场,http://38.75.136.137:98/gslb/dsdqpub/hjjc.m3u8
+上虞文化影院,http://l.cztvcloud.com/channels/lantian/SXshangyu2/720p.m3u8
+东阳影视生活,http://l.cztvcloud.com/channels/lantian/SXdongyang1/720p.m3u8
+鸡哥聊电影,https://goodiptv.club/douyu/5067952
+浙江教科影视,https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
+爱星影视,https://goodiptv.club/douyu/9476806
+南国都市,http://tencentplay.gztv.com/live/nanguodushi.m3u8
+南宁都市生活,http://615bbf179ba53515dccad7b1da5d1ad9.livehwc3.cn/hls.nntv.cn/nnlive/WLSH_24.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=2598844eaee8a4265e706fc14b3fc11d
+云南都市,https://hwapi.yntv.net/62hdvf/rjwt14.m3u8
+西安都市,http://112.46.105.20:8009/hls/29/index.m3u8
+淮安影院娱乐,http://live1.habctv.com/ysylsl/sd/live.m3u8
+陕西都市青春,http://112.46.105.20:8009/hls/19/index.m3u8
+黑龙江都市,https://idclive.hljtv.com:4430/live/dushi_hd.m3u8
+长影频道,http://tpc.x3322.net:9901/tsfile/live/1010_1.m3u8
+河北都市,https://radio.pull.hebtv.com/live/hebnczx.m3u8
+开心逛剧场,https://goodiptv.club/douyu/10329310
+浙江钱江都市,https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8
+经典剧集,http://www.goodiptv.club/douyu/6863367
+CCTV6电影,https://mgtv.ottiptv.cc/mg/624878396.m3u8
+第一剧场,https://live.ottiptv.cc/mcp/dyjc.m3u8
+豆瓣电影,https://live.tvfix.org/live/cmc/index.m3u8
+古装武侠,http://www.goodiptv.club/douyu/2793084
+刀刀影院,http://www.goodiptv.club/douyu/747764
+美亚电影,https://live.tvfix.org/live/mydy/index.m3u8
+天映频道,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dYLMXk
+PopC电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=FxCjSm
+美亚电影台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=FpJBRi
+天映经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=F7A9vZ
+千禧经典台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=90Qchb
+重温经典频道,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OR5upW
+黄金华剧台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=rkTiih
+1905电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=NFkDdp
+亚洲剧集台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=GY0r2Y
+天映经典台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=382nlv
+龙华洋片,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=FNKwtE
+龙华日韩,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zMdUGc
+龙华卡通,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=GEhzLs
+Y+剧场,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=yxGF79
+CCTV6,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=3TybfE
+天映频道_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=5yxKQi
+龙华偶像,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=TItYir
+龙华戏剧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BZ6ZaY
+龙华经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=y5AldV
+深圳都市,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=vSkN2z
+数字电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=LG4Vts
+广东影视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZKQd76
+CHC家庭电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zdWFIw
+天映经典_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=aJFPdv
+爱奇艺_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=yc2YvJ
+赛事最经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Da7CxU
+千禧经典台_SMT,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=9NCjOI
+经典动画大集合,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eaJgJc
+乒乓球经典赛事 延续火热状态！林诗栋亚洲杯男单摘铜 全场回放 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6kB1gr
+DJ情歌《爱情迷了路》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=if85GX
+经典歌曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qGzlzu
+奥斯卡经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=jdeL6u
+电子琴《20分钟经典流行音乐》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xxTnPu
+【经典老歌】DJ8首,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dkiq8k
+经典DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=bUITGd
+2021酒吧夜店经典中文车载劲爆DJ舞曲大串烧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=cdwJGi
+DJ13首《经典老歌》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hegrY8
+经典老歌6首,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=LH8HDH
+经典老歌DJ版精选六首,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=QEwWCA
+高胜美经典歌曲专辑,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=aHv8W1
+经典老歌DJ舞曲七首,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=AdaXq6
+《经典老歌》伤感女声篇,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=L1smju
+爱情情歌dj网,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pvRywe
+《经典老歌》DJ舞曲串烧，70、80、90后,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Ytxmbi
+精彩短剧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Ei50n8
+金庸经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=98pOVF
+网神影视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=itfCFf
+奶虫影院,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MsWf6R
+爱情公寓,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=GtQJtq
+粤语电影1,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qckjGq
+经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ATx95S
+可乐影视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=REcJxi
+恐怖电影3,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ROH84p
+经典影视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=AtX3rp
+科幻Fans布玛,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IfaP1X
+电影最TOP,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mHTGV8
+特辑电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=5tnfQz
+惊怂影视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Zr77Ty
+牛叔说剧悬疑,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fK7iwD
+凌儿影院,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=wLxK7O
+冰冰影院,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=9n8YhG
+牛叔说电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XrH2Mu
+老邪说电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=gELDrY
+解说-悬疑电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XGoZq8
+怡宝影视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mRAUMO
+悬疑影视合集,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ssR9YO
+漫威君集合,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=RGX3Cy
+小涛讲电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=JMvmcr
+神配音-经典搞笑,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=oRKsDb
+代娱说美剧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=CrNNN6
+日漫经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uOXpzk
+老王忆经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tWV25S
+悬疑-侦探宇宙,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YuLowS
+逗米说电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uXrAlM
+虫哥说电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XFe4BD
+解说-经典武侠,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zz5zAT
+有部电影儿说剧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=jICico
+邸生讲解经典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4sLJNB
+刘哔讲电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=gDMYL2
+解说-3说电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eSRxsV
+粤语电影2,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Or7ols
+电影迷小雅,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=J3lKzS
+刘老师说电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qKN4GL
+星君说电影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=sb8eOp
+悬疑-惊悚乐园,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=juoLco
+央視頻道,#genre#
+CCTV1,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=cozG0r
+CCTV2,http://38.75.136.137:98/gslb/dsdqbv/cctv2hd.m3u8
+CCTV3,http://39.152.103.17:8089/tsfile/live/1002_1.m3u8
+CCTV4,http://74.91.26.218:82/live/cctv4hd.m3u8
+CCTV5,http://38.75.136.137:98/gslb/dsdqpub/cctv5hd.m3u8
+CCTV7,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MSCrAY
+CCTV8,http://124.165.251.82:85/tsfile/live/0008_1.m3u8?playlive=1&authid=0
+CCTV9,http://74.91.26.218:82/live/cctv9hd.m3u8
+CCTV10,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kLyqQL
+CCTV11,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zrOpqW
+CCTV12,http://23.237.228.134/live3/CCTV12.m3u8
+CCTV13,https://event.pull.hebtv.com/jishi/cp1.m3u8
+CCTV14,http://74.91.26.218:82/live/cctv14hd.m3u8
+CCTV15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=jqjoLz
+CCTV16,http://74.91.26.218:82/live/cctv16hd.m3u8
+CCTV10科教,https://mgtv.ottiptv.cc/mg/624878405.m3u8
+CCTV11戏曲,https://mgtv.ottiptv.cc/mg/667987558.m3u8
+CCTV13新闻,https://mgtv.ottiptv.cc/mg/608807423.m3u8
+CCTV17农业农村,https://mgtv.ottiptv.cc/mg/673168256.m3u8
+CCTV1综合,https://mgtv.ottiptv.cc/mg/608807420.m3u8
+CCTV2财经,https://mgtv.ottiptv.cc/mg/631780532.m3u8
+CCTV5体育,https://mgtv.ottiptv.cc/mg/641886683.m3u8
+cctv1,https://live.ottiptv.cc/mcp/cctv1.m3u8
+cctv16,https://live.ottiptv.cc/mcp/cctv16.m3u8
+cctv2,https://live.ottiptv.cc/mcp/cctv2.m3u8
+cctv3,https://live.ottiptv.cc/mcp/cctv3.m3u8
+中国农林卫视,https://mgtv.ottiptv.cc/mg/956904896.m3u8
+兵团五师双河影,https://liveout.btzx.com.cn/62ds9e/6o77s4.m3u8
+CCTV央视台球,https://epg.pw/stream/ca9c1cd4b97fb824cedd7fedfd0c7a950afdd7f00751cfbb7c2d89831d7746a5.m3u8
+CCTV15音乐,https://mgtv.ottiptv.cc/mg/673168223.m3u8
+CCTV5+体育赛事,https://mgtv.ottiptv.cc/mg/641886773.m3u8
+兵团卫视,https://mgtv.ottiptv.cc/mg/956923145.m3u8
+CCTV12社会与法,https://mgtv.ottiptv.cc/mg/673168185.m3u8
+CCTV14少儿,https://mgtv.ottiptv.cc/mg/624878440.m3u8
+CCTV7国防军事,https://mgtv.ottiptv.cc/mg/673168121.m3u8
+cctv10,https://live.ottiptv.cc/mcp/cctv10.m3u8
+cctv11,https://live.ottiptv.cc/mcp/cctv11.m3u8
+cctv12,https://live.ottiptv.cc/mcp/cctv12.m3u8
+cctv13,https://live.ottiptv.cc/mcp/cctv13.m3u8
+cctv14,https://live.ottiptv.cc/mcp/cctv14.m3u8
+cctv15,https://live.ottiptv.cc/mcp/cctv15.m3u8
+cctv17,https://live.ottiptv.cc/mcp/cctv17.m3u8
+cctv4,https://live.ottiptv.cc/mcp/cctv4.m3u8
+cctv5,https://live.ottiptv.cc/mcp/cctv5.m3u8
+cctv5p,https://live.ottiptv.cc/mcp/cctv5p.m3u8
+cctv7,https://live.ottiptv.cc/mcp/cctv7.m3u8
+cctv8,https://live.ottiptv.cc/mcp/cctv8.m3u8
+cctv9,https://live.ottiptv.cc/mcp/cctv9.m3u8
+兵团五师双河新闻综合,http://liveout.btzx.com.cn/62ds9e/4nxdih.m3u8
+兵团八师石河子新闻综合,http://124.88.144.73:1935/live/xwzh/playlist.m3u8
+CCTV4欧洲,https://mgtv.ottiptv.cc/mg/608807419.m3u8
+中央电视塔东,https://gcalic.v.myalicdn.com/gc/ztd_1/index.m3u8
+中央电视塔南,https://gcalic.v.myalicdn.com/gc/ztn_1/index.m3u8
+CCTV3综艺,https://mgtv.ottiptv.cc/mg/624878271.m3u8
+CCTV4中文国际,https://mgtv.ottiptv.cc/mg/631780421.m3u8
+CCTV4美洲,https://mgtv.ottiptv.cc/mg/608807416.m3u8
+CCTV9纪录,https://mgtv.ottiptv.cc/mg/673168140.m3u8
+CETV1,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ANnltS
+CETV2,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=rgjZOa
+CETV4,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eK0MbL
+衛視綜藝,#genre#
+江西卫视,https://live.ottiptv.cc/mcp/jiangxi.m3u8
+北京卫视,https://mgtv.ottiptv.cc/mg/630287636.m3u8
+江苏卫视,https://mgtv.ottiptv.cc/mg/623899368.m3u8
+吉林卫视,https://mgtv.ottiptv.cc/mg/947472500.m3u8
+河北卫视,https://mgtv.ottiptv.cc/mg/962042070.m3u8
+陕西卫视,https://mgtv.ottiptv.cc/mg/738910838.m3u8
+宁夏卫视,https://mgtv.ottiptv.cc/mg/738910535.m3u8
+海峡卫视,https://mgtv.ottiptv.cc/mg/849119120.m3u8
+东方卫视,https://mgtv.ottiptv.cc/mg/651632648.m3u8
+东南卫视,https://mgtv.ottiptv.cc/mg/849116810.m3u8
+三沙卫视,https://mgtv.ottiptv.cc/mg/961023778.m3u8
+天津卫视,http://38.75.136.137:98/gslb/dsdqpub/tjwshd.m3u8
+湖南卫视,https://live.ottiptv.cc/mcp/hunan.m3u8
+内蒙古卫视,https://live.ottiptv.cc/mcp/neimenggu.m3u8
+西藏卫视,https://live.ottiptv.cc/mcp/xizang.m3u8
+广东卫视,https://mgtv.ottiptv.cc/mg/608831231.m3u8
+河南卫视,https://mgtv.ottiptv.cc/mg/790187291.m3u8
+重庆卫视,https://mgtv.ottiptv.cc/mg/738910914.m3u8
+浙江卫视,https://live.ottiptv.cc/mcp/zhejiang.m3u8
+广西卫视,https://live.ottiptv.cc/mcp/guangxi.m3u8
+安徽卫视,http://38.75.136.137:98/gslb/dsdqpub/ahwshd.m3u8
+湖北卫视,https://mgtv.ottiptv.cc/mg/947472496.m3u8
+青海卫视,https://mgtv.ottiptv.cc/mg/947472506.m3u8
+大湾区卫视,https://mgtv.ottiptv.cc/mg/608917627.m3u8
+辽宁卫视,https://mgtv.ottiptv.cc/mg/630291707.m3u8
+山东卫视,https://live.ottiptv.cc/mcp/shandong.m3u8
+贵州卫视,https://live.ottiptv.cc/mcp/guizhou.m3u8
+黑龙江卫视,https://live.ottiptv.cc/mcp/heilongjiang.m3u8
+四川卫视,https://live.ottiptv.cc/mcp/sichuan.m3u8
+山西卫视,https://live.ottiptv.cc/mcp/shanxi.m3u8
+甘肃卫视,http://38.75.136.137:98/gslb/dsdqpub/gswshd.m3u8
+深圳卫视,http://38.75.136.137:98/gslb/dsdqpub/szwshd.m3u8
+云南卫视,http://38.75.136.137:98/gslb/dsdqpub/ynwshd.m3u8
+新疆卫视,http://218.84.12.186:8001/hls/main/playlist.m3u8
+延边卫视,https://srs.iyb983.cn/video/CYS/index.m3u8
+安多卫视,https://liveout.xntv.tv/a65jur/96iln2.m3u8
+海南卫视,https://mgtv.ottiptv.cc/mg/947472502.m3u8
+亚洲卫视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=RDbrwo
+亚太第一卫视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uECWAt
+體育賽事,#genre#
+陕西体育休闲,https://mgtv.ottiptv.cc/migu/956909356.m3u8
+精品体育,https://epg.pw/stream/f7556eccd4ae06b0c2991fdc7a4f8388496559f728cc82459a8e50346040e226.m3u8
+CCTV风云足球,https://epg.pw/stream/ac8062ec9484078061d3bef507c15a423ac57ae4144e3fcc4b0a198dd420f911.m3u8
+广东体育,http://cdn2.163189.xyz/live/gdty/stream.m3u8
+篮球小人物,https://goodiptv.club/douyu/9184257
+屿风体育,https://goodiptv.club/douyu/10329889
+辽宁广播电视台体育休闲频道,https://mgtv.ottiptv.cc/mg/962067526.m3u8
+高尔夫网球,http://38.75.136.137:98/gslb/dsdqpub/gefwq.m3u8
+安徽综艺体育,http://112.27.235.94:8000/hls/25/index.m3u8
+广州竞赛,http://8.138.7.223/tv/gzjs.m3u8
+黑龙江文体,https://idclive.hljtv.com:4430/live/hljwy_hd.m3u8
+体育休闲频道,https://mgtv.ottiptv.cc/mg/626064707.m3u8
+陕西体育休闲频道,https://mgtv.ottiptv.cc/mg/956909356.m3u8
+NBA 热火VS公牛 全场回放（英文原声） 06:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=EjBnva
+英超 托特纳姆热刺VS曼城 全场回放（陈凯冬、何辉） 00:15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hjcMYI
+英超 托特纳姆热刺VS曼城 全场回放（陈渤胄） 00:15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=K1AtIa
+NBA 马刺VS魔术 全场回放（英文原声） 09:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=h6FYjE
+NBA 活塞VS篮网 全场回放（罗森） 06:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iwTJGy
+NBA 马刺VS魔术 全场回放（王晓晨） 09:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=U2FKE5
+NBA 凯尔特人VS雄鹿 全场回放（英文原声） 04:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=2ywcEr
+德甲 多特蒙德VS海登海姆 全场回放（沈云怡、秦游夏） 00:15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tNNwBK
+法甲 尼斯VS布雷斯特 全场回放（李永熙） 00:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8qrDR9
+NBA 尼克斯VS湖人 全场回放（英文原声） 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=urxNoX
+NBA 热火VS公牛 全场回放（张泽欣） 06:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=O0Ctky
+NBA 开拓者VS骑士 全场回放（英文原声） 09:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=9Bdcam
+意甲 克雷莫内塞VS国际米兰 全场回放（刘腾、贺宇） 00:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=TV3Wo7
+NBA 尼克斯VS湖人 全场回放（郑泽鹏） 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=EensE0
+NBA 凯尔特人VS雄鹿 全场回放（陈鑫隆） 04:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1gzz6V
+法甲 图卢兹VS欧塞尔 全场回放（盛斌） 00:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=NHAsFT
+NBA 猛龙VS爵士 全场回放（英文原声） 06:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=o74kMF
+意甲 帕尔马VS尤文图斯 全场回放（吴桐、刘腾） 03:15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=O7VW1R
+NBA 尼克斯VS湖人 全场回放（李天宇、刘铁、陈正昊、魏欣怡） 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=R1lfzP
+斯诺克 贾德·特鲁姆普10-4肖恩·墨菲 【回放】肖恩·墨菲4-10贾德·特鲁姆普（柏林） 03:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=DTMNIL
+英超 托特纳姆热刺VS曼城 全场回放（洪荒） 00:15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=okTaA5
+NBA 开拓者VS骑士 全场回放（邵化谦、季孟年、裴优） 09:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=V3NkXS
+NBA 奇才VS国王 全场回放（英文原声） 06:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dkXS5d
+西甲 毕尔巴鄂竞技VS皇家社会 全场回放（孙雨轩） 03:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=vRgxV2
+NBA 太阳VS快船 全场回放（连睿、苏群、周鹏、秋童） 08:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=w7Y9m5
+西甲 赫塔菲VS塞尔塔 全场回放（周楚雄） 01:15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=RZz5vr
+英超 托特纳姆热刺VS曼城 全场回放（詹俊、张路、林梦鸽） 00:15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=RrdSJb
+NBA 奇才VS国王 全场回放（刘芳宇） 06:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pEQf2g
+法甲 斯特拉斯堡VS巴黎圣日耳曼 全场回放（鹿中原、王宇） 03:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=vpXegL
+斯诺克 贾德·特鲁姆普10-4肖恩·墨菲 【回放】肖恩·墨菲4-10贾德·特鲁姆普 03:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=obPqRb
+NBA 活塞VS篮网 全场回放（英文原声） 06:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YNhCMn
+NBA 掘金VS雷霆 全场回放（孙博） 10:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Tu7FGr
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】曾丽美2-1乔恩特 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IJZgNd
+法甲 昂热VS梅斯 全场回放（乔迁） 00:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YToawS
+NBA 步行者VS火箭 全场回放（连睿 周鹏） 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1LvUmw
+NBA 黄蜂VS鹈鹕 全场回放（王凯） 03:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iJyqa3
+五人制亚洲杯 伊朗VS乌兹别克斯坦 涂远 13:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Q24VCU
+NBA 灰熊VS森林狼 全场回放（英文原声） 08:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=J4sAT2
+NBA 太阳VS快船 全场回放（英文原声） 08:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HhT4yO
+CBA 天津先行者VS山东高速 八强齐聚 共逐荣耀！来咪咕 看CBA俱乐部杯决赛 19:35,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KnVLhS
+斯诺克 丁俊晖VS霍金斯 吴宜泽张安达出战 朱峰立 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1qc0oD
+五人制亚洲杯 日本VS阿富汗 涂远 17:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6qCBoL
+五人制亚洲杯 伊朗VS乌兹别克斯坦 赛场原声 13:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xRD2Cm
+意甲 乌迪内斯VS罗马 全场回放（刘焕） 03:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MmGgDm
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】巴多萨1-2萨斯诺维奇 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Bz8Aik
+Zuffa拳击 Zuffa拳击第2期：瓦伦苏埃拉判定击败托雷斯 Zuffa拳击第2期全场回放 07:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=DBnBhL
+五人制亚洲杯 泰国VS伊拉克 赛场原声 15:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=7P4flm
+斯诺克 丁俊晖VS霍金斯 吴宜泽张安达出战 4号桌 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KwBDdQ
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】塞莱赫梅蒂娃1-2奥斯塔彭科 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ijV7OI
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】曾丽美2-1乔恩特（英文原声） 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zUrgPg
+西甲 马略卡VS塞维利亚 全场回放（李霄） 03:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=yg3CnH
+CBA 宁波町渥VS北京控股 图文直播 19:35,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OHUa1F
+NBA 灰熊VS森林狼 全场回放（陈鑫隆） 08:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Rag6K3
+英超 桑德兰VS伯恩利 全场回放（涂远） 03:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=krnIuF
+NBA 开拓者VS骑士 全场回放（邢晨） 09:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=sm8FS1
+斯诺克 丁俊晖VS霍金斯 吴宜泽张安达出战 3号桌 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=GMVcN7
+NBA 快船VS76人 全场回放（李天宇、刘铁、陈正昊、金佳悦） 10:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Tpl4T9
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】伊埃拉2-0森梅兹 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=lL5oEe
+五人制亚洲杯 日本VS阿富汗 赛场原声 17:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=DH7J1z
+WTA 萨姆索诺娃出战！陶森压场 英文原声 17:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=AcX9ht
+斯诺克 肖国栋PK囧哥 周跃龙塞尔比出战 1号桌 13:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZLdOwx
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】雅斯特雷姆斯卡2-0玛雅（英文原声） 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=bR0Q2u
+WTA 萨姆索诺娃出战！陶森压场 清流 17:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=jXlAs3
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】伊埃拉2-0森梅兹（英文原声） 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=afgAnd
+乒乓球亚洲杯 抽签仪式 现场原声 16:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PqE0Lm
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】塞莱赫梅蒂娃1-2奥斯塔彭科（英文原声） 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kt1yLy
+斯诺克 肖国栋PK囧哥 周跃龙塞尔比出战 3号桌 13:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OqDOrU
+乒乓球亚洲杯 小组循环赛第一轮 2号桌 11:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XpewbT
+五人制亚洲杯 泰国VS伊拉克 乔迁 15:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=LKCHn5
+NBA 黄蜂VS鹈鹕 全场回放（英文原声） 03:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=AJUUir
+NBA 篮网VS湖人 郑泽鹏 08:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=2pXain
+NBA 独行侠VS凯尔特人 英文原声 08:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=2uUk3x
+乒乓球亚洲杯 小组循环赛第一轮 周冠达 11:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pIq1pF
+乒乓球亚洲杯 小组循环赛第一轮 1号桌 11:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=e2uYMk
+斯诺克 丁俊晖VS霍金斯 吴宜泽张安达出战 秦正 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=znXWWO
+CBA 广东东阳光VS上海久事 图文直播 19:35,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=D5BcvB
+五人制亚洲杯 印度尼西亚VS越南 王子睿 19:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Mwxxp4
+NBA 开拓者VS太阳 庄宁宇 殷文玉 廖昕阳 11:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qTNBsX
+意甲 博洛尼亚VSAC米兰 石庆圣 李彦 03:15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=gOGnoz
+NBA 雷霆VS魔术 英文原声 08:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fJjxnx
+乒乓球亚洲杯 小组循环赛第一轮 朱子恒 18:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=5hxT3s
+WTA WTA阿布扎比站Day4 英文原声 17:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6xAMSN
+乒乓球亚洲杯 小组循环赛第一轮 1号桌 18:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zdeF5J
+斯诺克 丁俊晖VS霍金斯 吴宜泽张安达出战 1号桌 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=SMTaXD
+乒乓球亚洲杯 小组循环赛第一轮 刘国正 周冠达 17:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Vi9dpy
+乒乓球亚洲杯 刘国正、周冠达带您分析签位 刘国正 周冠达 周泽昊 18:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=DnqsOp
+乒乓球亚洲杯 小组循环赛第一轮 咪咕环廊视角 17:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zGK8SP
+NBA 篮网VS湖人 姜帆 曾令旭 佳依 08:15,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=5dQFo8
+NBA 活塞VS掘金 英文原声 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=50WQkJ
+乒乓球亚洲杯 小组循环赛第一轮 热身区 10:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IqJEkt
+CBA 四川丰谷酒业VS山西汾酒 图文直播 19:35,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=7e1XSq
+WTA WTA克卢日-纳波卡站Day4 英文原声 17:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=P45WR6
+NBA 勇士VS76人 英文原声 10:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BtuOje
+斯诺克 丁俊晖VS霍金斯 吴宜泽张安达出战 2号桌 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=aTn06y
+乒乓球亚洲杯 小组循环赛第一轮 刘馨蕊 18:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Du9Txv
+CBA 辽宁本钢VS江苏肯帝亚 图文直播 19:35,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=oHAcWc
+乒乓球亚洲杯 第一比赛日热身区 热身区 10:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZTm287
+斯诺克 赵心童再战希金斯 袁思俊VS特鲁姆普 1号桌 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mIMNwv
+NBA 步行者VS爵士 周赫 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=vUNNdq
+NBA 奇才VS尼克斯 英文原声 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fBVOBs
+CBA 青岛崂山啤酒VS广州朗肽海本 图文直播 19:35,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qu3BNh
+意甲 博洛尼亚VSAC米兰 赛场原声 03:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=A2IQSg
+乒乓球亚洲杯 小组循环赛第一轮 周泽昊 11:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=GcFSuj
+WTA WTA俄斯特拉发站Day4 英文原声 18:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=FPSqTZ
+CBA 新疆伊力特VS浙江稠州金租 图文直播 20:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=AXDZ1C
+WTA WTA阿布扎比站Day4 智能字幕 17:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pKsVCM
+乒乓球亚洲杯 小组循环赛第一轮 3号桌 18:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Yle23B
+NBA 篮网VS湖人 英文原声 08:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=53TR6k
+NBA 奇才VS尼克斯 贾磊 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=O8zCmG
+WTA WTA俄斯特拉发站Day4 清流 18:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=CGc2M5
+NBA 热火VS老鹰 刘芳宇 08:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BVnJRd
+五人制亚洲杯 印度尼西亚VS越南 赛场原声 19:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MUklWn
+NBA 活塞VS掘金 张泽欣 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1P5UP3
+NBA 勇士VS76人 杨健 马健 秋童 10:45,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=43pcm8
+NBA 雄鹿VS公牛 英文原声 08:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4UJ9wG
+乒乓球亚洲杯 抽签仪式 肖扬 16:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6zFxWr
+斯诺克 肖国栋PK囧哥 周跃龙塞尔比出战 2号桌 13:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pGbca9
+NBA 热火VS老鹰 英文原声 08:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Gr6KPg
+CBA 南京天之蓝VS深圳马可波罗 图文直播 19:35,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PRtwvx
+NBA 独行侠VS凯尔特人 蔡凯臣 季孟年 08:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=d2i5DZ
+NBA 雷霆VS魔术 罗森 08:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=vwPB9Z
+浙江省城市篮球联赛 杭州VS丽水 25/26赛季浙江省城市篮球联赛: 杭州VS丽水 19:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=TXFWc3
+乒乓球亚洲杯 小组循环赛第一轮 侯英超 11:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iFMUST
+乒乓球亚洲杯 小组循环赛第一轮 2号桌 18:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=u0TC80
+斯诺克 肖国栋PK囧哥 周跃龙塞尔比出战 4号桌 13:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=r8loQV
+WTA WTA阿布扎比站Day4 清流 17:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=msHHVJ
+NBA 开拓者VS太阳 英文原声 11:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=lXtAel
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】雅斯特雷姆斯卡2-0玛雅 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=oMKB0X
+NBA 掘金VS雷霆 全场回放（英文原声） 10:25,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZqLhqr
+斯诺克 奥沙利文、罗伯逊、斯佳辉出战 3号桌 13:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ll7gWn
+乒乓球亚洲杯 小组循环赛第一轮 混采区 18:20,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=y8Nwzy
+乒乓球亚洲杯 小组循环赛第一轮 凌维康 18:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=D1wk6N
+斯诺克 奥沙利文、罗伯逊、斯佳辉出战 4号桌 13:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ioZLZY
+CBA 北京北汽VS福建晋江文旅 图文直播 19:35,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=rg9ilI
+NBA 开拓者VS太阳 邢晨 12:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ebZotf
+乒乓球亚洲杯 小组循环赛第一轮 混采区 11:20,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zu36Ry
+斯诺克 赵心童再战希金斯 袁思俊VS特鲁姆普 3号桌 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uFcMfV
+WTA 伊埃拉横扫 奥斯塔彭科逆转晋级 【回放】巴多萨1-2萨斯诺维奇（英文原声） 15:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MucrUT
+斯诺克 奥沙利文、罗伯逊、斯佳辉出战 2号桌 13:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=lUX8jX
+乒乓球亚洲杯 小组循环赛第一轮 候场区 10:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=CWPZRS
+乒乓球亚洲杯 小组循环赛第一轮 3号桌 11:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tHEsNl
+斯诺克 奥沙利文、罗伯逊、斯佳辉出战 1号桌 13:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=NNsWmD
+WTA WTA克卢日-纳波卡站Day4 清流 17:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Wk3UBs
+乒乓球亚洲杯 小组循环赛第一轮 候场区 17:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=t6MXZ9
+斯诺克 赵心童再战希金斯 袁思俊VS特鲁姆普 4号桌 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=TGlaDr
+NBA 勇士VS76人 董倡硕 10:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=s4RX53
+斯诺克 赵心童再战希金斯 袁思俊VS特鲁姆普 2号桌 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=08MED0
+NBA 雄鹿VS公牛 吴博文 08:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=sCyN5U
+NBA 步行者VS爵士 英文原声 07:55,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PG4n9q
+斯诺克 丁俊晖VS霍金斯 吴宜泽张安达出战 朱蒙 19:00,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=TeOGXe
+邓紫棋,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hvPy0h
+篮球人物,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=X8wTDk
+说评篮球球员,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Bmmafk
+少兒動漫,#genre#
+优漫卡通频道,https://mgtv.ottiptv.cc/mg/626064703.m3u8
+福州少儿,http://live.zohi.tv/video/s10001-fztv-4/index.m3u8
+浙江少儿,https://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8
+南京少儿,http://nklive.nbs.cn/hls/e0981f3f-1a20-4a59-b8d1-17feb83a4610/index.m3u8
+海绵宝宝,https://live.metshop.top/douyu/3949681
+韩国EBS少儿,http://ebsonairios.ebs.co.kr/ebsutablet500k/tablet500k/playlist.m3u8
+广东少儿,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=H5opiy
+新动漫,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MGLyPm
+嘉佳卡通,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZsMh4t
+宝贝对不起dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=SXPXVy
+贝贝baby,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OxlbCb
+日语动画,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YpDAQp
+动画原创,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=wsMyVN
+小淘气说动漫,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Iq2bLi
+说动漫,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MRhvkZ
+洗碗君说动画,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=z2AVkZ
+开心锤动漫,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=7yv2HV
+国译动画,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=9K9TQQ
+皮皮看动漫,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4AfanG
+新聞資訊,#genre#
+淮安新闻综合,https://mgtv.ottiptv.cc/migu/639731826.m3u8
+镇江新闻综合,http://cm-wshls.homecdn.com/live/2aa50.m3u8
+上海新闻综合,https://mgtv.ottiptv.cc/mg/651632657.m3u8
+溧水新闻综合,https://mgtv.ottiptv.cc/migu/639737327.m3u8
+陕西新闻资讯,https://mgtv.ottiptv.cc/migu/956909289.m3u8
+盐城新闻综合,https://mgtv.ottiptv.cc/mg/639731825.m3u8
+徐州新闻综合,https://mgtv.ottiptv.cc/mg/639731747.m3u8
+陕西新闻资讯频道,https://mgtv.ottiptv.cc/mg/956909289.m3u8
+重庆新闻,http://38.75.136.137:98/gslb/dsdqpub/cqxw.m3u8
+连云港新闻综合,https://mgtv.ottiptv.cc/mg/639731715.m3u8
+宿迁新闻综合,https://mgtv.ottiptv.cc/mg/639731832.m3u8
+熊猫直播,https://gcwbndali.v.myalicdn.com/gcwbnd/ipanda1000_2/index.m3u8
+偃师新闻,http://tvpull.dxhmt.cn:9081/tv/10381-1.m3u8
+北京新闻,https://satellitepull.cnr.cn/live/wxbjxwgb/playlist.m3u8
+福建新闻,http://satellitepull.cnr.cn/live/wx32fjxwgb/playlist.m3u8
+中国蓝新闻,http://ali-m-l.cztv.com/channels/lantian/channel009/1080p.m3u8
+缙云新闻综合,http://l.cztvcloud.com/channels/lantian/SXjinyun1/720p.m3u8
+龙泉新闻综合,http://l.cztvcloud.com/channels/lantian/SXlongquan1/720p.m3u8
+龙游新闻综合,https://l.cztvcloud.com/channels/lantian/SXlongyou1/720p.m3u8
+北海新闻综合,https://live.gxrb.com.cn/gx/beihai/index.m3u8
+平遥新闻综合,https://tntgjhjb.live.sxmty.com/live/hls/3a4585ac11ec4e1bb07b419101b370c3/baf63e2b313440c2a25d7859f9b73b05-1.m3u8
+广西新闻,https://tv.gxtv.cn/channel/channelivePlay_9dfd8600075811e9ba67e41f13b60c62.html
+武威新闻,https://play.kankanlive.com/live/1693539781636986.m3u8
+叙州新闻综合,http://pili-live-hls.ybcxjd.com/jdh-live/2108111201035597.m3u8
+无锡新闻综合,http://stream.thmz.com/wxtv1/playlist.m3u8
+安顺新闻,http://hplayer1.juyun.tv/camera/154379194.m3u8
+赣州新闻,https://pili-live-hls-sjxgz2024.sobeylive.com/jxgz2024/396_q_live172526329228525.m3u8
+旺苍新闻综合,http://channel.wcrmt.cn:80/nmip-media/channellive/channel105268/playlist.m3u8
+舟曲新闻,http://pili-live-hls.hfmt.net/gntv/zqtv.m3u8
+泰州新闻综合,https://mgtv.ottiptv.cc/mg/639731818.m3u8
+南通新闻综合,https://mgtv.ottiptv.cc/mg/955227985.m3u8
+武义新闻综合,http://l.cztvcloud.com/channels/lantian/SXwuyi1/720p.m3u8
+新沂新闻,http://live.xysrmt.cn/xwzh/sd/live.m3u8
+宜兴新闻综合,https://mgtv.ottiptv.cc/mg/955227996.m3u8
+公共新闻频道,https://mgtv.ottiptv.cc/mg/626064693.m3u8
+上海第一财经,https://mgtv.ottiptv.cc/mg/608780988.m3u8
+南京新闻综合频道,https://mgtv.ottiptv.cc/mg/838109047.m3u8
+平湖新闻综合,http://l.cztvcloud.com/channels/lantian/SXpinghu1/720p.m3u8
+渑池新闻综合,http://tvpull.dxhmt.cn:9081/tv/11221-1.m3u8
+普陀新闻综合,http://l.cztvcloud.com/channels/lantian/SXputuo1/720p.m3u8
+灵宝新闻综合,http://tvpull.dxhmt.cn:9081/tv/11282-1.m3u8
+沁阳新闻综合,http://tvpull.dxhmt.cn:9081/tv/10882-1.m3u8
+滑县新闻,http://tvpull.dxhmt.cn:9081/tv/10526-1.m3u8
+郸城新闻综合,http://tvpull.dxhmt.cn:9081/tv/11625-1.m3u8
+巩义新闻综合,http://tvpull.dxhmt.cn:9081/tv/10181-1.m3u8
+兰溪新闻综合,http://l.cztvcloud.com/channels/lantian/SXlanxi1/720p.m3u8
+开化新闻综合,http://l.cztvcloud.com/channels/lantian/SXkaihua1/720p.m3u8
+嵊州新闻综合,http://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8#http://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8
+新昌新闻综合,https://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8
+云和新闻综合,http://l.cztvcloud.com/channels/lantian/SXyunhe1/720p.m3u8
+浙江新闻,http://ali-xwl.cztv.com/live/channel071080Plxw.m3u8
+余姚新闻综合,http://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8
+项城新闻,http://tvpull.dxhmt.cn:9081/tv/11681-1.m3u8
+文成新闻综合,http://l.cztvcloud.com/channels/lantian/SXwencheng1/720p.m3u8
+庆元新闻综合,http://l.cztvcloud.com/channels/lantian/SXqingyuan1/720p.m3u8
+上虞新闻综合,http://l.cztvcloud.com/channels/lantian/SXshangyu1/720p.m3u8
+永嘉新闻综合,http://l.cztvcloud.com/channels/lantian/SXyongjia1/720p.m3u8
+浙江公共新闻,https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8
+广州新闻,http://tencentplay.gztv.com/live/xinwen.m3u8
+哈尔滨资讯,http://stream.hrbtv.net/zxpd/sd/live.m3u8
+渭源新闻,http://play.kankanlive.com/live/1720408280309109.m3u8
+东莞生活资讯,https://stream.sun0769.com/dgrtv1/mp4tv2_800/index.m3u8
+合肥新闻,http://112.27.235.94:8000/hls/18/index.m3u8
+太谷新闻综合,https://p2.vzan.com/slowlive/596867413819827251/live.m3u8?zbid=1725814272&tpid=1516989100&type=0
+夹江新闻综合,http://tvfile.jjrm.org.cn/nmip-media/channellive/channel106282/playlist.m3u8
+邯郸新闻,https://jwcdnqx.hebyun.com.cn/live/hdxwzh/1500k/tzwj_video.m3u8
+固镇新闻,http://www.guzhenm.com:7001/hls/hd-live.m3u8
+宜兴新闻,http://yixing-tv-ori-hls.jstv.com/yixing-tv-ori/yixing_xw.m3u8
+珲春新闻,http://stream8.jlntv.cn/hctv/sd/live.m3u8
+舒兰新闻综合,http://stream8.jlntv.cn/shulan/sd/live.m3u8?_upt=332db6421699196585
+舒兰新闻,http://stream8.jlntv.cn/shulan/sd/live.m3u8
+辉南新闻综合,http://stream5.jlntv.cn/hn/sd/live.m3u8
+西安新闻,http://112.46.105.20:8009/hls/28/index.m3u8
+江夏新闻综合,http://59.175.226.142:280/gb28181/xwzh.m3u8
+荆门新闻综合,http://stream.jmtv.com.cn/xwzh/sd/live.m3u8
+苏州生活资讯,https://live-auth.51kandianshi.com/szgd/csztv5.m3u8
+祁县新闻综合,http://ggpagerl.live.sxmty.com/live/hls/b350dc1ac5da45c2b2233f6eb122ddf4/49d3766c7f204685a2a8f027b234c33d.m3u8
+武乡新闻综合,http://uzoiczhh.live.sxmty.com/live/hls/0d41f1480c4042d49927858f01fde707/53130407737b417b9a6259b57246bae3.m3u8
+湖州新闻综合,http://hzcm-live.media.hugd.com/3f5fa7d64c7c46a38c6bd8ad35e836cc/65128273761b4731ae53729ea6dcf932.m3u8?auth_key=2277598215-9d21c15111244bea8d298c361d31a72e-0-d031198f58d44b0e91ba2e3f3b188865
+海宁新闻综合,https://p2hs.vzan.com/slowlive/317913155078575177/live.m3u8
+泸县新闻综合,http://lxfile.lxxcb.cn/nmip-media/channellive/channel103799/playlist.m3u8
+金川新闻综合,http://live.jinchuanrmt.com:90/live/zhxw.m3u8
+松潘新闻综合,http://live.spccmc.com:90/live/spxwzh.m3u8
+苏州新闻综合,https://live-auth.51kandianshi.com/szgd/csztv1.m3u8
+泗洪新闻综合,http://live1.habctv.com/ggpdsl/sd/live.m3u8#http://live1.habctv.com/ggpdsl/sd/live.m3u8
+雅安新闻综合,https://play.yunxya.com/channellive/xinwen.m3u8
+滦平新闻,http://jwplay.hebyun.com.cn/live/LPTV001/1500k/tzwj_video.m3u8
+烟台新闻综合,http://live.yantaitv.cn/live/3e81a8879da44c5dadf3bd9c10468e1c/9b776d420ee4438199b7657c8eb88f07-1.m3u8
+陕西新闻咨询,http://112.46.105.20:8009/hls/18/index.m3u8
+衡阳新闻综合,https://liveplay-srs.voc.com.cn/hls/tv/183_554704.m3u8
+汶川新闻综合,http://live.iwcmt.cn:90/live/zhxw.m3u8
+江津新闻,http://222.179.155.21:1935/ch1.m3u8
+江阴新闻综合,https://mgtv.ottiptv.cc/mg/955227979.m3u8
+直播中国,https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
+义马新闻综合,http://tvpull.dxhmt.cn:9081/tv/11281-1.m3u8
+第一财经,http://satellitepull.cnr.cn/live/wx32dycjgb/playlist.m3u8
+衢江新闻综合,http://l.cztvcloud.com/channels/lantian/SXqujiang1/720p.m3u8
+诸暨新闻综合,https://l.cztvcloud.com/channels/lantian/SXzhuji3/720p.m3u8
+萧山新闻综合,https://l.cztvcloud.com/channels/lantian/SXxiaoshan1/720p.m3u8
+象山新闻综合,http://l.cztvcloud.com/channels/lantian/SXxiangshan1/720p.m3u8
+哈尔滨新闻综合,http://stream.hrbtv.net/xwzh/sd/live.m3u8
+苍南新闻综合,https://l.cztvcloud.com/channels/lantian/SXcangnan1/720p.m3u8
+南京新闻综合,http://nklive.nbs.cn/hls/d511bc9d-a694-4453-b3a2-4fc842cc97a1/index.m3u8
+西宁新闻综合,https://liveout.xntv.tv/a65jur/90p2i1.m3u8
+七台河新闻综合,http://live.qthnews.org.cn:1935/live/live1/800k/tzwj_video.m3u8
+东莞新闻综合,https://stream.sun0769.com/dgrtv1/mp4tv1_800/index.m3u8
+新闻综合,https://m3u8channel.yunxya.com/nmip-media/channellive/channel100028/playlist.m3u8
+黄山新闻综合,http://hslive.hsnewsnet.com/lsdream/hve9Wjs/1000/live.m3u8
+新安新闻综合,http://tvpull.dxhmt.cn:9081/tv/10323-1.m3u8
+i-Cable News Channel (有線新聞台) (1080p) [Geo-blocked],https://cdn.hklive.tv/xxxx/78/index.m3u8
+什邡新闻,http://live.sfrmt.com:85/live/zhpd.m3u8
+汕头新闻综合,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=SgsbPP
+广东新闻,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZOAMHg
+音樂頻道,#genre#
+音乐现场,https://satellitepull.cnr.cn/live/wx32nmgyygb/playlist.m3u8
+风云音乐,http://38.75.136.137:98/gslb/dsdqpub/fyyy.m3u8
+DJ音乐舞曲《一千个轮回》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PCIGh1
+十首车载音乐,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IbWaYR
+女孩街头演唱DJ《放不下想又怕》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=NtR1Xm
+韩国女团dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KdMWWU
+DJ车载音乐,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6s8QXZ
+音乐1,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=EZMGcn
+车载音乐DJ歌曲劲歌热舞提神醒目,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0PIb6U
+音乐12,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hkRKkF
+音乐14,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=stsmQy
+音乐4,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=N36e5P
+音乐11,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=CZgU9u
+音乐2,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IGYqIf
+音乐5,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Kh92s4
+音乐7,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xfuRdC
+MV音乐2,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0aumrs
+女团韩语,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=cCOXuC
+音乐13,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uy9gHm
+其他頻道,#genre#
+SET Taiwan,http://sanlihalive1-a.akamaihd.net/5ffd3a166f7241d9b489b7d7241db96f/ap-northeast-1/4338955585001/profile_0/chunklist.m3u8?hdnea=st%3D1664042391~exp%3D9007200918783382~acl%3D%2F5ffd3a166f7241d9b489b7d7241db96f%2F%2A%2Fprofile_0%2Fchunklist.m3u8%2A~hmac%3D29538a1877a3c3728afe61bcd55b5a7b98f517bb3e2c75f8433b9338fda5b3e3
+南京十八,https://mgtv.ottiptv.cc/migu/838151753.m3u8
+DaAi 1,https://pulltv1.wanfudaluye.com/live/tv1.m3u8
+SET Metro,http://sanlihalive1-a.akamaihd.net/4c3bb0ccad574d0e9b507c2dcd2dfabc/ap-northeast-1/4338955585001/profile_0/chunklist.m3u8?hdnea=st%3D1664042191~exp%3D9007200918783182~acl%3D%2F4c3bb0ccad574d0e9b507c2dcd2dfabc%2F%2A%2Fprofile_0%2Fchunklist.m3u8%2A~hmac%3D957e95920f87270a35afde9e5bd3d25c96af4c19596f0f2cc44ff968b89165c1
+DaAi 2,https://pulltv2.wanfudaluye.com/live/tv2.m3u8
+EBC YOYO,https://ythls.armelin.one/channel/UCiWRSesvSYmY7YOyz0tv_zQ.m3u8
+江苏教育,http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jsjiaoyu/600/index.m3u8?netType=0&pid=2028597139&timestamp=20250903090031&Channel_ID=0116_2600037000-99000-200300220100002&ProgramID=628008321&ParentNodeID=-99&assertID=5500287493&client_ip=106.13.250.83&SecurityKey=20250903090031&mvid=5101012819&mcid=500020&playurlVersion=WX-A1-8.8.1-RELEASE&videocodec=h264&bean=mgspad&tid=android&conFee=0&puData=d3e3bd992ebf554d360ba9b83b9b179d&ddCalcu=dd93v7ea13bbba9db93982be9bafb505643d&sv=10004&ct=android
+SET iNews,https://ythls.armelin.one/channel/UCoNYj9OFHZn3ACmmeRCPwbA.m3u8
+发现之旅,https://mgtv.ottiptv.cc/mg/624878970.m3u8
+老故事,https://mgtv.ottiptv.cc/mg/884121956.m3u8
+CGTN俄语,https://mgtv.ottiptv.cc/mg/609006446.m3u8
+CGTN,https://mgtv.ottiptv.cc/mg/609017205.m3u8
+南京教科频道,https://mgtv.ottiptv.cc/mg/838153729.m3u8
+新片放映厅,https://mgtv.ottiptv.cc/mg/619495952.m3u8
+江苏城市频道,https://mgtv.ottiptv.cc/mg/626064714.m3u8
+陕西秦腔频道,https://mgtv.ottiptv.cc/mg/956909303.m3u8
+江苏国际,https://mgtv.ottiptv.cc/mg/626064674.m3u8
+云南丽江玉龙雪山草甸,https://gcalic.v.myalicdn.com/gc/hkylxs06_1/index.m3u8
+云南丽江玉龙雪山,https://gcalic.v.myalicdn.com/gc/ylxs11_1/index.m3u8
+乌镇龙形田,https://gcalic.v.myalicdn.com/gc/zjwzlxt_1/index.m3u8
+乌镇全景,https://gcalic.v.myalicdn.com/gc/zjwzblt_1/index.m3u8
+乐山大佛全景,https://gcalic.v.myalicdn.com/gc/lsdfgfl_1/index.m3u8
+乌镇西市河,https://gcalic.v.myalicdn.com/gc/zjwzbblh_1/index.m3u8
+云南丽江印象实景,https://gcalic.v.myalicdn.com/gc/hkylxs01_1/index.m3u8
+CGTN西语,https://0472.org/hls/cgtnx.m3u8
+厦门鼓浪屿,https://gcalic.v.myalicdn.com/gc/gly01_1/index.m3u8
+丽江古城万古楼遥望玉龙雪山,https://gcalic.v.myalicdn.com/gc/ljgcwglytylxs_1/index.m3u8
+四川峨眉山远眺万佛顶,https://gcalic.v.myalicdn.com/gc/emswfs_1/index.m3u8
+南京玄武湖公园,https://gcalic.v.myalicdn.com/gc/xwh01_1/index.m3u8
+四川四姑娘山隆珠措,https://gcalic.v.myalicdn.com/gc/sgns02_1/index.m3u8
+丽江古城大水车,https://gcalic.v.myalicdn.com/gc/ljgcdsc_1/index.m3u8
+乌镇蓝印花布,https://gcalic.v.myalicdn.com/gc/zjwzlyhb_1/index.m3u8
+八里沟风景区天界山玻璃栈道,https://gcalic.v.myalicdn.com/gc/blg03_1/index.m3u8
+五彩池,https://gcalic.v.myalicdn.com/gc/hlwcc_1/index.m3u8
+八里沟风景区桃花湾瀑布,https://gcalic.v.myalicdn.com/gc/blg05_1/index.m3u8
+四川峨眉山普贤菩萨铜像,https://gcalic.v.myalicdn.com/gc/emspxps_1/index.m3u8
+四川峨眉山云海日出,https://gcalic.v.myalicdn.com/gc/emsarm_1/index.m3u8
+山东教育,http://gslbmgsplive.miguvideo.com/migu/kailu/sdjyws/51/20250915/index.m3u8?netType=0&pid=2028597139&timestamp=20250927080126&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609154353&ParentNodeID=-99&assertID=5910022199&client_ip=106.13.250.83&SecurityKey=20250927080126&mvid=2200208305&mcid=500020&playurlVersion=WX-A1-8.9.2-RELEASE&videocodec=h264&bean=mgspad&tid=android&conFee=0&puData=41ee1554c91427e91ee78ce8b64f7a33&ddCalcu=3431eae27e9f104565b48ce9c18472e7ee19
+叶县,http://tvpull.dxhmt.cn:9081/tv/10422-1.m3u8
+吉林乡村,https://satellitepull.cnr.cn/live/wxjlxcgb/playlist.m3u8
+福建经济,http://satellitepull.cnr.cn/live/wx32fjdnjjgb/playlist.m3u8
+黄山飞来石,https://gcalic.v.myalicdn.com/gc/hsptgy_1/index.m3u8
+中华小当家,https://live.iill.top/huya/11342413
+浙江国际,https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8
+之江纪录,https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8
+江苏城市,http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jschengshi/600/index.m3u8?netType=0&pid=2028597139&timestamp=20250903090031&Channel_ID=0116_2600037000-99000-200300220100002&ProgramID=626064714&ParentNodeID=-99&assertID=5500260508&client_ip=106.13.250.83&SecurityKey=20250903090031&mvid=5100186409&mcid=500020&playurlVersion=WX-A1-8.8.1-RELEASE&videocodec=h264&bean=mgspad&tid=android&conFee=0&puData=3712225a575d903704881b6443f50a06&ddCalcu=6307va1a02x52af2354a4567b51d89804307&sv=10004&ct=android
+柳河综合,http://stream3.jlntv.cn:80/aac_lhgb/sd/live.m3u8
+安徽国际,https://www.ahtv.cn/folder9000/folder20193?channelIndex=6
+哈尔滨生活,http://111.43.126.240:9003/hls/3/index.m3u8
+JJ斗地主,https://live.iill.top/douyin/685317364746
+祁门综合,http://zbbf2.ahbztv.com/live/416.m3u8
+句容生活,http://jrlive.jrntv.com/live/_definst_/shenghuos/playlist.m3u8
+仁寿综合,https://play.scrstv.com.cn/DT/live.m3u8?auth_key=60001724663204-0-0-c1cc4ded9841ac34f63cdbd3aec647ef
+成县综合,https://play.kankanlive.com/live/1702454377323961.m3u8
+靖远综合,http://play.kankanlive.com/live/1692005762394912.m3u8
+景泰综合,https://play.kankanlive.com/live/1624439143745981.m3u8
+通渭综合,https://play.kankanlive.com/live/1725005047185027.m3u8
+无锡生活,https://stream.thmz.com/wxtv4/playlist.m3u8
+广东民生,http://183.11.239.36:808/hls/18/index.m3u8
+宾阳综合,http://pulls.myun.tv/live/0dkp33j5.m3u8
+怀仁综合,https://1yp7hc5p.live.sxmty.com/live/hls/bff8529922344209985b6e49baa9555a/efa2543628fc4a7ea93d3d6c975f77dc-1.m3u8
+中国党员教育,http://12371ksc.v.kcdnvip.com/12371/dangyuanwang_1/index.m3u8
+广西国际,https://hlscdn.liangtv.cn/live/0234c48e0bc24fe1b41b9999a253e581/1075ee38e04f490690f6a36a16e09c79.m3u8
+无锡娱乐,https://stream.thmz.com/wxtv2/playlist.m3u8
+沐川综合,http://file.ysxtv.cn/cms/videos/nmip-media/channellive/channel4/playlist.m3u8
+津南一套,http://play.jinnantv.top/live/JNTV1.m3u8
+梨园,https://dxtx.hntv.tv/live/lypd.m3u8?wsSecret=41543190cdf375f1c73207222bb96542&wsTime=1769313549
+中国村庄,http://newcntv.qcloudcdn.com/asp/hls/4000/0303000a/3/default/93fc12dbf14241c18c23da104fbade23/4000.m3u8
+地理中国,http://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/c6baf6f74bb944aeacee1065ea72c798/1200.m3u8
+临潭,http://pili-live-hls.hfmt.net/gntv/lttv.m3u8
+碌曲,http://pili-live-hls.hfmt.net/gntv/lqtv.m3u8
+Dali TV,http://www.dalitv.com.tw:4568/live/dali/index.m3u8
+Genius Go Go Go,https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV26.m3u8
+Beautiful Life TV,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8
+中学生,https://mgtv.ottiptv.cc/mg/708869532.m3u8
+mnews,https://ythls.armelin.one/channel/UC4LjkybVKXCDlneVXlKAbmw.m3u8
+Pet Club TV,https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-petclub-samsungnz/playlist.m3u8
+CGTN法语,https://0472.org/hls/cgtnf.m3u8
+CGTN阿语,https://0472.org/hls/cgtna.m3u8
+狂阿弥爷,https://goodiptv.club/douyu/8975282
+漫画解说,https://www.goodiptv.club/douyu/5907076
+董王老登,https://goodiptv.club/douyu/9412287
+花町馆长,https://goodiptv.club/douyu/2295993
+画渣花小烙,https://goodiptv.club/douyu/9072066
+北京大妈有话说er,https://goodiptv.club/douyu/9440530
+鸡蛋高V,https://goodiptv.club/douyu/9367188
+托尔兹桃花剑,https://goodiptv.club/douyu/8896743
+贝爷求生,http://www.goodiptv.club/douyu/9661369
+有一辆立标奔驰,https://goodiptv.club/douyu/12442176
+广东珠江,http://cdn2.163189.xyz/live/gdzj/stream.m3u8
+敦化一套,http://stream8.jlntv.cn/dhtv/playlist.m3u8
+无锡经济,https://stream.thmz.com/wxtv5/playlist.m3u8
+夏河,http://pili-live-hls.hfmt.net/gntv/xhtv.m3u8
+沭阳综合,https://shuyang-tv-hls.cm.jstv.com:443/shuyang-tv/shuyangzh.m3u8
+西峰,http://pili-live-rtmp.luan2.hfmt.net/luan2/xifeng/123456.m3u8
+CGTN阿拉伯语,https://mgtv.ottiptv.cc/mg/609154345.m3u8
+Taiwan Plus TV,https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV78.m3u8
+CGTN西班牙语,https://mgtv.ottiptv.cc/mg/609006450.m3u8
+宁夏广播电视台经济频道,https://mgtv.ottiptv.cc/mg/962067520.m3u8
+cgtnru,https://live.ottiptv.cc/mcp/cgtnru.m3u8
+梅河口综合,http://stream3.jlntv.cn:80/aac_mhkgb/playlist.m3u8
+广安公共,http://live1.gatv.com.cn:85/live/GGPD.m3u8
+常熟民生,http://3gvod.zjgonline.com.cn:1935/live/_definst_/shehuishenghuo_app/chunklist.m3u8
+靖宇,http://stream8.jlntv.cn/jytv/sd/live.m3u8
+东丰,http://stream5.jlntv.cn/df/sd/live.m3u8
+龙井,http://stream8.jlntv.cn/ljtv/sd/live.m3u8
+江苏综艺频道,https://mgtv.ottiptv.cc/mg/626065193.m3u8
+南京十八频道,https://mgtv.ottiptv.cc/mg/838151753.m3u8
+财富天下,https://mgtv.ottiptv.cc/mg/956923159.m3u8
+陕西银龄频道,https://mgtv.ottiptv.cc/mg/956909362.m3u8
+cgtndocumentary,https://live.ottiptv.cc/mcp/cgtndoc.m3u8
+cgtnfrench,https://live.ottiptv.cc/mcp/cgtnfr.m3u8
+CGTNALBY,https://live.ottiptv.cc/mcp/cgtnar.m3u8
+cgtnsp,https://live.ottiptv.cc/mcp/cgtnsp.m3u8
+CGTNEN,https://live.ottiptv.cc/mcp/cgtn.m3u8
+兵器科技,http://38.75.136.137:98/gslb/dsdqpub/gfjs.m3u8
+电视指南,http://38.75.136.137:98/gslb/dsdqpub/dszn.m3u8
+CCTV世界地理,http://38.75.136.137:98/gslb/dsdqpub/sjdl.m3u8
+泰山太平岭,https://gcalic.v.myalicdn.com/gc/hkts09_1/index.m3u8
+泰山白云亭悬崖,https://gcalic.v.myalicdn.com/gc/hkts02_1/index.m3u8
+湖南张家界御笔峰,https://gcalic.v.myalicdn.com/gc/zjjybf_1/index.m3u8
+泰山南天门,https://gcalic.v.myalicdn.com/gc/hkts07_1/index.m3u8
+狮子山鸟瞰丽江古城,https://gcalic.v.myalicdn.com/gc/ljgcszsnkgc_1/index.m3u8
+泰山主峰,https://gcalic.v.myalicdn.com/gc/taishan01_1/index.m3u8
+黄山始信新道,https://gcalic.v.myalicdn.com/gc/hsyg_1/index.m3u8
+江苏南京牛首山,https://gcalic.v.myalicdn.com/gc/nss01_1/index.m3u8
+湖南张家界天门山西线玻璃栈道,https://gcalic.v.myalicdn.com/gc/tms05_1/index.m3u8
+泰山大观峰,https://gcalic.v.myalicdn.com/gc/taishan03_1/index.m3u8
+浙江舟山东极岛,https://gcalic.v.myalicdn.com/gc/djd01_1/index.m3u8
+泰山碧霞祠,https://gcalic.v.myalicdn.com/gc/hkts03_1/index.m3u8
+青岛崂山双福,https://gcalic.v.myalicdn.com/gc/qdls03_1/index.m3u8
+湖南张家界宝峰湖,https://gcalic.v.myalicdn.com/gc/zjjbfh_1/index.m3u8
+雪乡梦幻家园,https://gcalic.v.myalicdn.com/gc/mdjxxmhjyxj_1/index.m3u8
+鸣沙山,https://gcalic.v.myalicdn.com/gc/dhyyqst_1/index.m3u8
+湖南张家界水绕四门,https://gcalic.v.myalicdn.com/gc/zjjsrsm_1/index.m3u8
+新昌生活,http://l.cztvcloud.com/channels/lantian/SXxinchang2/720p.m3u8
+嵊泗综合,http://l.cztvcloud.com/channels/lantian/SXshengsi1/720p.m3u8
+平湖民生休闲,http://l.cztvcloud.com/channels/lantian/SXpinghu2/720p.m3u8
+浙江经济生活,http://ali-xwl.cztv.com/live/channel031080Plxw.m3u8
+鄢陵综合,http://tvpull.dxhmt.cn:9081/tv/11024-1.m3u8
+余姚综合,https://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8
+浙江钱江,http://l.cztvcloud.com/channels/lantian/SXyuyao2/720p.m3u8
+登封综合,http://tvpull.dxhmt.cn:9081/tv/10185-1.m3u8
+新乡县电视台,http://tvpull.dxhmt.cn:9081/tv/10721-1.m3u8
+洞头综合,http://l.cztvcloud.com/channels/lantian/SXdongtou1/720p.m3u8
+新蔡综合,http://tvpull.dxhmt.cn:9081/tv/11729-1.m3u8
+上虞新商都,http://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8
+郏县综合,http://tvpull.dxhmt.cn:9081/tv/10425-1.m3u8
+西华综合,http://tvpull.dxhmt.cn:9081/tv/11622-1.m3u8
+余姚姚江文化,https://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8
+普陀电视台,https://l.cztvcloud.com/channels/lantian/SXputuo1/720p.m3u8
+荥阳综合,http://tvpull.dxhmt.cn:9081/tv/10182-1.m3u8
+潢川综合,http://tvpull.dxhmt.cn:9081/tv/11526-1.m3u8
+余杭综合,http://l.cztvcloud.com/channels/lantian/SXyuhang1/720p.m3u8
+浙江遂昌,http://l.cztvcloud.com/channels/lantian/SXsuichang1/720p.m3u8
+开化国家公园,http://l.cztvcloud.com/channels/lantian/SXkaihua2/720p.m3u8
+余杭未来E,http://l.cztvcloud.com/channels/lantian/SXyuhang3/720p.m3u8
+苏八拉西吐槽屋,https://goodiptv.club/douyu/97643
+热门港剧,http://www.goodiptv.club/douyu/5522351
+哈尔滨娱乐,https://stream.hrbtv.net/ylpd/sd/live.m3u8
+橙记港剧,http://www.goodiptv.club/douyu/4549169
+黄栗子Ye,https://goodiptv.club/douyu/9046097
+桀骜不驯认识,https://goodiptv.club/douyu/2041014
+漠漠fumiyo,https://goodiptv.club/douyu/8911070
+卡皮君本人,https://goodiptv.club/douyu/9050486
+广州综合,http://tencentplay.gztv.com/live/zonghes.m3u8
+浙江教育,http://ali-m-l.cztv.com/channels/lantian/channel04/720p.m3u8
+浙江民生休闲,https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8
+豆客解说,https://goodiptv.club/douyu/8883122
+浙江经视,https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
+浙江休闲台,http://ali-m-l.cztv.com/channels/lantian/channel006/720p.m3u8
+数码时代,http://ali-m-l.cztv.com/channels/lantian/channel12/720p.m3u8
+阿依图娜,https://goodiptv.club/douyu/9047046
+乐至综合,http://175.155.106.72:89/live1/live1.m3u8
+任丘综合,https://jwcdnqx.hebyun.com.cn/live/rqtv1/1500k/tzwj_video.m3u8
+永昌综合,https://play.kankanlive.com/live/1652755738635915.m3u8
+兴隆综合,https://jwcdnqx.hebyun.com.cn/live/xlzh/1500k/tzwj_video.m3u8
+古县综合,https://l2fpdktp.live.sxmty.com/live/hls/e4c3b363cc4549788e2d983f403e07db/d99ce1eb686e41b9afc888110bd95aa7.m3u8
+邯郸科技教育,https://jwcdnqx.hebyun.com.cn/live/hdkj/1500k/tzwj_video.m3u8
+白银综合,http://play.kankanlive.com/live/1720408089419110.m3u8
+广元公共,https://m3u8.channel.dzsm.com/nmip-media/channellive/channel101257/playlist.m3u8
+邢台生活,https://jwcdnqx.hebyun.com.cn/live/xtcsshpd/1500k/tzwj_video.m3u8
+北京科教,http://player.cntv.cn/standard/live_HLSDRM20180606.swf?ChannelID=btv3&P2PChannelID=pd%3A%2F%2Fcctv_p2p_hdbtv3
+邯郸公共频道,https://jwcdnqx.hebyun.com.cn/live/hdgg/1500k/tzwj_video.m3u8
+秦安综合,https://play.kankanlive.com/live/1659926941626981.m3u8
+剑阁综合,https://m3u8.channel.dzsm.com/nmip-media/channellive/channel105549/playlist.m3u8
+句容党建,http://jrlive.jrntv.com/live/_definst_/dangjians/playlist.m3u8
+西峰综合,https://play.kankanlive.com/live/1683944827526991.m3u8
+井研综合,http://tvfile.jyrmt.cn/nmip-media/channellive/channel104452/playlist.m3u8
+亳州农村,http://zbbf2.ahbztv.com/live/418.m3u8
+奎屯哈萨克语,http://218.84.12.186:8002/hls/main/playlist.m3u8
+云霄综合,https://live.zzyxxw.com:2443/live/xwzh.m3u8
+可克达拉综合,http://file.loulannews.cn/nmip-media/channellive/channel103824/playlist.m3u8
+南宁公共,http://hls.nntv.cn/nnlive/GGPD_24.m3u8
+宜兴紫砂,http://3gvod.zjgonline.com.cn:1935/live/_definst_/xinwenzonghe_app/chunklist.m3u8
+北京青年,http://player.cntv.cn/standard/live_HLSDRM20180919.swf?v=180.171.5.8.9.6.3.9&ChannelID=btv8&videoTVChannel=btv8&P2PChannelID=pd%3A%2F%2Fcctv_p2p_hdbtv8&tai=btv8&VideoName=btv8&channelID=btv8
+柳河,http://stream5.jlntv.cn/lh/sd/live.m3u8
+名山综合,https://m3u8channel-bx.yunxya.com/nmip-media/channellive/channel104666/playlist.m3u8
+安徽导视,http://dspdhls.appcoo.com:8888/live/dspd/index.m3u8
+广元综合,https://m3u8.channel.dzsm.com/nmip-media/channellive/channel100999/playlist.m3u8
+清河经济综艺,https://jwcdnqx.hebyun.com.cn/live/qinghe1/1500k/tzwj_video.m3u8
+北京生活,https://wstvcpudali.v.myalicdn.com/wstvcpud/udrmbtv7_1/index.m3u8?adapt=0&BR=audio
+平泉综合,https://jwcdnqx.hebyun.com.cn/live/pqzh/1500k/tzwj_video.m3u8
+双辽,http://stream5.jlntv.cn/sl/sd/live.m3u8
+白山公共,http://stream8.jlntv.cn/baishan2/playlist.m3u8
+德惠综合,http://stream11.jlntv.cn/dehuitv/sd/live.m3u8
+长白山电视台,http://stream8.jlntv.cn/cbstv/sd/live.m3u8
+延边2,http://stream5.jlntv.cn/wq/playlist.m3u8
+磐石,http://stream5.jlntv.cn/ps/sd/live.m3u8
+广德生活,https://live.gdtv.ah.cn/live/newsTV.m3u8
+汪清综合,http://stream5.jlntv.cn/wq/sd/live.m3u8
+通化县,http://stream5.jlntv.cn/thx/sd/live.m3u8
+新沂生活,http://live.xysrmt.cn/shpd/sd/live.m3u8
+泗阳综合,http://3739115337.cloudvdn.com/a.m3u8?domain=siyang-tv-hls.cm.jstv.com&player=nwEAAKHdjSKP_58X&secondToken=secondToken%3A5FUijZmDyNMxtCDdne0YzSAwjuw&streamid=siyang-tv%3Asiyang-tv%2Fsiyangzh&v3=1
+苏州社会经济,https://live-auth.51kandianshi.com/szgd/csztv2.m3u8
+烟台经济科技,http://live.yantaitv.cn/live/27f84144e95a4652ae9e5c211b2a6b55/405f3e33ba384aa0a16014d0becd1261-1.m3u8
+绍兴公共,http://live.shaoxing.com.cn/video/s10001-sxtv2/index.m3u8
+烟台公共,http://live.yantaitv.cn/live/e50f104a4ffe4a41b2217cbda534146f/d86092e69df94668b33390278b061700-1.m3u8
+番禺综合,http://video.epaper.pybtv.cn:8080/live/rtmp_live_demo.flv
+来宾综合,http://zb.gxlbamc.com:1935/live/lbzh.stream/playlist.m3u8
+涟水电视台综合,https://lianshui-tv-hls.cm.jstv.com:443/lianshui-tv/lsxw.m3u8
+自然传奇,http://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/81a1ad3a661748bfb8560c92d38204ca/1200.m3u8
+荥经综合,https://m3u8channel-yj.yunxya.com/nmip-media/channellive/channel101140/playlist.m3u8
+靖宇综合,http://stream9.jlntv.cn:80/aac_jygb/playlist.m3u8
+淮阴综合,https://huaiyin-tv-replay.cm.jstv.com/huaiyin-tv/huaiyinf.m3u8
+湖州公共民生,http://hzcm-live.media.hugd.com/1e6b554b9ab74513958c0e1ffe664d22/9acaa7634309494cb29a85eb12136607.m3u8?auth_key=2272900830-9a2389b8bf4e49d580d4ad807423d326-0-ea78a5c7a678c436263582d368f5009e
+通海电视台,https://zb-live.ynurl.com/tonghai/3bfe3a9e-48e6-4c1e-8770-1df66447cc6c.m3u8
+陇川综合,https://zb-live.ynurl.com/longchuan/58f88df3-605e-4c57-865c-8e8f85241ca1.m3u8
+飞碟之谜02,https://newcntv.qcloudcdn.com/asp/hls/2000/0303000a/3/default/d2454bbb542d4613a9db478dab2addfd/2000.m3u8
+铜梁综合,http://183.64.174.171:40123/ch1.m3u8
+桦甸综合,http://stream9.jlntv.cn:80/aac_huadiangb/playlist.m3u8
+金川乡村,http://live.jinchuanrmt.com:90/live/jcxc.m3u8
+赣州公共,https://pili-live-hls-sjxgz2024.sobeylive.com/jxgz2024/396_q_live172526334096251.m3u8
+象山综合,http://play-sh13.quklive.com/live/1702360350551252.m3u8?auth_key=2037107484-800189c57a5a44d3b823b60cf84f6756-0-a6f6828a62d5c167cff5e68735fa0d39
+易门综合,https://zb-live.ynurl.com/yimen/3b75a2f9-7941-46b7-992d-a9796fbca5fe.m3u8
+甘孜综合,http://tv.drs.ganzitv.com:8100/channellive/gztv.flv
+人与自然,http://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/1425e1d505654cb48ba82b807b221193/1200.m3u8
+长子综合,https://www.wxhcgbds.com:8081/channelTv/WXTV_1.m3u8
+镇江二套社会民生,http://zjtv-wshls.homecdn.com/live/2aa16.m3u8
+龙井综合,http://stream9.jlntv.cn:80/aac_longjinggb/playlist.m3u8
+邢台综合,http://jwplay.hebyun.com.cn/live/xtsrmtzs/1500k/tzwj_video.m3u8
+陕西银龄,http://112.46.105.20:8009/hls/20/index.m3u8
+浙江留学,http://ali-vl.cztv.com/channels/lantian/channel009/360p.m3u8
+湖州文化娱乐,http://hzcm-live.media.hugd.com/613c47f0ab0d4eaa98b21378d0db6ded/0051d31c9dd543a7825eea4e49675b2a.m3u8?auth_key=2277598059-0a5ebfa1c0dc4671b42a60810fc37039-0-fa625b7d1feab612062453c12e3c8887
+苏州文化生活,https://live-auth.51kandianshi.com/szgd/csztv3.m3u8
+飞碟之谜01,https://hls.cntv.lxdns.com/asp/hls/2000/0303000a/3/default/f0a47e155d32450daa1d36a04fd7d262/2000.m3u8
+2024年春晚,https://p2.bdstatic.com/rtmp.liveshow.lss-user.baidubce.com/live/stream_bduid_6488563992_8982723413/merged_1707497046297_88536_25144_41936.m3u8
+黄花城水长城02,http://gctxyc.liveplay.myqcloud.com/gc/wgw02_1/index.m3u8
+新疆天山,http://gctxyc.liveplay.myqcloud.com/gc/xjtcdhsz_1/index.m3u8
+和美乡途轮播台,https://mgtv.ottiptv.cc/mg/713591450.m3u8
+CCTV女性时尚,http://38.75.136.137:98/gslb/dsdqpub/nxss.m3u8
+CGTN纪录,https://0472.org/hls/cgtnd.m3u8
+丽江古城大研花巷观景,https://gcalic.v.myalicdn.com/gc/ljgcdyhxgjt_1/index.m3u8
+云南大理崇圣寺三塔中景,https://gcalic.v.myalicdn.com/gc/dlst03_1/index.m3u8
+云南大理崇圣寺三塔远景,https://gcalic.v.myalicdn.com/gc/dlst01_1/index.m3u8
+云南丽江冰川,https://gcalic.v.myalicdn.com/gc/hkylxs05_1/index.m3u8
+云南丽江蓝月谷,https://gcalic.v.myalicdn.com/gc/ylxs12_1/index.m3u8
+天涯石,https://gcalic.v.myalicdn.com/gc/tyhjtys_1/index.m3u8
+云南白沙远眺玉龙雪山,https://gcalic.v.myalicdn.com/gc/hkylxs03_1/index.m3u8
+恒山悬空寺全景,https://gcalic.v.myalicdn.com/gc/hsxksqj_1/index.m3u8
+张掖七彩丹霞,https://gcalic.v.myalicdn.com/gc/zyqcdx01_1/index.m3u8
+广西桂林漓江景区,https://gcalic.v.myalicdn.com/gc/gllj01_1/index.m3u8
+安徽池州九华山风景区九华山,https://gcalic.v.myalicdn.com/gc/jhs05_1/index.m3u8
+安徽黟县芦村远眺,https://gcalic.v.myalicdn.com/gc/yxlcyt_1/index.m3u8
+四川峨眉山远眺贡嘎雪山,https://gcalic.v.myalicdn.com/gc/emsyh_1/index.m3u8
+泰山十八盘,https://gcalic.v.myalicdn.com/gc/taishan05_1/index.m3u8
+安徽黟县西递牌坊,https://gcalic.v.myalicdn.com/gc/yxxdpf_1/index.m3u8
+月牙泉,https://gcalic.v.myalicdn.com/gc/dhyyqsm_1/index.m3u8
+江苏徐州云龙湖风景区云龙山观景台西,https://gcalic.v.myalicdn.com/gc/ylh04_1/index.m3u8
+泰山望人松,https://gcalic.v.myalicdn.com/gc/taishan02_1/index.m3u8
+六盘山红军长征景区,https://gcalic.v.myalicdn.com/gc/lpsgmjng01_1/index.m3u8
+普陀山,https://gcalic.v.myalicdn.com/gc/pts01_1/index.m3u8
+青岛崂山八水河,https://gcalic.v.myalicdn.com/gc/qdls02_1/index.m3u8
+黄山,https://gcalic.v.myalicdn.com/gc/ahhs01_1/index.m3u8
+黄花城水长城01,https://gcalic.v.myalicdn.com/gc/wgw01_1/index.m3u8
+内乡综合,http://tvpull.dxhmt.cn:9081/tv/11325-1.m3u8
+固始综合,http://tvpull.dxhmt.cn:9081/tv/11525-1.m3u8
+宝丰综合,http://tvpull.dxhmt.cn:9081/tv/10421-1.m3u8
+唐河一套,http://tvpull.dxhmt.cn:9081/tv/11328-1.m3u8
+临颍综合,http://tvpull.dxhmt.cn:9081/tv/11122-1.m3u8
+黄花城水长城03,https://gcalic.v.myalicdn.com/gc/wgw03_1/index.m3u8
+黄果树六角亭瀑布,https://gcalic.v.myalicdn.com/gc/hgsspzxdpb_1/index.m3u8
+内黄综合,http://tvpull.dxhmt.cn:9081/tv/10527-1.m3u8
+永城综合,http://tvpull.dxhmt.cn:9081/tv/11481-1.m3u8
+宜阳综合,http://tvpull.dxhmt.cn:9081/tv/10327-1.m3u8
+温县综合,http://tvpull.dxhmt.cn:9081/tv/10825-1.m3u8
+黄龙,https://gcalic.v.myalicdn.com/gc/hlzycc_1/index.m3u8
+甘肃经济,https://satellitepull.cnr.cn/live/wxgshhzs/playlist.m3u8
+禹州综合,http://tvpull.dxhmt.cn:9081/tv/11081-1.m3u8
+扶沟综合,http://tvpull.dxhmt.cn:9081/tv/11621-1.m3u8
+新野综合,http://tvpull.dxhmt.cn:9081/tv/11329-1.m3u8
+方城一套,http://tvpull.dxhmt.cn:9081/tv/11322-1.m3u8
+新县综合,http://tvpull.dxhmt.cn:9081/tv/11523-1.m3u8
+松阳综合,http://l.cztvcloud.com/channels/lantian/SXsongyang1/720p.m3u8
+萧山综合,http://l.cztvcloud.com/channels/lantian/SXxiaoshan1/720p.m3u8
+青田电视台,http://l.cztvcloud.com/channels/lantian/SXqingtian1/720p.m3u8
+世界纪录大全,https://goodiptv.club/douyu/9406359
+主播拍个肚皮,https://goodiptv.club/douyu/9387499
+小手枪Newhandgun,https://goodiptv.club/douyu/8943060
+UP主DJC,https://goodiptv.club/douyu/9429545
+罗休休休,https://goodiptv.club/douyu/9403178
+斗鱼港剧,http://www.goodiptv.club/douyu/5061550
+麦绿素dustdream,https://goodiptv.club/douyu/9336437
+浙江教科,http://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
+我叫孙火旺,https://goodiptv.club/douyu/9770949
+洋房姐姐,https://goodiptv.club/douyu/9172774
+萧山生活,http://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8
+龙游生活娱乐,https://l.cztvcloud.com/channels/lantian/SXlongyou2/720p.m3u8
+KyoKyo不是QQ,https://goodiptv.club/douyu/4732337
+女王泡面V,https://goodiptv.club/douyu/9369937
+浙江经济,http://ali-m-l.cztv.com/channels/lantian/channel03/720p.m3u8
+哲忆丶,https://goodiptv.club/douyu/8977251
+浙江民生,http://ali-m-l.cztv.com/channels/lantian/channel06/720p.m3u8
+锦书致南辞阿,https://goodiptv.club/douyu/2894528
+莫扎金,https://goodiptv.club/douyu/9272077
+甘南县综合,https://stream.hrbtv.net/zxpd/sd/live.m3u8
+我是怪异君V,https://goodiptv.club/douyu/10279570
+磐石综合,http://stream3.jlntv.cn:80/aac_psgb/sd/live.m3u8
+七台河民生社教,http://live.qthnews.org.cn:1935/live/live2/800k/tzwj_video.m3u8
+通化县综合,http://stream3.jlntv.cn:80/aac_thxgb/playlist.m3u8
+万州三峡移民,http://123.146.162.24:8017/c2F0hmi/1000/live.m3u8
+东丰综合,http://stream3.jlntv.cn:80/aac_dfgb/playlist.m3u8
+天祝综合,https://play.kankanlive.com/live/1656487214793905.m3u8
+临夏州综合,http://play.kankanlive.com/live/1714096320293954.m3u8
+嘉峪关综合,http://play.kankanlive.com/live/1720583434627241.m3u8
+双辽综合,http://stream3.jlntv.cn:80/aac_slgb/playlist.m3u8
+昌黎综合,https://jwcdnqx.hebyun.com.cn/live/clzhpd/1500k/tzwj_video.m3u8
+大宁综合,http://live.daningtv.com/aac_dngb/playlist.m3u8
+朝天综合,https://m3u8.channel.dzsm.com/nmip-media/channellive/channel104601/playlist.m3u8
+定襄综合,http://lbyzztfe.live.sxmty.com/live/hls/645ff4c60e0a49f0a203abbd73dd8be9/0720e665f10f48e98c9639f4f492fb4a-1.m3u8
+陕西秦腔,http://112.46.105.20:8009/hls/22/index.m3u8
+青川综合,http://qcfile.qcrmt.com/nmip-media/channellive/channel100933/playlist.m3u8
+黎城综合,http://111.53.96.67:8081/live/1/index.m3u8
+长白朝语,http://hplayer1.juyun.tv:80/camera/11344136.m3u8
+航拍中国第二季,http://newcntv.qcloudcdn.com/asp/hls/4000/0303000a/3/default/2bdfdad540b342f592f9817cb7f3b79a/4000.m3u8
+黄山公共生活,http://hslive.hsnewsnet.com/lsdream/iY92ady/1000/live.m3u8
+国学频道,https://live.ottiptv.cc/mcp/guoxue.m3u8
+泰山玉皇顶,https://gcalic.v.myalicdn.com/gc/taishan06_1/index.m3u8
+福建武夷山玉女峰,https://gcalic.v.myalicdn.com/gc/wysynf_1/index.m3u8
+望乡台,https://gcalic.v.myalicdn.com/gc/hlwxt_1/index.m3u8
+都江堰鱼嘴,https://gcalic.v.myalicdn.com/gc/djyqyl1_1/index.m3u8
+陕西洋县国宝朱鹮02,https://gcalic.v.myalicdn.com/gc/zh02_1/index.m3u8
+贵州省兴义市万峰林,https://gcalic.v.myalicdn.com/gc/xywfl_1/index.m3u8
+雪乡大石碑,https://gcalic.v.myalicdn.com/gc/mdjxxdsb_1/index.m3u8
+黄山排云亭,https://gcalic.v.myalicdn.com/gc/hspyt_1/index.m3u8
+南京教科,http://nklive.nbs.cn/hls/75b3c462-b831-4de7-a34b-5d3221db2069/index.m3u8
+邸生,https://goodiptv.club/douyu/9665298
+RTHK (港台電視32) (1080p) [Geo-blocked],https://cdn.hklive.tv/xxxx/32/index.m3u8
+ET Mall 60,https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV18.m3u8
+RTHK (港台電視31) (1080p) [Geo-blocked],https://cdn.hklive.tv/xxxx/31/index.m3u8
+Supreme Master TV,https://lbs-us1.suprememastertv.com/720p.m3u8
+CGTN外语纪录,https://mgtv.ottiptv.cc/mg/609006487.m3u8
+辽宁广播电视台公共频道,https://mgtv.ottiptv.cc/mg/962045223.m3u8
+Global News,https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV02.m3u8
+宁夏广播电视台文旅频道,https://mgtv.ottiptv.cc/mg/962067523.m3u8
+辽宁广播电视台生活频道,https://mgtv.ottiptv.cc/mg/962045226.m3u8
+冰冰影剧,http://www.goodiptv.club/douyu/74374
+武清综合,https://tvpull.smartwq.cn/wqlive/convergencemedia/playlist.m3u8
+88跑马台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=P7RrMU
+华语剧台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OxNlnN
+亚洲剧台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=yEhVK8
+爱ANI,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zhfzYl
+猪哥亮歌厅秀,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kBaFCe
+港台電視 31,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=cyaauk
+动物星球,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dQooOI
+广东大湾区,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YxloEm
+四海钓鱼,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=lWLSvs
+快乐垂钓,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=L677LX
+汕头经济生活,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=E4RPXP
+潮州综合,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=NO7RJo
+武术世界,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Cgbv6f
+体坛名栏汇,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Oia2q6
+揭阳综合,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Fhnfco
+广东经济,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tJNPJ0
+广东戏曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=LgpHlu
+熊猫频道4,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=rU3uuS
+熊猫频道7,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZXUVGZ
+熊猫频道1,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1yLSSu
+新动力量创一流,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0rY6UF
+熊猫频道3,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uLqum2
+熊猫频道10,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0GpOan
+熊猫频道2,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=i1ZIzx
+最强综艺趴,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=5qlvL5
+熊猫频道01高清,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ioesa8
+熊猫频道9,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iEuYFY
+中国天气,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=r70Me3
+茶,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=z9GC66
+中华特产,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=SOj3h4
+熊猫频道5,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MrWql3
+萨马兰奇杯 U14第16场 江西众天麒麟 VS 长沙市第六中学 全场回放（原声） 20:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0wR7m2
+萨马兰奇杯 U14第12场 航海基金宁波队 VS UI4 VIET NAM1 全场回放（原声） 19:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zTbiQP
+熊猫频道8,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Hkklj0
+熊猫频道6,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hipGSJ
+海来阿木《浪子心》DJ沈念版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MSOe04
+推荐9首DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Wwm81G
+DJ版《三月里的小雨》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8ysorl
+劲爆DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=WAbFHR
+新歌推荐,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qMqmAJ
+《人间惊鸿客》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0dwcgM
+车载DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=09mYEh
+伤感DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=lzYOfE
+DJ《心在跳情在烧》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=654GaG
+东亚超级联赛 东京电击VS新北国王 清流播出1 18:05,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=beHyzS
+精选DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xUKId7
+郭镐鸣《野摩托》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ztK4uY
+东亚超级联赛 琉球黄金帝王VS桃园璞园领航猿 王冠证 18:35,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hk6U02
+伤感情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KifYSR
+DJ版《蜜雪冰城》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ENiL1T
+车载必备DJ《殇雪》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iHY83T
+张杰-星星,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=gV4MXQ
+萨马兰奇杯 成人小组赛第二轮 新北FOOTER VS 3X3 VIETNAM 清流播出 19:10,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ewOpdJ
+花都开了你来不来,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Q0TY7s
+2021DJ串烧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=SPaAPp
+极致烟嗓,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iPtndZ
+萨马兰奇杯 U12第45场 华大燃芽 VS 晋江实验小学 清流播出 18:30,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xnwCtN
+2022DJ串烧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=cqWz1B
+动感DJ《苦了累了听听歌》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=c9kbFO
+赵蕾蕾《寂寞的城伤心的人》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=9zOAAw
+郑源还可以抱着你,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=r9GBF3
+DJ《我们不再是从前》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KWlM4Q
+网络神曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Jh6yq1
+DJ版《夜难眠》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pAqnt1
+网络大神,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1wxb1F
+《那一夜》谢军,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=aSercw
+抖音热歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=7ED3dF
+北方姑娘,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ckoF1Y
+DJ 最美不过你的微笑,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XbcKvX
+孙艺琪《寂寞的人别听伤感情歌》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=nqCNt2
+唱着情歌流着泪,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=CEV0mM
+异域风情,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MSrLaw
+大鱼,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=s6qwPc
+动感超人,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dxRbgK
+DJ版《无味》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0MhD8C
+粤语歌串烧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ccrqRX
+DJ版《爱不得忘不舍》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=N0SGhD
+DJ版《原谅你的谎》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=QQH7ZG
+《爱你到最后一刻》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=GB3efF
+DJ小鱼儿 - 如果你真的要离开 (DJ加快版),http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4aezDz
+今日热歌DJ《如果爱还在》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=f0NHaz
+程响-不辞而别,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=QmU88j
+爱难求情难断,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=VjnmDc
+让我做你的眼睛,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6MxFEQ
+时间会知道你好不好,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=f6mX58
+DJ 流浪兄弟,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=x1BmnI
+海来阿木-你的万水千山,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Nq78ZY
+芒种,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fg8TK9
+红尘只是个过客,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MBim6g
+陈瑞红尘永相伴,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Tc7nMa
+程响-心若倦了,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=n8DQzz
+我的楼兰,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ofiZyA
+降央卓玛,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zlaDWZ
+执迷不悔–刘惜君,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=nhpw8F
+DJ《醉过多少回》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IyBeiE
+DJ《等爱》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mbPpLa
+下沙-游鸿明,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=s2miMN
+《忘川彼岸DJ》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XUXJ5S
+天路,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hjlT2x
+错位时空,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0VGrFr
+听闻远方有你,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uMgEFe
+英雄泪,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MEybgJ
+我没醉,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=647feT
+童年,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=9mD8La
+梵影-总以为来日方长,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=59vglE
+伤了心的女人怎么了,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=B1CZNV
+DJ版《真的为你哭了》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=FVwHF6
+程响-怎么会不难过,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=j8ib3l
+酒吧DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=WSBXdG
+一首《爱一回错一回》DJ版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Prpifs
+伤不起dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8pkkfb
+《野狼的士高》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=bi89Ul
+DJ《连锁反应》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fOuOdo
+任妙音《天在下雨我在想你》DJ版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Pk7gBz
+伤感情歌DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kKWGB1
+最火10首车载DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KLgqR4
+情歌《你是我今生不能忘的唯一》DJ版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=bxYbNu
+精选5首《催泪情歌》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=lqicow
+海来阿木-烟雨人间,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=LVO4Me
+邓丽君,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6SEv09
+5首伤感DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Z8Np6g
+忘记你需要多久(DJ小鱼儿版),http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1xXiKO
+2021最佳伤感情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=FqX0kR
+DJ《酒醉风雨情》《伤心苦酒》《朋友的酒》《红尘没有错》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=U7tADv
+女生DJ伤感情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=wQFNR8
+DJ天后,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=QRGeKW
+程响-不敢,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YK0k6V
+【老歌DJ版】《精选8首》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=U2TCsk
+荷东dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fIWyEh
+DJ一万个舍不得,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=WFMCQz
+DJ老歌60-70-80爱听,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XiKhaj
+花儿笑了DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MXNHxt
+DJ版《黑街》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xu6X9r
+DJ版《一个人挺好》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=t7eX0C
+为爱疯狂,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fIGmzg
+甜歌美人舞,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=nwxkF7
+DJ《等爱的玫瑰》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=gDINO1
+DJ秀丽江山,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=CeLBuF
+DJ此生已过半,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xSjcYK
+DJ石头心,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=amLJp8
+几首绝美情歌DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=oqk5xH
+一首伤感歌曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8v18ya
+2021年最劲爆的dj歌曲 全中文舞曲串烧-2021夜店混音,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HO8lba
+2021《精选5首酒吧DJ舞曲》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BQsnaQ
+2021年6首网络伤感情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=rLPyi8
+6首DJ情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HHFrFL
+7首「伤感情歌」,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=sESOFO
+2021年爆红神曲《精选10》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Nhw01a
+DJ爱难求,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ae4Emk
+DJ10首老歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=2aapmd
+DJ《给你留念》》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=w31Wn8
+DJ《精选8首》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=oVHVHT
+精选车载酒吧劲爆中文DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HniQqB
+DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=2VDepJ
+几首比较火的DJ情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=oxda5Y
+DJ爆红老歌10首车载,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ACWszH
+dj《错过不是我的错》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qJeNdL
+DJ《情火》《拥抱你离去》《夜夜夜漫长》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=NAmRyj
+车载DJ推荐《将军在上》《馋丫头》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4R2vTX
+2021最新情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0qe2mv
+情难断,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Bwd68E
+精选6首DJ情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=QpCwBm
+《感动天感动地》无损超嗨版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=VAhhXx
+爆红全网十首DJ车载,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=prfeDM
+郑亦辰《消遣》DJ版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eUeDKg
+DJ情歌8首,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=UrdMwC
+DJ4首吸烟的女人,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=wAtmeg
+DJ《舍不得又能怎样呢》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=wTsqoH
+DJ歌曲《怎么爱都爱不够》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xEavd8
+现场一曲《最美的情缘》DJ版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=scDBru
+2019火爆DJ串烧第一期,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=n0LHvW
+精选5首DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IHlhwV
+新世纪舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4CfjkA
+国际舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kccofs
+2021火爆女生版伤感DJ情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dxEvhI
+DJ情歌5首,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=bG4SUG
+DJ揣着梦想走,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=W7is85
+小倩《绣红装》DJ版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=7k5w01
+DJ《小薇》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=nEcUn9
+2021一夜火爆几首DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qz1EIb
+《拈花一笑》《对面的小姐姐》《想你了小哥哥》《一朵情花开》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=buQKGk
+车载DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=FDleeX
+5首伤感情歌DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fYzKoZ
+2020国外热门动感DJ版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=jAS8G8
+桥边姑娘,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=X1RiJk
+MV_Stellar_高清,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OSdAs0
+车载DJ舞曲《大风吹》《浪子闲话》《玛尼情歌》《沙漠骆驼》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KhLvZQ
+林俊杰,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PRkywH
+DJ《潮湿的心》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Ii4GH2
+男神dj舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=9Y1aIr
+汪苏泷,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OgmCKR
+「精选DJ洗脑神曲」节奏欢快，动感魔性,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BZkxzL
+DJ没理由,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=S2Ms0m
+5首劲爆dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4B6kI2
+2018精选十首《动感DJ舞曲》串烧大碟,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=yeVIf0
+DJ舞曲《拼命的喝酒拼命的抽烟》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BichPL
+背叛情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iIcdtR
+敢爱敢做,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=MDB4O2
+7 DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OZscAQ
+精选五首DJ男声串烧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pdQp4Q
+老歌DJ《化蝶》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=02y05T
+《2首车载DJ歌曲联唱》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZlVubP
+许嵩,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Q6Pwmy
+《潇洒的走DJ》动感节奏,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=5YfkF6
+舞台美女dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0lETDw
+情哥哥DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=F0FmrE
+野花香dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tblytO
+车震一小时,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XNyvaS
+百花香(抖音DJ版),http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=OdrM6Y
+让人陶醉的几首DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ceyHsZ
+DJ情歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=viaDg3
+DJ最烈的酒最猛的烟,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Zg6Tpu
+潘玮柏,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6BjTqO
+抖音热歌《大风吹+夜夜夜漫长》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mVkg4W
+DJ《信天游》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=DdOzA3
+疯疯疯,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZI6PNL
+SHE,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xfXHL2
+秋月剪水,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Ug4R7X
+DJ让我欢喜让我忧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PoIpxm
+日韩舞曲DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1fjl38
+DJ版《秒针》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ObteOf
+伤感情歌DJ《爱错绝情的你》《我只想告诉你》新歌上线,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YUKDeX
+一夜火爆i网络DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Hul9yn
+伤感情歌DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=vWIgGJ
+爱你到最后一刻,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eKx2lG
+2021爆红《6首女生版伤感DJ》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=yXbn5Y
+慢摇dj舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Z9mUky
+《听风的歌》DJ舞曲重低音夜店歌曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=RTRl96
+DJ  无情书,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=bhptVy
+网络金曲《拈花一笑》《陪你千山万水》《对面小姐姐》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=84wX6h
+今夜回望dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eA3cXb
+徐良,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8tTE2N
+好歌分享《精选6首伤感DJ舞曲》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mkhR6n
+真心太难求,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=10txm9
+六首伤感DJ舞曲《为爱受尽相思罪》《爱过了头心伤透》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=9MjVqO
+DJ舞曲《闯天涯》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tfLZN1
+敢问路在何方dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1anZeO
+爱江山更爱美人金典,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ADYovd
+dj舞曲英雄泪,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0OcxCF
+《鸳鸯DJ》劲爆DJ,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=prEj2u
+乔洋,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xx1v9m
+周杰伦,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=WCed2b
+绝美情歌dj,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XjV3Ze
+庄心妍,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eEUWe8
+薛之谦,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tch8rQ
+蔡依林,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=c1vaFH
+滚石30周年10,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=V69D0e
+梁静茹,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kCmWNH
+最火的5首DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=DELCpw
+月老掉线超清版,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=wnDXkp
+林忆莲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ucpCeC
+滚石30周年6,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6VOJKW
+刘若英,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kT6C2R
+周深,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hEFWRh
+金海心,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hXMQxS
+任然,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HsuBih
+许三多场,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PcAVQg
+魏佳艺,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=P7sbrk
+滚石30周年2,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=VzMFp3
+蔡健雅,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fIzTdX
+滚石30周年8,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Dy3qWw
+陈淑桦,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mDMFRH
+悍匪重案,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8kKfyx
+七首DJ情歌《拈花一笑》《对面的小姐姐》《想你了小哥哥》等,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=AofJ4N
+卓依婷,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=k9ky38
+滚石30周年11,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Y7C7iY
+颜人中,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=sWSIGE
+星爷国语,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=2FnQgn
+老秦说剧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=W9L0v0
+王力宏,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=WVVZro
+姜育恒,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=t4OTOT
+张惠妹,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tIRIzf
+许蒿,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HUjhaQ
+任贤齐,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kSYH1O
+西游续集,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=VUlpll
+滚石30周年7,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KATsIG
+五月天,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HMiVia
+神乐二台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dKgYE6
+幽兰狄仁杰,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZAAP3k
+串烧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Sd3dvN
+云朵,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=o4wYIS
+王心凌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=feBlUI
+腾格尔,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iX9Gfa
+孙燕姿,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=y7n1Gd
+张韶涵,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Sw6UKr
+老蔡解说,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=bZUjbB
+美人热舞洗脑DJ舞曲,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=9udaxI
+吃米滴虫,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iH2ft5
+滚石30周年1,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=O5fSpo
+韩宝仪,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=VwJGSx
+小片片说大片,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1mt6EJ
+陈奕迅,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=cjuhXP
+长片短解,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=ZoxDHO
+童安格,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4rZaVV
+挖沟连长,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dGWRsr
+八六西游,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=CTpmu4
+陈慧琳,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kvBFNV
+滚石30周年4,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=TAMiLX
+陈瑞,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=pYlCXK
+蓝翔新三国,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=O8BF7z
+滚石30周年13,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Ajyq9l
+口音重的解说,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tPNs02
+滚石30周年3,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=TD4Mle
+莫文蔚,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PR7x2o
+神乐一台,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qfYlIg
+小司马说剧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=qDA8ww
+陶喆,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=oYgAX1
+宇哥解说,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=3R7no3
+脑袋寻欢,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=14LkvU
+1900影剧室,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fPOBbU
+雍正帝王,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=HgGC3v
+滚石30周年9,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=uQgY81
+球球新三国,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0x4bhB
+滚石30周年12,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=eemB9R
+狄仁杰全,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=jjoXkU
+情歌DJ合集,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=dL06LG
+汪明荃,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=B8hVUx
+滚石30周年5,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=zA06po
+百晓生说剧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=oWvry1
+双鹰狄仁杰,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=tqdmUK
+刀郎《山河廖哉》,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Ko7XMa
+尉迟杰影评,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=i4UOLI
+来呀官人解说,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fha8Xj
+林志炫,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KcHk9s
+解说-国产推理,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IuICYA
+小司马解说,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=gCPluj
+解说吸奇侠,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=hk5oBk
+一目十影,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=TM5Yxo
+解说古今中外犯罪录,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=fLsE22
+鬼兄奇谈,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=0v6voQ
+解说-梁山好汉,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=x0y8KC
+解说奥雷卡尔克斯,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BxBEFq
+段子-小小天才,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=NskpJQ
+老烟斗鬼故事,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=IpJm7w
+奇葩果仁,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6W1UPz
+彼岸零可,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=7qOzDf
+特色话-文西,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8zVy8H
+解说-困困,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=lmWjo4
+骑毛驴的八戒,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=h476v3
+说片将军侃片,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=mU9RVH
+万合出品,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PnGVf7
+大蓝雀-神剧爆笑,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=BaFxPp
+谁语Whospeak,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=Ksi7ro
+吐槽辣眼雷剧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KK4IWQ
+郭云神奇的神奇解说,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=4YlsnH
+拳叔二次元,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iZWwkW
+韩美食家,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kQvd11
+史君说剧,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=XOOe5L
+MV点歌,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=K51jNS
+地道赶海,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KcdNew
+鱼叔荐好片,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=H4RVYy
+科学放映室,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=8ibP2v
+百晓生解说,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=SbCg7F
+欧美大片,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=WvIHz9
+王杰,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=363CEA
+夜魔人老王,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=bIL1Yw
+火龙果解说,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=6AOK8i
+日语电视,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=iBQvKs
+Alin,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=1dBZmT
+译制国语,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=LaZBSY
+中二日记,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=n9ms3F
+周扒片深度,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=CtLHv6
+侃片大师兄,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=YGwmdH
+指缝里看片,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=kU1rox
+解说爆笑,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=PkDkap
+史君观影-国产刑侦,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=xqmNY0
+史剧解说-洪武大案,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=KOGrvQ
+听书故事,http://kkk.888.3116598.xyz/api.php?n=xxxtw&id=GEMnEy

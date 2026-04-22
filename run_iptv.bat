@@ -3,9 +3,7 @@ chcp 65001 >nul 2>&1
 
 if exist "%~dp0env_config.bat" call "%~dp0env_config.bat"
 
-set "PATH=C:\tools\ffmpeg\ffmpeg-7.1-essentials_build\bin;%PATH%"
-set "HTTP_PROXY=http://127.0.0.1:3067"
-set "HTTPS_PROXY=http://127.0.0.1:3067"
+set "PATH=C:\tools\ffmpeg\bin;C:\Users\Administrator\AppData\Local\Programs\Python\Python312;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Scripts;%PATH%"
 
 cd /d C:\tools\IPTV
 

@@ -1,3 +1,4 @@
+央視頻道,#genre#
 CCTV+ 2 (600p) [Not 24/7],https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
 CCTV1(RTHK33),https://stream1.freetv.fun/9f1b84dd3a947a7915d0bc74607ef26453ecebe1bbc5d5c0fa624007ac18b0ec.m3u8
 CCTV1(RTHK33),https://stream1.freetv.fun/1fb3f86be0eebb643de89f0b93f912bf1b2c513819c63050a91cf9cdfe4ab196.m3u8
@@ -22,7 +23,9 @@ CCTV1(RTHK33),https://stream1.freetv.fun/3788e4fd295011461ce6ef1f10f19c7a7b379cd
 CCTV1(RTHK33),https://stream1.freetv.fun/c65a629c9e66ecd8e19b54929697db5a572222bf2969e74f81551a9e65148187.ctv
 CCTV1(RTHK33),https://stream1.freetv.fun/5018fc141cbd5d5263b2a854286af87c88b69a2a2ba6919ac4e42d6188a5bc81.ctv
 CCTV1(RTHK33),https://stream1.freetv.fun/2d928adc1b9ee23f7870afaec3c49f62bdb2e191948b53695ffe30c5beaa0a3f.m3u8
+衛視綜藝,#genre#
 浙江教科影视,https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
+港澳台頻,#genre#
 TVB Plus,https://stream1.freetv.fun/5c71ddc1ee039d8057898c807e9cda2dfc61c7534d017fbf7c0de04c5c58c890.m3u8
 TVB Plus,https://stream1.freetv.fun/efea08e40d2af040689b157636dfc39a60cdd414ca5fa586e091a12876bb4bbf.m3u8
 TVB Plus,https://stream1.freetv.fun/e175c99ac93e5584a2134fc6349ebe81808147fb1b7b44d76c7d16fa98d82b74.m3u8
@@ -85,27 +88,32 @@ TVB華劇,https://stream1.freetv.fun/10e310c5f0a1dc8c0c5d76a0800a0d2950687756864
 鳳凰香港,https://stream1.freetv.fun/de73fec89305dacef19eafcb697172c30729dd00897cb0d30c80affbb3a582e9.m3u8
 鳳凰香港,https://stream1.freetv.fun/1adc080c2a2e1019875ad56cd3e5093054475d1f818d2973262d3492d8a74306.m3u8
 鳳凰香港,https://stream1.freetv.fun/1d0cd71c154df6f70ed3dbf11b59922a12c9ad1ec4f8f1913fdcc17065a24041.ctv
+影視劇集,#genre#
 AMC电影,http://61.221.215.25:8800/hls/43/index.m3u8
-CHC电影,http://183.237.95.108:9901/tsfile/live/1008_1.m3u8?key=txiptv&playlive=0&authid=0
+CHC电影,http://183.237.95.108:9901/tsfile/live/1008_1.m3u8?playlive=0&authid=0
 东阳影视生活,http://l.cztvcloud.com/channels/lantian/SXdongyang1/720p.m3u8
-哈尔滨影视,http://stream.hrbtv.net/yspd/sd/live.m3u8?zheild
+哈尔滨影视,http://stream.hrbtv.net/yspd/sd/live.m3u8
 安徽影视,https://www.ahtv.cn/folder9000/folder20193?channelIndex=3
 辽宁影视剧,http://120.76.248.139/live/bfgd/4200000070.m3u8
 韩国电影1,https://stream.ads.ottera.tv/playlist.m3u8?network_id=595
 韩国电影2,https://stream.ads.ottera.tv/playlist.m3u8?network_id=743
 龙华电影,https://cdn8.163189.xyz/live/lhdy/stream.m3u8
+體育賽事,#genre#
 篮球专场,https://isus.cc/php/huya.php?id=27949551
+少兒動漫,#genre#
 經典卡通臺,https://stream1.freetv.fun/999d5e5605f738c169f98d42b6d5d9502c8b42857e29d0628dbc153785ff75d3.m3u8
+新聞資訊,#genre#
 万州新闻综合,https://wanzhoulive.cbg.cn/iTXwrGs/800/live.m3u8
 东莞新闻综合,https://stream.sun0769.com/dgrtv1/mp4tv1_800/index.m3u8
 台视新闻 HD,http://38.64.72.148/hls/modn/list/4013/chunklist0.m3u8
-夹江新闻综合,http://tvfile.jjrm.org.cn/nmip-media/channellive/channel106282/playlist.m3u8?zsicd
-广西新闻,http://36.136.38.87:85/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0$广西移动
+夹江新闻综合,http://tvfile.jjrm.org.cn/nmip-media/channellive/channel106282/playlist.m3u8
+广西新闻,http://36.136.38.87:85/tsfile/live/0006_1.m3u8?playlive=1&authid=0%24%E5%B9%BF%E8%A5%BF%E7%A7%BB%E5%8A%A8
 成都新闻频道,http://115.29.208.41:34567/sccd.php?id=cdtv1&kl=www.9kds.com
-泗阳资讯频道,http://siyang-tv-hls.cm.jstv.com/siyang-tv/siyangzx.m3u8?zjiangsd
+泗阳资讯频道,http://siyang-tv-hls.cm.jstv.com/siyang-tv/siyangzx.m3u8
 烟台新闻综合,http://live.yantaitv.cn/live/3e81a8879da44c5dadf3bd9c10468e1c/9b776d420ee4438199b7657c8eb88f07-1.m3u8
-舒兰新闻,http://stream8.jlntv.cn/shulan/sd/live.m3u8?zjild
+舒兰新闻,http://stream8.jlntv.cn/shulan/sd/live.m3u8
 黑水新闻综合,http://live.schstv.com:90/live/xwzh.m3u8
+其他頻道,#genre#
 16,https://cloud.7so.top/f/KZP3t4/2%20%2812%29.mp4
 2,https://cloud.7so.top/f/6Rgmty/3%20%287%29.mp4
 20240203期,https://vod.v.jstv.com/2024/02/03/JSTV_JSWSNEW_1706970149015_RkGBvWs_1308.mp4
@@ -332,7 +340,7 @@ snaap!,https://stream1.freetv.fun/1dad0882045d6c9065bc63bc343aeb79d12a7bc0710433
 卡塔尔Al Jazeera Arabic,http://live-hls-web-aja.getaj.net/AJA/02.m3u8
 原住民電視,https://stream1.freetv.fun/22c5da7b5ac3a6d641b5139dd45ef88240a204734ee223eaaec7aee861817cfe.m3u8
 双辽综合,http://stream3.jlntv.cn:80/aac_slgb/playlist.m3u8
-古县综合,https://l2fpdktp.live.sxmty.com/live/hls/e4c3b363cc4549788e2d983f403e07db/d99ce1eb686e41b9afc888110bd95aa7.m3u8?zshanxd
+古县综合,https://l2fpdktp.live.sxmty.com/live/hls/e4c3b363cc4549788e2d983f403e07db/d99ce1eb686e41b9afc888110bd95aa7.m3u8
 台視HD,https://stream1.freetv.fun/e84c6b51786fed95a30015ab67a9deb0c6711adc83cda15534a7591aebd811ae.m3u8
 台視HD,https://stream1.freetv.fun/b56616ca791b5b2b499c15067c91ada89782e642978a957edec7038d5b5cd248.m3u8
 台視新聞FHD,https://stream1.freetv.fun/6d45c852234adf9247cfc6eb9b1682de0defb8f84183c6dcf6a39bb24c07af32.m3u8
@@ -345,7 +353,7 @@ snaap!,https://stream1.freetv.fun/1dad0882045d6c9065bc63bc343aeb79d12a7bc0710433
 好訊息 2,https://stream1.freetv.fun/d13c90f2ead30623f0bc7b17562018f57fc29c7e171a85c546e9ac0e6325cf1b.m3u8
 嫁衣案下集-大堂-小程玉英,http://gcw.bdcdn.shoujiduoduo.com/v/201104/7f6a182e42bd064ee4427623e68fb02e.mp4
 宜兴紫砂,http://3gvod.zjgonline.com.cn:1935/live/_definst_/xinwenzonghe_app/chunklist.m3u8
-宿豫综合频道,https://suyu-tv-hls.cm.jstv.com/suyu-tv/syzhpd.m3u8?zjiangsd
+宿豫综合频道,https://suyu-tv-hls.cm.jstv.com/suyu-tv/syzhpd.m3u8
 寰宇新聞,https://stream1.freetv.fun/7fcd19485260298737eeb56138cc149f0be0cc175bf93721e4074bfb2b63fbe0.m3u8
 寰宇新聞FHD,https://stream1.freetv.fun/d9e077d94c5ba3a10f9d1a26d5c1f3aa5d4d3f811e1f85120c5b742aaa506157.m3u8
 寰宇新聞台灣臺,https://stream1.freetv.fun/def5a6f37b1ac6bb85367130b5f3cf8e7cb0605a6af23489f6d60902f9e4f1d2.m3u8
@@ -425,7 +433,7 @@ snaap!,https://stream1.freetv.fun/1dad0882045d6c9065bc63bc343aeb79d12a7bc0710433
 生命電視台,http://211.73.19.201/live/AB167E56-808C-81D4-6471-76DC400D5192.m3u8?fmt=x264_1200K_ts&cpid=admin&size=1920X1080
 番禺综合,http://video.epaper.pybtv.cn:8080/live/rtmp_live_demo.flv
 睢宁综合频道,http://suining-tv-hls.cm.jstv.com/suining-tv/suiningzh.m3u8
-祁门综合,http://zbbf2.ahbztv.com/live/416.m3u8?zanhd
+祁门综合,http://zbbf2.ahbztv.com/live/416.m3u8
 秦腔赶坡选段,http://gcw.bdcdn.shoujiduoduo.com/v/201029/eb7fbb8b56dade1730ec3a521a276b3c.mp4
 第106集,https://vip.lz-cdn16.com/20230415/17051_9d62c82e/index.m3u8
 第119集,https://vip.lz-cdn16.com/20230415/17064_5b466341/index.m3u8
@@ -464,7 +472,7 @@ snaap!,https://stream1.freetv.fun/1dad0882045d6c9065bc63bc343aeb79d12a7bc0710433
 華視教育文化,https://stream1.freetv.fun/f7d8e1fcfd7eb512251b6da18e67187760ac602c400781e48ce3976e1dbd62c1.m3u8
 華視教育文化,https://stream1.freetv.fun/f7d8e1fcfd7eb512251b6da18e67187760ac602c400781e48ce3976e1dbd62c1.m3u8
 華視新聞資訊,https://stream1.freetv.fun/8da1df79136517c2f2ce450806078671ce23ac0dcc104ee8898bcaa43e440598.m3u8
-西峰,http://pili-live-rtmp.luan2.hfmt.net/luan2/xifeng/123456.m3u8?zgand
+西峰,http://pili-live-rtmp.luan2.hfmt.net/luan2/xifeng/123456.m3u8
 警察故事2013,https://vip1.lz-cdn1.com/20220420/2679_f713e430/1200k/hls/mixed.m3u8
 通化辉南综合,http://stream5.jlntv.cn/hn/playlist.m3u8
 采昌影劇,https://stream1.freetv.fun/8a1f21adf71db7349328b77f9881e1b75568b582632af73aac699132660dbbe6.ctv
@@ -472,14 +480,14 @@ snaap!,https://stream1.freetv.fun/1dad0882045d6c9065bc63bc343aeb79d12a7bc0710433
 金光布袋戲,https://stream1.freetv.fun/32e0b0367265fa9e679ad9a22979f03cd463ca02696ee5bfe67820cc83571332.ctv
 鏡新聞,https://stream1.freetv.fun/0b727cefde59b26132997b410779b477cc6c0e0b46250c83e29418c11d1a4e19.m3u8
 鏡新聞,https://stream1.freetv.fun/0a7c84c40ea7b310b9886e6c708068403f8fcd0d550d04c3a2e9e95ae394eaa1.m3u8
-铜梁综合,http://183.64.174.171:40123/ch1.m3u8?zzhongqd
+铜梁综合,http://183.64.174.171:40123/ch1.m3u8
 长春公主岭综合,http://stream5.jlntv.cn/gzl/playlist.m3u8
 长春德惠综合,http://stream11.jlntv.cn/dehuitv/playlist.m3u8
 随州综合,https://34766.hlsplay.aodianyun.com/guangdianyun_34766/tv_channel_304.m3u8?auth_key=3302215019-0-0-de184e5122771cc495e468e9c7436cef&extra_key=Gpp9OoaDCH7QYfDm16Wcl4hKcngRCXVGx9VcHeaQX930Ka3v-c4mV2j97p_kbvdufvKF3Q6wFS1W_H1aXcWh_V1jOTCERh56NU_qMoXr0phq-bmgkVoBH38ozPxOe3-ykriQMcm-F2_pLFglvV2A78dDHi093smvbecTkzhTa9c
 雲朵妈妈,https://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/d8ad434c6b08421a927557a4d98da65c/1200.m3u8
-靖天戏剧,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv058
+靖天戏剧,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?id=4gtv-4gtv058
 靖天戲劇,https://stream1.freetv.fun/b4f15adf935f16285a2c2ef88df0d5a58dd7934a03a8ec7d9f4e57ca2206faf6.ctv
-靖天映画,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv055
+靖天映画,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?id=4gtv-4gtv055
 靖天映畫,https://stream1.freetv.fun/0864058ec04ec30d97650ab00f4f78c094c0c88f5c79f141c0292f525cf29ea1.ctv
 靖天電影,https://stream1.freetv.fun/6dd2fa11256d9b01e56697fe96435249d3d817b521ae86e3ed484bba403963c6.ctv
 靖天電影,https://stream1.freetv.fun/765e3a4358b2cbd984b01409af173e0359bbd3c5eb632013725a6892776a3784.ctv
@@ -487,7 +495,7 @@ snaap!,https://stream1.freetv.fun/1dad0882045d6c9065bc63bc343aeb79d12a7bc0710433
 靖洋戲劇,https://stream1.freetv.fun/7b257b9abd13790ce343fd280564c1810cc85a5497b0f6bbab320bd6dca4d8bd.ctv
 非凡新聞HD,https://stream1.freetv.fun/0d5a5ce924aa323b57e608e00cf62cbd6628179bf5d0b2e0ddd93a5796ccfbdf.ctv
 飞碟之谜02,https://newcntv.qcloudcdn.com/asp/hls/2000/0303000a/3/default/d2454bbb542d4613a9db478dab2addfd/2000.m3u8
-高邮综合频道,http://gaoyou-tv-hls.cm.jstv.com/gaoyou-tv/gaoyouxw.m3u8?zjiangsd
+高邮综合频道,http://gaoyou-tv-hls.cm.jstv.com/gaoyou-tv/gaoyouxw.m3u8
 鳳凰衛視中文,https://stream1.freetv.fun/c8ad10f8d135ebbea6b77779874c1d8a6da07d925786ac11f855c0dfa87b4487.m3u8
 鳳凰衛視中文,https://stream1.freetv.fun/a3cfcb6f4429baaa2f182afaf1ab55003d71ca680ca0afd61968d36b33f26f03.m3u8
 鳳凰衛視中文,https://stream1.freetv.fun/e6fd2d09a19cbeb78145f445436d44d9ec43c79a9ce2ffcdd4116a5c8bafdc6f.m3u8

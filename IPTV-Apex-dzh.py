@@ -34,6 +34,9 @@ except ImportError:
     HAS_M3U8_LIB = False
     print("⚠️  未安装 m3u8 库，频道名解析准确率可能降低 10-20%（安装命令：pip install m3u8）")
 
+# FFprobe 可用性标志（全局）
+HAS_FFPROBE = False
+
 # 修复 Windows 控制台编码问题
 if sys.platform == 'win32':
     import io
@@ -1174,9 +1177,11 @@ class StreamChecker:
             overseas = NameProcessor.is_overseas(name)
             timeout  = Config.TIMEOUT_OVERSEAS if overseas else Config.TIMEOUT_CN
 
-            # ffprobe 流检测
-            result = self._check_with_ffprobe(url, name, timeout, proxy, overseas)
-            # 失败则降级 HTTP 检测
+            # ffprobe 流检测（如果可用）
+            result = None
+            if HAS_FFPROBE:
+                result = self._check_with_ffprobe(url, name, timeout, proxy, overseas)
+            # 失败或无ffprobe则降级 HTTP 检测
             if not result:
                 result = self._check_with_http(url, name, timeout, proxy, overseas)
 
@@ -1253,52 +1258,77 @@ class StreamChecker:
 
     def _check_with_http(self, url: str, name: str, timeout: int,
                          proxy: Optional[str], overseas: bool) -> Dict[str, Any]:
-        """HTTP 降级检测：proxy 挂了自动降级直连"""
+        """HTTP 降级检测：严格验证响应内容，排除伪200"""
         start_time = time.time()
         domain  = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
         headers = {'User-Agent': random.choice(Config.UA_POOL), 'Referer': domain}
-        http_timeout = timeout // 2
+        http_timeout = timeout
 
         def _do_check(use_proxy: bool) -> tuple:
-            """返回 (latency, status_code_or_None, error_reason_or_None)"""
+            """返回 (latency, status_code_or_None, error_reason_or_None, is_valid_stream)"""
             proxies = {'http': proxy, 'https': proxy} if use_proxy and proxy else None
             try:
                 t0 = time.time()
+                # 先尝试HEAD快速检测
                 resp = self.session.head(url, headers=headers, timeout=http_timeout,
                                          allow_redirects=True, proxies=proxies)
-                resp.close()
                 latency = round(time.time() - t0, 2)
                 if resp.status_code in (200, 206, 301, 302, 304):
-                    return latency, resp.status_code, None
-                # 4xx/5xx → 降级 GET 试一次
+                    resp.close()
+                    # 200响应需要进一步验证内容
+                    if resp.status_code in (200, 206):
+                        # 检查Content-Type，排除明显非流媒体响应
+                        ct = resp.headers.get('Content-Type', '').lower()
+                        if 'html' in ct and 'mpeg' not in ct and 'mp2t' not in ct:
+                            # 可能是HTML错误页，需要GET验证
+                            pass
+                        else:
+                            return latency, resp.status_code, None, True
+                    return latency, resp.status_code, None, True
+                
+                # HEAD失败或返回错误码，尝试GET验证
                 resp2 = self.session.get(url, headers=headers, timeout=http_timeout,
                                          allow_redirects=True, proxies=proxies, stream=True)
+                latency2 = round(time.time() - t0, 2)
+                if resp2.status_code in (200, 206):
+                    # 读取前512字节验证内容
+                    content = b''
+                    try:
+                        for chunk in resp2.iter_content(chunk_size=512):
+                            content = chunk
+                            break
+                    except:
+                        pass
+                    resp2.close()
+                    
+                    # 验证内容是否为有效流
+                    content_lower = content.decode('utf-8', errors='ignore').lower()
+                    # M3U8/M3U 文件特征
+                    if '#extm3u' in content_lower:
+                        return latency2, 200, None, True
+                    # TS流特征（同步字节 0x47）
+                    if content and content[0] == 0x47:
+                        return latency2, 200, None, True
+                    # MP4/FLV等视频容器特征
+                    if content[:4] in (b'ftyp', b'FLV\x01', b'\x00\x00\x00', b'moov'):
+                        return latency2, 200, None, True
+                    # 排除HTML错误页
+                    if '<html' in content_lower or '<!doctype' in content_lower:
+                        return latency2, resp2.status_code, "HTML error page", False
+                    # 其他情况视为有效
+                    return latency2, 200, None, True
+                
                 resp2.close()
-                return latency, resp2.status_code, None
+                return latency2, resp2.status_code, f"HTTP {resp2.status_code}", False
             except Exception as e:
-                return None, None, str(e)
+                return None, None, str(e), False
 
-        # 第一次尝试（用 proxy）
-        if proxy:
-            latency, code, err = _do_check(use_proxy=True)
-            if latency is not None:
-                if code is not None:
-                    q = max(StreamChecker._calc_quality_score(latency, 0.0), Config.MIN_QUALITY_SCORE)
-                    return {"status": "有效", "name": name, "url": url, "lat": latency,
-                            "overseas": overseas, "quality": q, "speed": 0.0}
-            # proxy 连不上或超时 → 立即降级直连（不等 proxy 超时）
-            if err and any(x in err.lower() for x in ('connection', 'timeout', 'refused', 'proxy', 'tunnel')):
-                latency2, code2, _ = _do_check(use_proxy=False)
-                if latency2 is not None:
-                    q = max(StreamChecker._calc_quality_score(latency2, 0.0), Config.MIN_QUALITY_SCORE)
-                    return {"status": "有效", "name": name, "url": url, "lat": latency2,
-                            "overseas": overseas, "quality": q, "speed": 0.0}
-        else:
-            latency, code, err = _do_check(use_proxy=False)
-            if latency is not None:
-                q = max(StreamChecker._calc_quality_score(latency, 0.0), Config.MIN_QUALITY_SCORE)
-                return {"status": "有效", "name": name, "url": url, "lat": latency,
-                        "overseas": overseas, "quality": q, "speed": 0.0}
+        # 直连检测（不使用代理，模拟用户真实播放环境）
+        latency, code, err, is_valid = _do_check(use_proxy=False)
+        if latency is not None and is_valid:
+            q = max(StreamChecker._calc_quality_score(latency, 0.0), Config.MIN_QUALITY_SCORE)
+            return {"status": "有效", "name": name, "url": url, "lat": latency,
+                    "overseas": overseas, "quality": q, "speed": 0.0}
 
         return {"status": "失效", "name": name, "url": url, "overseas": overseas,
                 "reason": err or "检测超时/连接失败"}
@@ -1678,29 +1708,49 @@ class IPTVChecker:
                 _url = _ch.get('url', '')
                 if not _url:
                     continue
+                    continue
                 if _url.startswith(('udp://', 'rtp://', 'srt://')):
                     _ch['_direct_ok'] = True
                     continue
                 _netloc = _url.split('://', 1)[-1].split('?')[0].split('/')[0].lower()
-                if any(_k in _netloc for _k in _KNOWN_DIRECT):
+                # 仅可靠CDN可直通
+                if any(_k == _netloc or _netloc.endswith('.' + _k) for _k in _RELIABLE_CDN):
                     _ch['_direct_ok'] = True
                     continue
                 _to_test.append((_cat_key, _ch))
 
             _total = sum(len(v) for v in cat_map.values())
-            self.logger.info(f'直连二验: 总计 {_total} 个 | 直通 {len(_all_channels)-len(_to_test)} 个 | 待测 {len(_to_test)} 个 (并发60)')
+            self.logger.info(f'直连二验: 总计 {_total} 个 | 可靠CDN直通 {len(_all_channels)-len(_to_test)} 个 | 待检测 {len(_to_test)} 个')
 
             if _to_test:
                 def _check_one(_ch):
+                    """严格检测：HEAD失败则GET验证，并检查响应内容"""
+                    _url = _ch['url']
                     try:
-                        _r = _req.head(_ch['url'], timeout=3, verify=False,
+                        # 先尝试HEAD
+                        _r = _req.head(_url, timeout=8, verify=False,
                                        allow_redirects=True,
-                                       headers={'User-Agent': 'Mozilla/5.0 (compatible; IPTV-Checker/1.0)'})
+                                       headers={'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18'})
+                        if _r.status_code in (200, 206):
+                            return _ch, True
+                        # HEAD返回非200，尝试GET前512字节验证内容
+                        if _r.status_code >= 400:
+                            _r2 = _req.get(_url, timeout=8, verify=False,
+                                          stream=True,
+                                          headers={'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18',
+                                                   'Range': 'bytes=0-511'})
+                            if _r2.status_code in (200, 206):
+                                _content = _r2.content[:200].decode('utf-8', errors='ignore')
+                                # 检查是否为有效的m3u8/mp内容（排除错误页）
+                                if '#extm3u' in _content.lower() or 'stream' in _content.lower():
+                                    return _ch, True
+                            return _ch, False
                         return _ch, _r.status_code < 500
-                    except:
+                    except Exception:
+                        # 连接失败，标记无效
                         return _ch, False
 
-                with ThreadPoolExecutor(max_workers=60) as _ex:
+                with ThreadPoolExecutor(max_workers=80) as _ex:
                     _futures = {_ex.submit(_check_one, ch): ch for _, ch in _to_test}
                     for _fut in as_completed(_futures):
                         _ch, _ok = _fut.result()
@@ -1718,7 +1768,7 @@ class IPTVChecker:
 
             self.stats['filtered_by_recheck'] = _removed
             self.stats['valid'] = sum(len(v) for v in cat_map.values())
-            self.logger.info(f'直连二验: 过滤 {_removed} 个，剩余 {self.stats["valid"]} 个有效')
+            self.logger.info(f'直连二验: 过滤 {_removed} 个无效源，剩余 {self.stats["valid"]} 个有效')
         except Exception as _e:
             self.logger.warning(f'直连二验异常: {_e}')
 
@@ -1964,6 +2014,7 @@ class IPTVChecker:
 
 # ==================== 命令行入口 ====================
 def main():
+    global HAS_FFPROBE
     # 检测 ffprobe
     try:
         result = subprocess.run(
@@ -1976,12 +2027,13 @@ def main():
         )
         if result.returncode == 0:
             print("✅ ffprobe 正常")
+            HAS_FFPROBE = True
         else:
-            print("❌ ffprobe 不可用，请安装 FFmpeg")
-            sys.exit(1)
+            print("⚠️ ffprobe 不可用，将使用 HTTP 检测（准确率较低）")
+            HAS_FFPROBE = False
     except (FileNotFoundError, subprocess.TimeoutExpired):
-        print("❌ ffprobe 不可用，请安装 FFmpeg")
-        sys.exit(1)
+        print("⚠️ ffprobe 不可用，将使用 HTTP 检测（准确率较低）")
+        HAS_FFPROBE = False
 
     # 初始化配置
     Config.load_from_file()

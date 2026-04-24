@@ -306,122 +306,122 @@ http://107.150.60.122/live/snwshd.m3u8
 http://58.57.40.22:9901/tsfile/live/1057_1.m3u8
 #EXTINF:-1 group-title="衛視綜",黑龙江卫视
 http://58.57.40.22:9901/tsfile/live/1040_1.m3u8
-#EXTGRP:港澳台頻
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTGRP:港澳台
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/ca3ef0d86499c5532593cd3f5f8e1e49b5cb6e458df18d5e4819e830955af5da.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/5c71ddc1ee039d8057898c807e9cda2dfc61c7534d017fbf7c0de04c5c58c890.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/e175c99ac93e5584a2134fc6349ebe81808147fb1b7b44d76c7d16fa98d82b74.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/dec5e1d162ddc4e733fb714c2c8795323ccf94261596cffe7ee65f0034986c70.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/f154902517f39c01a56296587c62613fee9c99bc97e5dc6867da9a187c96aa13.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/391d21caea3269c8477f1c3fc0f24bbfded5d4f4fcf1d63d96b5cd8574792a34.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/da034e93c10ecf7d190dc26e54b87fb80766685de00d86afdf46a833c512cb27.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/6ade45822dc9265d4aba6c1854bfd6a2635b13d96624929150024f662eca25d7.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/f154902517f39c01a56296587c62613fee9c99bc97e5dc6867da9a187c96aa13.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB Plus
+#EXTINF:-1 group-title="港澳台",TVB Plus
 https://stream1.freetv.fun/dec5e1d162ddc4e733fb714c2c8795323ccf94261596cffe7ee65f0034986c70.ctv
-#EXTINF:-1 group-title="港澳台頻",TVBS Asia
+#EXTINF:-1 group-title="港澳台",TVBS Asia
 https://stream1.freetv.fun/1f5a105e1d310976a1fd6974db9451f8099e12c0df74fe2ad84087d5b6177f9a.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVBS Asia
+#EXTINF:-1 group-title="港澳台",TVBS Asia
 https://stream1.freetv.fun/363c2cded19435f6246775f35056ac65a2041ac53ee74d310346babe4550ab93.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVBS新聞HD
+#EXTINF:-1 group-title="港澳台",TVBS新聞HD
 https://stream1.freetv.fun/b9008aeb80dd41cc97f7006561fd5af645903c8fe9f44cb2e1e866c841842054.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB亞洲劇
+#EXTINF:-1 group-title="港澳台",TVB亞洲劇
 https://stream1.freetv.fun/0e9dc5f67eeae3d90d5afce9b70b9a06d6b3db352230f64d93221b83afb9e9ff.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB亞洲劇
+#EXTINF:-1 group-title="港澳台",TVB亞洲劇
 https://stream1.freetv.fun/0854ce5d4e8860e055549f5881ef05ab76b1bd0bc5bea78057553ed66f44d800.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB亞洲劇
+#EXTINF:-1 group-title="港澳台",TVB亞洲劇
 https://stream1.freetv.fun/490340d742eb83c96123103e77460d8be396d5b87ee81e045aecaed070e152b6.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB亞洲劇
+#EXTINF:-1 group-title="港澳台",TVB亞洲劇
 https://stream1.freetv.fun/2aef95d17a02f90322721318b132da070c7e4cf542e6fcebe3d6ce02379a4742.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB亞洲劇
+#EXTINF:-1 group-title="港澳台",TVB亞洲劇
 https://stream1.freetv.fun/52055e00fcf09c1a1fdd4289f27dce8639ebf402e478b7204b22711cb6589d4c.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB亞洲劇
+#EXTINF:-1 group-title="港澳台",TVB亞洲劇
 https://stream1.freetv.fun/5d67b3e9131d07f6e7da4e6fafda09cc609ee7fefb2e14ca14cf5bd6da5e4107.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB亞洲劇
+#EXTINF:-1 group-title="港澳台",TVB亞洲劇
 https://stream1.freetv.fun/395aa9bcecda230deb8046ff6d1b97f4158ab2d965e8610e865dc27560447d33.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB亞洲劇
+#EXTINF:-1 group-title="港澳台",TVB亞洲劇
 https://stream1.freetv.fun/fe2dbb4d5eaa4cbe031db7efd490f9a162b19052e943f9800e18b90e9ac5adaf.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB亞洲劇
+#EXTINF:-1 group-title="港澳台",TVB亞洲劇
 https://stream1.freetv.fun/0e9dc5f67eeae3d90d5afce9b70b9a06d6b3db352230f64d93221b83afb9e9ff.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB星河(粵)
+#EXTINF:-1 group-title="港澳台",TVB星河(粵)
 https://stream1.freetv.fun/5d97764b0d8d0d78edaff0889e066b337f6a9e7abd5026db7ac5445becf5b351.m3u8
-#EXTINF:-1 group-title="港澳台頻",TVB星河(粵)
+#EXTINF:-1 group-title="港澳台",TVB星河(粵)
 https://stream1.freetv.fun/e1f2e0d3c534c1d7b467fa6bf2a647527e6841c6c2d76b14b29e22682fba93f1.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB星河(粵)
+#EXTINF:-1 group-title="港澳台",TVB星河(粵)
 https://stream1.freetv.fun/1c202fca80785f8b4824cdf42054cbbdb391c0debedaa601e797953597ae2eda.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB星河(粵)
+#EXTINF:-1 group-title="港澳台",TVB星河(粵)
 https://stream1.freetv.fun/1014774338dd6fcc6e3c0358712f55964ae23ffb1c8ff3a246979c2583fadff1.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB星河(粵)
+#EXTINF:-1 group-title="港澳台",TVB星河(粵)
 https://stream1.freetv.fun/9bbb5f6b3fe726c6ed82737f4babafc986bc35e8b9a57840b28f69b623855886.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB星河(粵)
+#EXTINF:-1 group-title="港澳台",TVB星河(粵)
 https://stream1.freetv.fun/1014774338dd6fcc6e3c0358712f55964ae23ffb1c8ff3a246979c2583fadff1.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB華劇
+#EXTINF:-1 group-title="港澳台",TVB華劇
 https://stream1.freetv.fun/10e310c5f0a1dc8c0c5d76a0800a0d2950687756864f9885429ed0d9868ffd1e.ctv
-#EXTINF:-1 group-title="港澳台頻",TVB黃金翡翠台
+#EXTINF:-1 group-title="港澳台",TVB黃金翡翠台
 https://stream1.freetv.fun/99bb646a71d6fb69f3287af93bc08e97e334d626c7889509579bf47e76b641f8.ctv
-#EXTINF:-1 group-title="港澳台頻",明珠
+#EXTINF:-1 group-title="港澳台",明珠
 https://stream1.freetv.fun/69f1ead0e893a2afc15dd39f8bb06bb84a91875cf4fb29e1c7e3a4730273b641.m3u8
-#EXTINF:-1 group-title="港澳台頻",明珠
+#EXTINF:-1 group-title="港澳台",明珠
 https://stream1.freetv.fun/9355776363cced50b636fb90bd1d63ba128a62b87206583d553b215847a74d2d.ctv
-#EXTINF:-1 group-title="港澳台頻",明珠
+#EXTINF:-1 group-title="港澳台",明珠
 https://stream1.freetv.fun/a4ef3a05fe986f663938806c799210b5063fd8a4be0058da04fd45fe000a7e24.ctv
-#EXTINF:-1 group-title="港澳台頻",明珠
+#EXTINF:-1 group-title="港澳台",明珠
 https://stream1.freetv.fun/b5aa75db3a810edaa7ec150a9c16452a1590dc403278710c4d6ede50ff2b555c.m3u8
-#EXTINF:-1 group-title="港澳台頻",明珠
+#EXTINF:-1 group-title="港澳台",明珠
 https://stream1.freetv.fun/b5aa75db3a810edaa7ec150a9c16452a1590dc403278710c4d6ede50ff2b555c.m3u8
-#EXTINF:-1 group-title="港澳台頻",明珠臺(備)
+#EXTINF:-1 group-title="港澳台",明珠臺(備)
 https://stream1.freetv.fun/fc542dddf6d96335d494c255d5df19fc0f2c61c46779dd9fe85e54b1559c3460.ctv
-#EXTINF:-1 group-title="港澳台頻",明珠臺(備)
+#EXTINF:-1 group-title="港澳台",明珠臺(備)
 https://stream1.freetv.fun/18147fe9227d749afdbf2b79ad6a6182ecd2276f2338a696d0c23d998e2763b2.ctv
-#EXTINF:-1 group-title="港澳台頻",明珠臺(備)
+#EXTINF:-1 group-title="港澳台",明珠臺(備)
 https://stream1.freetv.fun/e56abfec74a8d135ddfc2c074a81751b6fc41d0272d5f5519c218b2e56d3265f.ctv
-#EXTINF:-1 group-title="港澳台頻",明珠臺(備)
+#EXTINF:-1 group-title="港澳台",明珠臺(備)
 https://stream1.freetv.fun/4db377997e788111dc3a7a47fec67132e36bd8221c27f01f0d14ae82d86bc4ff.ctv
-#EXTINF:-1 group-title="港澳台頻",明珠臺(備)
+#EXTINF:-1 group-title="港澳台",明珠臺(備)
 https://stream1.freetv.fun/b49f11a7e68a76202daba76fb5c90eb8ef1c34d977c5e9eac0825112f74f87d3.ctv
-#EXTINF:-1 group-title="港澳台頻",明珠臺(備)
+#EXTINF:-1 group-title="港澳台",明珠臺(備)
 https://stream1.freetv.fun/e56abfec74a8d135ddfc2c074a81751b6fc41d0272d5f5519c218b2e56d3265f.ctv
-#EXTINF:-1 group-title="港澳台頻",福建漳州醉美沙滩翡翠湾
+#EXTINF:-1 group-title="港澳台",福建漳州醉美沙滩翡翠湾
 https://gcalic.v.myalicdn.com/gc/fcw03_1/index.m3u8
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/d9a2e34945118d998ae46a4440adbd8b97ad86e379c36161dbea8d01c7ea74a6.m3u8
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/2d6d5de01dfd6fdcaaf4fe4b5ab0188eb1849a91fee22cc73276e6737ce055a8.m3u8
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/96be57df137f3e952c37d15c81c54511223f65ab2929549598ef3c601f7f0add.m3u8
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/169afe453d043b4888d3e0684163a3c8e7c13738df07bcfa187dcd05223e3891.ctv
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/829b7e0470319a0e8fff9a9cc0eccdf0f87d0785005387b2a9f38fd9c7cde69c.ctv
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/07b8f89d6c2bf405852bd8eb695e2389afdb45dfaf30d5273f8d2b819720681f.ctv
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/363a02513a5dbd6658d52b26c733386779319595957dce38c539ddb689d7b401.ctv
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/b6805e649e0c7b8193b4fd6d6b407675b3254a0eca4b30ef8ed033b5202b285e.ctv
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/ec738c8f8b5d5706670eb42e4fe79edc5d6f471ba93d0eb20dff4c372efef4db.ctv
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/b1128a129ebb9fd5ddde711ab565c82831400d80e5aa6aa9822e6c1b33ed95c5.ctv
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/ad698c68f995a760534e836438ea8e8bc65abf16cd0ed1d6b8e005cd9b90913c.ctv
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/7626cd1e0830deb6cc37d51b751648e27e25c8136a22f61f6bb6ce5a85dcb0c4.ctv
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/96be57df137f3e952c37d15c81c54511223f65ab2929549598ef3c601f7f0add.m3u8
-#EXTINF:-1 group-title="港澳台頻",翡翠台
+#EXTINF:-1 group-title="港澳台",翡翠台
 https://stream1.freetv.fun/b6805e649e0c7b8193b4fd6d6b407675b3254a0eca4b30ef8ed033b5202b285e.ctv
-#EXTINF:-1 group-title="港澳台頻",鳳凰香港
+#EXTINF:-1 group-title="港澳台",鳳凰香港
 https://stream1.freetv.fun/a6e64c90fc24ccf34c0be8409108f8b9e4e4e91f51e8b3daa2bcfe108d2cfb20.m3u8
-#EXTINF:-1 group-title="港澳台頻",鳳凰香港
+#EXTINF:-1 group-title="港澳台",鳳凰香港
 https://stream1.freetv.fun/a6e64c90fc24ccf34c0be8409108f8b9e4e4e91f51e8b3daa2bcfe108d2cfb20.m3u8
 #EXTGRP:影視劇
 #EXTINF:-1 group-title="影視劇",AMC电影

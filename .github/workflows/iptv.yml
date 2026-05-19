@@ -20,7 +20,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 tqdm
+          pip install requests httpx beautifulsoup4 tqdm zhconv
       
       - name: Run IPTV crawler
         run: |
@@ -28,7 +28,16 @@ jobs:
         env:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      
+
+      - name: Generate M3U and sync
+        run: |
+          python scripts/generate_m3u.py
+          python scripts/sync_to_gist.py
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        if: success()
+
       - name: Commit and push
         run: |
           git config user.name "GitHub Actions"

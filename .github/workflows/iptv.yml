@@ -1,0 +1,46 @@
+name: IPTV Daily Check
+
+on:
+  schedule:
+    # 每天 02:00 UTC (北京时间 10:00)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  iptv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 tqdm
+      
+      - name: Set proxy environment
+        run: |
+          echo "HTTPS_PROXY=${{ secrets.HTTPS_PROXY }}" >> $GITHUB_ENV
+          echo "HTTP_PROXY=${{ secrets.HTTP_PROXY }}" >> $GITHUB_ENV
+        env:
+          HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
+          HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
+      
+      - name: Run IPTV crawler
+        run: |
+          python run_iptv.py -w 20 -t 10 --no-speed-check
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add live_ok.txt live_ok.m3u live_ok_git.txt
+          git commit -m "chore: auto-update $(date +%Y-%m-%d)" || exit 0
+          git push

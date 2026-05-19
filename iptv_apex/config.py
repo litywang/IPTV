@@ -50,7 +50,7 @@ class Config:
     TIMEOUT_OVERSEAS = 15
     RETRY_COUNT = 1
     REQUEST_JITTER = False
-    MAX_LINKS_PER_NAME = 2
+    MAX_LINKS_PER_NAME = 1  # TVBOX: each channel keeps only 1 best source
     MAX_SOURCES_PER_DOMAIN = 0
 
     # FFprobe

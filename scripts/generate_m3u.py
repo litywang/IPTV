@@ -2,7 +2,6 @@ import os
 import sys
 
 # 分类中文名 -> M3U group-title 映射
-# M3U group-title 使用英文映射
 CAT_NAMES = {
     "4K专区": "4K",
     "港澳台频": "GDHKTW",
@@ -34,31 +33,19 @@ if os.path.exists('live_ok.txt'):
             f.write('#EXTM3U\n\n')
             current_group = None
             for line in raw_lines:
-                # 新格式：分类行  分类名,#genre#
+                # 分类行：分类名,#genre#
                 if line.endswith(',#genre#'):
                     cat = line[:-9].strip()
                     group = make_group_tag(cat)
                     if group != current_group:
                         f.write(f'#EXTGRP:{group}\n')
                         current_group = group
-                # 新格式：频道行  名称,URL
+                # 频道行：名称,URL
                 elif ',' in line and current_group is not None:
                     parts = line.split(',', 1)
                     if len(parts) == 2:
                         name, url = parts
                         f.write(f'#EXTINF:-1 group-title="{current_group}",{name}\n')
-                        f.write(f'{url}\n')
-                        channel_count += 1
-                # 旧格式兜底：  分类|名称,URL
-                elif '|' in line:
-                    cat_part, rest = line.split('|', 1)
-                    if ',' in rest:
-                        name, url = rest.split(',', 1)
-                        group = make_group_tag(cat_part.strip())
-                        if group != current_group:
-                            f.write(f'#EXTGRP:{group}\n')
-                            current_group = group
-                        f.write(f'#EXTINF:-1 group-title="{group}",{name}\n')
                         f.write(f'{url}\n')
                         channel_count += 1
 

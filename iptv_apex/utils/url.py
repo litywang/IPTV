@@ -22,6 +22,7 @@ class URLCache:
         self.cache_file = cache_file
         self.ttl_seconds = ttl_hours * 3600
         self.cache: Dict[str, float] = {}
+        self._dirty = False  # 显式初始化，避免 AttributeError
         self._load()
         self._cleanup_expired()
 

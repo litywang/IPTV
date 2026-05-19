@@ -25,7 +25,7 @@ class StreamChecker:
         # 禁用系统代理检测（Windows 注册表可能配置了代理）
         self.session.trust_env = False
 
-    def check(self, line: str, proxy: Optional[str] = None) -> Optional[Dict]:
+    def check(self, line: str) -> Optional[Dict]:
         """检测单条直播源，返回结果字典或 None"""
         try:
             name, url = line.split(',', 1)
@@ -42,7 +42,7 @@ class StreamChecker:
         timeout = Config.TIMEOUT_OVERSEAS if is_overseas else Config.TIMEOUT_CN
 
         # 检测逻辑
-        result = self._check_with_http(url, timeout, proxy)
+        result = self._check_with_http(url, timeout)
         if not result:
             return None
 
@@ -56,7 +56,7 @@ class StreamChecker:
         name_upper = name.upper()
         return any(kw.upper() in name_upper for kw in Config.OVERSEAS_KEYWORDS)
 
-    def _check_with_http(self, url: str, timeout: int, proxy: Optional[str] = None) -> Optional[Dict]:
+    def _check_with_http(self, url: str, timeout: int) -> Optional[Dict]:
         """HTTP 流检测，支持 IPv6 和重定向"""
         try:
             headers = {
@@ -67,6 +67,7 @@ class StreamChecker:
             }
             # 测活阶段禁用代理（SOUL.md 策略：测活不能用代理）
             # trust_env=False 已在 __init__ 中设置，彻底禁用系统代理
+            # proxy 参数已移除，测活固定不走代理
 
             resp = self.session.get(url, headers=headers, timeout=timeout,
                                    stream=True, verify=False,
@@ -115,8 +116,8 @@ class StreamChecker:
         # FLV
         if content[:3] == b'FLV':
             return True
-        # MP4
-        if content[4:8] == b'ftyp':
+        # MP4 (需要至少8字节)
+        if len(content) >= 8 and content[4:8] == b'ftyp':
             return True
         return False
 
@@ -136,7 +137,7 @@ class StreamChecker:
                 pass
         return min(quality, 100)
 
-    def check_speed(self, url: str, proxy: Optional[str] = None) -> float:
+    def check_speed(self, url: str) -> float:
         """检测下载速度 (MB/s)，测活阶段不用代理"""
         try:
             headers = {'User-Agent': random.choice(Config.UA_POOL)}

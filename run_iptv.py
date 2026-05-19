@@ -14,8 +14,8 @@ import sys
 
 # 修复 Windows 编码
 if sys.platform == 'win32':
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace', line_buffering=True)
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace', line_buffering=True)
 
 from iptv_apex.config import Config
 from iptv_apex.core.pipeline import IPTVChecker
@@ -48,9 +48,12 @@ def main():
     if args.no_speed_check:
         Config.ENABLE_SPEED_CHECK = False
 
-    # 测活阶段确保无代理环境变量（订阅拉取在 WebSourceFetcher 内单独处理代理）
-    for var in ('HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy'):
-        os.environ.pop(var, None)
+    # 代理策略：env_config.bat 设置代理环境变量
+    # - 拉源（sync_fetcher/async_crawler）：显式传 proxy 参数，走代理 ✅
+    # - 测活（stream.py）：trust_env=False，不走代理 ✅
+    # - 直连二验（direct.py）：trust_env=False，不走代理 ✅
+    # - 推送（sync_to_gist.py）：继承环境变量，走代理 ✅
+    # 因此不再清空环境变量，避免误杀推送阶段的代理
 
     checker = IPTVChecker()
 

@@ -1,4 +1,4 @@
-# 缓存和临时文件
+# Cache and temp
 .iptv_cache.json
 .iptv_stats.json
 *.log
@@ -9,67 +9,56 @@ __pycache__/
 # FFmpeg
 ffmpeg/
 
-# Karing
-Karing/
-
-# 工作目录
-.workbuddy/
-
-# 备份文件
-*.bak
-*_backup_*.txt
-
-# 测试文件
-test_*.py
-_*.py
-_*.txt
-_*.bat
-_*.ps1
-
-# 临时状态文件
-.source_*.json
-
-# 旧数据文件
-*_backup_*.txt
-live_ok_fail.txt
-live_ok_test.txt
-
-# 日志和输出
-cache_status.txt
-trace_output.txt
-run_log.txt
-_cron_output.txt
-
-# 调试脚本
-patch_direct_recheck.py
-z_fix.py
-analyze_sources.py
-
-# 旧备份
-*.bak
-
-# 环境配置（含 token）
+# Environment config (contains tokens)
 env_config.bat
 
-# IPTV: live_ok.txt has tokens, track live_ok_git.txt instead
-live_ok.txt
+# Backup files
+*.bak
+*.bak.*
 
-# Archive 目录（历史代码）
-IPTV/archive/
-
-# 临时分析脚本
+# Test/debug scripts
+test_*.py
+_*.py
+_*.bat
+_*.ps1
 analyze_*.py
 check_*.py
 verify_*.py
 fix_*.py
+patch_*.py
 quick_test.py
-paste.txt
+z_fix.py
+scan_warehouses.py
 
-# 文档（不需要同步）
+# Source data (not for repo)
+paste.txt
+live_ok_fail.txt
+
+# live_ok.txt has tokens, track live_ok_git.txt instead
+live_ok.txt
+
+# Monitor state (local only)
+.source_*.json
+.bw_trigger
+
+# Broken cache
+.iptv_cache.json.broken.*
+
+# Docs (not needed in repo)
 BUG_FIX_REPORT.md
 SCRIPTS.md
 _async_crawler_audit.md
 task-summary_*.md
+deep-scan-result-*.md
 
-# 破损缓存
-.iptv_cache.json.broken.*
+# Deprecated
+live_ok_tvbox.txt
+live_ok_tvbox_git.txt
+live_ok_tvbox.m3u
+tvbox_cang.json
+
+# Misc
+.workbuddy/
+Karing/
+archive/
+IPTV/

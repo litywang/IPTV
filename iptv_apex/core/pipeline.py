@@ -187,7 +187,7 @@ class IPTVChecker:
         # 5. 并发测活（不用代理）
         with ThreadPoolExecutor(max_workers=real_workers) as executor, \
              tqdm(total=total, desc="检测", unit="条", ncols=70) as pbar:
-            future_to_ln = {executor.submit(self.checker.check, ln, None): ln for ln in lines_to_check}
+            future_to_ln = {executor.submit(self.checker.check, ln): ln for ln in lines_to_check}
             done_count = 0
             for future in as_completed(future_to_ln):
                 ln = future_to_ln[future]
@@ -220,7 +220,7 @@ class IPTVChecker:
                     valid_sources.append((cat, ch))
             speed_filtered = 0
             for cat, ch in tqdm(valid_sources, desc="测速", unit="条", ncols=60):
-                speed = self.checker.check_speed(ch['url'], None)
+                speed = self.checker.check_speed(ch['url'])
                 if speed < Config.MIN_SPEED_MBPS:
                     if ch in cat_map[cat]:
                         cat_map[cat].remove(ch)

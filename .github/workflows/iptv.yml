@@ -42,6 +42,6 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add live_ok.txt live_ok.m3u live_ok_git.txt
+          git add live_ok_git.txt live_ok.m3u
           git commit -m "chore: auto-update $(date +%Y-%m-%d)" || exit 0
           git push

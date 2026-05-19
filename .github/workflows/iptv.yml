@@ -22,14 +22,6 @@ jobs:
         run: |
           pip install requests beautifulsoup4 tqdm
       
-      - name: Set proxy environment
-        run: |
-          echo "HTTPS_PROXY=${{ secrets.HTTPS_PROXY }}" >> $GITHUB_ENV
-          echo "HTTP_PROXY=${{ secrets.HTTP_PROXY }}" >> $GITHUB_ENV
-        env:
-          HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
-          HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
-      
       - name: Run IPTV crawler
         run: |
           python run_iptv.py -w 20 -t 10 --no-speed-check

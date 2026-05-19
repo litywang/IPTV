@@ -36,6 +36,7 @@ jobs:
         env:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
         if: success()
 
       - name: Commit and push

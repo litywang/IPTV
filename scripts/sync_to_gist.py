@@ -1,10 +1,13 @@
-import os, subprocess, datetime, sys, json
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import os, subprocess, datetime, sys, json, shutil
 from urllib.parse import urlparse, parse_qs, urlencode
 
 # Ensure Git is in PATH for subprocess calls
-_git_paths = r'C:\Program Files\Git\cmd;C:\Program Files\Git\bin'
-if all(p not in os.environ.get('PATH','') for p in ['Git\\cmd','Git\\bin','git.exe']):
-    os.environ['PATH'] = _git_paths + ';' + os.environ.get('PATH','')
+if sys.platform == 'win32':
+    _git_paths = r'C:\Program Files\Git\cmd;C:\Program Files\Git\bin'
+    if all(p not in os.environ.get('PATH','') for p in ['Git\\cmd','Git\\bin','git.exe']):
+        os.environ['PATH'] = _git_paths + ';' + os.environ.get('PATH','')
 
 if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -48,7 +51,7 @@ def sanitize_file(src, dst):
         f.write('\n'.join(new_lines) + '\n')
     return len([l for l in new_lines if l.strip() and ',#genre#' not in l])
 
-GIT_EXE = r'C:\Program Files\Git\cmd\git.exe'
+GIT_EXE = shutil.which('git') or ('git' if sys.platform != 'win32' else r'C:\Program Files\Git\cmd\git.exe')
 
 def get_token():
     """从环境变量或 git config 获取 GitHub Token"""
@@ -114,7 +117,12 @@ else:
     else:
         gist_id = os.environ.get('GIST_ID', '')
         import urllib.request
-        proxy_handler = urllib.request.ProxyHandler({})
+        # Gist API 走代理（github.com 国内不可直连）
+        _proxy_url = os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY') or None
+        if _proxy_url:
+            proxy_handler = urllib.request.ProxyHandler({'http': _proxy_url, 'https': _proxy_url})
+        else:
+            proxy_handler = urllib.request.ProxyHandler({})
         opener = urllib.request.build_opener(proxy_handler)
         urllib.request.install_opener(opener)
         gist_files = {'IPTV.txt': {'content': content}}

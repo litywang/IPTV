@@ -181,7 +181,7 @@ class IPTVChecker:
 
         self.logger.info(f"📋 待测: {total} 条")
 
-        cat_map: Dict[str, List[Dict]] = {c: [] for c in Config.CATEGORY_ORDER}
+        cat_map: Dict[str, List[Channel]] = {c: [] for c in Config.CATEGORY_ORDER}
         fail_list: List[str] = []
         real_workers = min(args.workers, total)
 

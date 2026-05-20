@@ -254,7 +254,7 @@ class IPTVChecker:
         except Exception as e:
             self.logger.warning(f"⚠️ 统计保存失败: {e}")
 
-    def write_results(self, output_file: str, cat_map: Dict[str, List[Dict]], total: int, fail_list: Optional[List[str]] = None) -> int:
+    def write_results(self, output_file: str, cat_map: Dict[str, List[Channel]], total: int, fail_list: Optional[List[str]] = None) -> int:
         """写入结果文件"""
         output_limit = getattr(Config, 'MAX_OUTPUT_SOURCES', 2000)
         max_links = getattr(Config, 'MAX_LINKS_PER_NAME', 1)
@@ -340,7 +340,7 @@ class IPTVChecker:
                         if not _wrote_genre:
                             f.write(f"{cat},#genre#\n")
                             _wrote_genre = True
-                        chs = sorted(grouped[norm_name], key=lambda x: x['quality'], reverse=True)
+                        chs = sorted(grouped[norm_name], key=lambda x: x.quality, reverse=True)
                         # 获取最佳显示名称
                         display_name = NameProcessor.get_display_name(chs[0].name) if chs else norm_name
                         for ch in chs[:max_links]:

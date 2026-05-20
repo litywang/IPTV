@@ -6,9 +6,13 @@
 """
 
 import random
+import warnings
 from typing import List, Optional
 
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+warnings.filterwarnings('ignore', category=InsecureRequestWarning)
 
 from ..config import Config
 from ..core.parser import parse as parse_playlist

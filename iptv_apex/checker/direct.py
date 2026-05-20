@@ -6,10 +6,15 @@
 """
 
 import random
+import warnings
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, List
 
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+# 禁用 HTTPS 证书验证警告（直播源大量使用自签名证书）
+warnings.filterwarnings('ignore', category=InsecureRequestWarning)
 
 from ..config import Config
 from ..core.models import Channel

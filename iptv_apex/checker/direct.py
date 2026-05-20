@@ -12,6 +12,7 @@ from typing import Dict, List
 import requests
 
 from ..config import Config
+from ..core.models import Channel
 
 
 class DirectChecker:
@@ -61,15 +62,21 @@ class DirectChecker:
                     if netloc.startswith('[' + prefix):
                         return True
             for k in self.KNOWN_DIRECT:
-                if netloc == k or netloc.endswith('.' + k) or ('.' + k) in netloc:
+                if netloc == k:
+                    return True
+                # 后缀匹配：k 以 . 结尾，匹配 netloc 以 k 开头（如 cdn. 匹配 cdn.example.com）
+                if k.endswith('.') and (netloc == k[:-1] or netloc.startswith(k)):
+                    return True
+                # 子串匹配：k 出现在 netloc 中（前后有 . 边界）
+                if '.' + k + '.' in '.' + netloc + '.':
                     return True
         except Exception:
             pass
         return False
 
-    def check_one(self, channel: Dict) -> bool:
+    def check_one(self, channel: Channel) -> bool:
         """单条直连检测（不用代理），支持 IPv6"""
-        url = channel.get('url', '')
+        url = channel.url
         if not url:
             return False
 
@@ -123,11 +130,11 @@ class DirectChecker:
         # 分离已知直通和待检测
         to_test = []
         for cat, ch in all_channels:
-            url = ch.get('url', '')
+            url = ch.url
             if url.startswith(('udp://', 'rtp://', 'srt://')):
-                ch['_direct_ok'] = True
+                ch.direct_ok = True
             elif self.is_known_direct(url):
-                ch['_direct_ok'] = True
+                ch.direct_ok = True
             else:
                 to_test.append((cat, ch))
 
@@ -140,7 +147,7 @@ class DirectChecker:
                 futures = {ex.submit(self.check_one, ch): (cat, ch) for cat, ch in to_test}
                 for fut in as_completed(futures):
                     cat, ch = futures[fut]
-                    ch['_direct_ok'] = fut.result()
+                    ch.direct_ok = fut.result()
 
         # 重建 cat_map
         removed = 0

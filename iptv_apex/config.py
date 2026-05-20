@@ -48,7 +48,7 @@ class Config:
     FETCH_WORKERS = 20
     TIMEOUT_CN = 8
     TIMEOUT_OVERSEAS = 15
-    RETRY_COUNT = 1
+    RETRY_COUNT = 2  # 测活重试次数（含首次请求共 2 次）
     REQUEST_JITTER = False
     MAX_LINKS_PER_NAME = 1  # TVBOX: each channel keeps only 1 best source
     MAX_SOURCES_PER_DOMAIN = 0
@@ -258,7 +258,12 @@ class Config:
 
     @classmethod
     def init_compiled_rules(cls):
-        """预编译分类正则"""
+        """预编译分类正则
+
+        config.json 中的规则支持两种格式：
+          - 关键词: "CCTV", "卫视"  → 自动转义后做子串匹配
+          - 正则:   "regex:CCTV-\\d+" → 直接使用正则匹配
+        """
         if not hasattr(cls, '_compiled'):
             cls._compiled = {
                 'noise': re.compile(cls._get_noise_pattern()),
@@ -268,11 +273,22 @@ class Config:
         if not cls.CATEGORY_RULES_COMPILED and cls.CATEGORY_RULES:
             from .utils.name import NameProcessor
             for cat, keywords in cls.CATEGORY_RULES.items():
-                simplified = [NameProcessor.simplify(kw) for kw in keywords if kw.strip()]
-                if not simplified:
+                parts = []
+                for kw in keywords:
+                    kw = kw.strip()
+                    if not kw:
+                        continue
+                    if kw.startswith('regex:'):
+                        # 正则规则：去掉前缀后直接编译
+                        parts.append(kw[6:])
+                    else:
+                        # 关键词规则：繁简转换后转义
+                        simplified = NameProcessor.simplify(kw)
+                        parts.append(re.escape(simplified))
+                if not parts:
                     cls.CATEGORY_RULES_COMPILED[cat] = re.compile(r'(?=x(?<!x))')
                     continue
-                pattern = '|'.join(re.escape(kw) for kw in simplified)
+                pattern = '|'.join(parts)
                 cls.CATEGORY_RULES_COMPILED[cat] = re.compile(pattern, re.IGNORECASE)
 
     @staticmethod

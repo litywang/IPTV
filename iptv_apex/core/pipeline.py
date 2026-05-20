@@ -31,6 +31,7 @@ from ..crawler.sync_fetcher import WebSourceFetcher
 from ..crawler.async_crawler import AsyncWebSourceCrawler
 from ..checker.stream import StreamChecker
 from ..checker.direct import DirectChecker
+from .models import Channel
 
 
 class IPTVChecker:
@@ -184,7 +185,7 @@ class IPTVChecker:
         fail_list: List[str] = []
         real_workers = min(args.workers, total)
 
-        # 5. 并发测活（不用代理）
+        # 5. 并发测活（不用代理，测活+测速一次完成）
         with ThreadPoolExecutor(max_workers=real_workers) as executor, \
              tqdm(total=total, desc="检测", unit="条", ncols=70) as pbar:
             future_to_ln = {executor.submit(self.checker.check, ln): ln for ln in lines_to_check}
@@ -194,39 +195,39 @@ class IPTVChecker:
                 r = future.result()
                 if r:
                     self.stats['valid'] += 1
-                    fp = URLCleaner.get_fingerprint(r['url'])
+                    fp = URLCleaner.get_fingerprint(r.url)
                     self.cache.add(fp)
-                    if r['overseas']:
+                    if r.overseas:
                         self.stats['by_overseas']['overseas'] += 1
                     else:
                         self.stats['by_overseas']['cn'] += 1
-                    if 'quality' not in r or r['quality'] == 0:
-                        r['quality'] = Config.MIN_QUALITY_SCORE
-                    category = NameProcessor.classify(r['name'])
-                    if category in cat_map:
-                        cat_map[category].append(r)
+                    if r.quality == 0:
+                        r.quality = Config.MIN_QUALITY_SCORE
+                    r.category = NameProcessor.classify(r.name)
+                    if r.category in cat_map:
+                        cat_map[r.category].append(r)
                 else:
                     self.stats['failed'] += 1
                     fail_list.append(ln)
                 done_count += 1
                 pbar.update(1)
 
-        # 6. 速度检测
+        # 6. 速度过滤（对已测活通过的源，按速度阈值过滤）
         if Config.ENABLE_SPEED_CHECK:
-            self.logger.info("⏳ 速度检测...")
-            valid_sources = []
-            for cat, chs in cat_map.items():
-                for ch in chs:
-                    valid_sources.append((cat, ch))
+            self.logger.info("⏳ 速度过滤...")
             speed_filtered = 0
-            for cat, ch in tqdm(valid_sources, desc="测速", unit="条", ncols=60):
-                speed = self.checker.check_speed(ch['url'])
-                if speed < Config.MIN_SPEED_MBPS:
-                    if ch in cat_map[cat]:
-                        cat_map[cat].remove(ch)
+            for cat in list(cat_map.keys()):
+                kept = []
+                for ch in cat_map[cat]:
+                    if ch.speed < Config.MIN_SPEED_MBPS:
                         speed_filtered += 1
+                    else:
+                        ch.quality = min(ch.quality + int(ch.speed * 10), 100)
+                        kept.append(ch)
+                if kept:
+                    cat_map[cat] = kept
                 else:
-                    ch['quality'] = min(ch['quality'] + int(speed * 10), 100)
+                    del cat_map[cat]
             if speed_filtered > 0:
                 self.stats['filtered_by_quality'] += speed_filtered
 
@@ -263,12 +264,10 @@ class IPTVChecker:
         for cat, channels in cat_map.items():
             grouped = defaultdict(list)
             for ch in channels:
-                if Config.ENABLE_QUALITY_FILTER and ch.get('quality', 0) < Config.MIN_QUALITY_SCORE:
+                if Config.ENABLE_QUALITY_FILTER and ch.quality < Config.MIN_QUALITY_SCORE:
                     continue
                 # 使用规范化名称作为分组键
-                norm_name = NameProcessor.normalize(ch['name'])
-                # 保存原始名称用于显示
-                ch['_norm_name'] = norm_name
+                norm_name = NameProcessor.normalize(ch.name)
                 grouped[norm_name].append(ch)
             if grouped:
                 cat_grouped[cat] = grouped
@@ -325,13 +324,13 @@ class IPTVChecker:
                                     return (5, 1)  # CCTV5+ 紧跟 CCTV5
                                 return (num, 0)
                             # 非CCTV频道排在最后，按评分排序
-                            return (999, -max(ch['quality'] for ch in grouped[norm_name]))
+                            return (999, -max(ch.quality for ch in grouped[norm_name]))
                         
                         ordered_keys = sorted(grouped.keys(), key=cctv_sort_key)
                     else:
                         # 其他组：按评分从高到低排序
                         ordered_keys = sorted(grouped.keys(),
-                            key=lambda n: max(ch['quality'] for ch in grouped[n]), reverse=True)
+                            key=lambda n: max(ch.quality for ch in grouped[n]), reverse=True)
                     
                     cat_count = 0
                     _wrote_genre = False
@@ -343,12 +342,12 @@ class IPTVChecker:
                             _wrote_genre = True
                         chs = sorted(grouped[norm_name], key=lambda x: x['quality'], reverse=True)
                         # 获取最佳显示名称
-                        display_name = NameProcessor.get_display_name(chs[0]['name']) if chs else norm_name
+                        display_name = NameProcessor.get_display_name(chs[0].name) if chs else norm_name
                         for ch in chs[:max_links]:
                             if _total_written >= output_limit:
                                 break
                             # 使用规范化后的显示名称
-                            f.write(f"{display_name},{ch['url']}\n")
+                            f.write(f"{display_name},{ch.url}\n")
                             _total_written += 1
                             cat_count += 1
                     self.stats['by_category'][cat] = cat_count

@@ -24,7 +24,7 @@ from iptv_apex.core.pipeline import IPTVChecker
 def main():
     parser = argparse.ArgumentParser(description="IPTV-Apex v2.0")
     parser.add_argument('-w', '--workers', type=int, default=80, help='并发线程数')
-    parser.add_argument('-t', '--timeout', type=int, default=8, help='单源超时秒数')
+    parser.add_argument('-t', '--timeout', type=int, default=8, help='单源超时秒数（境外自动×2）')
     parser.add_argument('--no-local', action='store_true', help='跳过本地 paste.txt')
     parser.add_argument('--no-web-fetch', action='store_true', help='跳过网络爬取')
     parser.add_argument('--no-cache', action='store_true', help='禁用缓存')

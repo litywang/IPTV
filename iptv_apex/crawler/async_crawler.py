@@ -254,14 +254,12 @@ class AsyncWebSourceCrawler:
             return False
 
     # -------------------------------------------------------------------------
-    # 内容解析：M3U / M3U8 / TXT 统一解析
+    # 内容解析：从子播放列表内容中提取 URL（用于递归发现）
     # -------------------------------------------------------------------------
-    def parse_content(self, url: str, content: str) -> Set[str]:
+    def _extract_urls_from_content(self, url: str, content: str) -> Set[str]:
         """
-        统一解析 M3U / M3U8 / TXT 格式内容，返回原始频道 URL 集合。
-        - M3U: #EXTINF 行中可能内嵌 URL
-        - TXT: "名称,URL" 或只有 URL 的行
-        - 二级 M3U: 纯 URL 行（每行一个 .m3u/.m3u8/.txt 链接）
+        从子播放列表内容中提取直播源 URL。
+        与统一解析器的区别：这里只提取 URL，不解析频道名。
         """
         urls: Set[str] = set()
         lines = content.splitlines()
@@ -271,14 +269,14 @@ class AsyncWebSourceCrawler:
             if not line:
                 continue
 
-            # ── M3U 元数据行（跳过，不处理频道名）──
+            # 跳过 M3U 元数据行
             if line.startswith('#EXTINF:'):
                 continue
 
             if line.startswith('#'):
-                continue  # 跳过其他 M3U/M3U8 注释行
+                continue
 
-            # ── URL 行 ──
+            # URL 行
             if not line.startswith(('http://', 'https://')):
                 continue
 
@@ -286,11 +284,11 @@ class AsyncWebSourceCrawler:
             if line in self.all_extracted:
                 continue
 
-            # 过滤非播放列表 URL（调用之前定义的静态方法）
+            # 过滤非播放列表 URL
             if not self._is_playlist(line):
                 continue
 
-            # 补充：检查扩展名黑名单
+            # 检查扩展名黑名单
             line_suffix = Path(urlparse(line).path).suffix.lower()
             if line_suffix in self.EXT_BLACKLIST:
                 continue
@@ -308,7 +306,6 @@ class AsyncWebSourceCrawler:
         sub_urls: Set[str] = set()
         for pattern in self.URL_PATTERNS:
             for match in re.findall(pattern, content, re.IGNORECASE):
-                # 清理末尾杂字符
                 clean = match.rstrip('\'")> \t')
                 if self._is_playlist(clean) and clean not in self.all_extracted:
                     sub_urls.add(clean)
@@ -381,7 +378,7 @@ class AsyncWebSourceCrawler:
             return set()
 
         # 解析当前文件中的频道 URL
-        channel_urls = self.parse_content(url, text)
+        channel_urls = self._extract_urls_from_content(url, text)
 
         # 递归：从内容中找子播放列表（仅深度 0 触发一次）
         discovered: Set[str] = set()
@@ -441,29 +438,17 @@ class AsyncWebSourceCrawler:
                 if text is None:
                     return {}
 
-                # ── 统一解析（双通道：TXT + M3U）──
+                # ── 统一解析（M3U + TXT + 旧格式）──
                 result: Dict[str, str] = {}
                 all_channel_urls: Set[str] = set()
 
-                # 通道1：TXT 格式（名称,URL）
-                # 不依赖 _is_playlist（URL 可能是 .rtsp/.sdp/.m3u8 等各种协议）
-                for raw_line in text.splitlines():
-                    line = raw_line.strip()
-                    if not line or line.startswith('#'):
-                        continue
-                    if ',' in line:
-                        parts = line.split(',', 1)
-                        if len(parts) == 2 and parts[1].strip().startswith('http'):
-                            u = parts[1].strip()
-                            if u not in self.all_extracted:
-                                self.all_extracted.add(u)
-                                all_channel_urls.add(u)
-
-                # 通道2：M3U / 纯 URL 行
-                # （parse_content 会因为 all_extracted 已填充而跳过 TXT 解析出的 URL，
-                #   这正是预期行为——去重由 all_channel_urls 负责）
-                m3u_urls = self.parse_content(url, text)
-                all_channel_urls.update(m3u_urls)
+                # 使用统一解析器
+                from ..core.parser import parse as parse_playlist
+                channels = parse_playlist(text)
+                for _, u in channels:
+                    if u and u not in self.all_extracted:
+                        self.all_extracted.add(u)
+                        all_channel_urls.add(u)
 
                 # 对所有找到的 URL 去重 + 质量评分
                 scored: List[tuple] = []

@@ -153,7 +153,7 @@ class DirectChecker:
         removed = 0
         result = {}
         for cat in cat_map:
-            still = [c for c in cat_map[cat] if c.get('_direct_ok', True)]
+            still = [c for c in cat_map[cat] if c.direct_ok]
             removed += len(cat_map[cat]) - len(still)
             if still:
                 result[cat] = still

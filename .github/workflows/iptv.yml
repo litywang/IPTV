@@ -12,37 +12,51 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      
+
       - name: Install dependencies
         run: |
-          pip install requests httpx beautifulsoup4 tqdm zhconv
-      
+          pip install requests httpx tqdm zhconv
+
       - name: Run IPTV crawler
         run: |
-          python run_iptv.py -w 20 -t 10 --no-speed-check
+          python run_iptv.py -w 20 -t 10 --no-speed-check 2>&1 | tee check.log
         env:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Generate M3U and sync
-        run: |
-          python scripts/generate_m3u.py
-          python scripts/sync_to_gist.py
+      - name: Generate M3U
+        run: python scripts/generate_m3u.py
+        if: success()
+
+      - name: Sanitize and sync to Gist
+        run: python scripts/sync_to_gist.py
         env:
-          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GIST_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
         if: success()
 
       - name: Commit and push
+        if: success()
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add live_ok_git.txt live_ok.m3u
-          git commit -m "chore: auto-update $(date +%Y-%m-%d)" || exit 0
-          git push
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add live_ok_git.txt live_ok.m3u .iptv_cache.json .iptv_stats.json 2>/dev/null || true
+          if ! git diff --staged --quiet; then
+            count=$(grep -c ',http' live_ok_git.txt 2>/dev/null || echo 0)
+            git commit -m "chore: auto-update $(date +%Y-%m-%d) sources=${count}"
+            git pull --rebase origin master || true
+            git push origin master
+          else
+            echo "No changes to commit"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

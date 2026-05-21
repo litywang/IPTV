@@ -31,7 +31,6 @@ z_fix.py
 scan_warehouses.py
 
 # Source data (not for repo)
-paste.txt
 live_ok_fail.txt
 
 # live_ok.txt has tokens, track live_ok_git.txt instead

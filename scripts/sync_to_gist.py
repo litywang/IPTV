@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import os, subprocess, datetime, sys, json, shutil
+"""
+Gist 同步模块
+只负责将 live_ok.txt 同步到 Gist，不做 git commit/push
+"""
+import os, datetime, sys, json, shutil
 from urllib.parse import urlparse, parse_qs, urlencode
-
-# Ensure Git is in PATH for subprocess calls
-if sys.platform == 'win32':
-    _git_paths = r'C:\Program Files\Git\cmd;C:\Program Files\Git\bin'
-    if all(p not in os.environ.get('PATH','') for p in ['Git\\cmd','Git\\bin','git.exe']):
-        os.environ['PATH'] = _git_paths + ';' + os.environ.get('PATH','')
 
 if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 if sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8':
     sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 
-# ========== 0. URL 清理（GitHub Push Protection 合规） ==========
+# ========== URL 清理（GitHub Push Protection 合规） ==========
 SENSITIVE_PARAMS = {
     'userid','sign','auth_token','token','key','secret','password','passwd',
     'tk','auth','verify','access_token','refresh_token','expires_in','nonce',
@@ -51,94 +49,68 @@ def sanitize_file(src, dst):
         f.write('\n'.join(new_lines) + '\n')
     return len([l for l in new_lines if l.strip() and ',#genre#' not in l])
 
-GIT_EXE = shutil.which('git') or ('git' if sys.platform != 'win32' else r'C:\Program Files\Git\cmd\git.exe')
-
 def get_token():
-    """从环境变量或 git config 获取 GitHub Token"""
+    """从环境变量获取 Gist Token"""
     token = os.environ.get('GIST_TOKEN', '')
     if token and token != 'YOUR_GIST_TOKEN_HERE':
         return token
     token = os.environ.get('GH_TOKEN', '')
     if token:
         return token
-    r = subprocess.run([GIT_EXE, 'config', '--global', '--list'], capture_output=True, text=True, encoding='utf-8', errors='replace')
-    for line in r.stdout.splitlines():
-        if line.startswith('user.ghp_') or line.startswith('GIST_TOKEN=') or (line.startswith('GITHUB_TOKEN=') and 'ghp_' in line):
-            return line.split('=', 1)[1].strip()
     return ''
 
-# ========== 1. GitHub Push ==========
-print("=== GitHub Push ===")
-try:
-    if os.path.exists('live_ok.txt'):
-        chan_count = sanitize_file('live_ok.txt', 'live_ok_git.txt')
-        print("Sanitized: %d channels -> live_ok_git.txt" % chan_count)
-    else:
-        print("live_ok.txt not found, skip")
-        chan_count = 0
-
-    subprocess.run([GIT_EXE,'add','live_ok_git.txt','live_ok.m3u','.iptv_cache.json','.iptv_stats.json'],
-        capture_output=True)
-    r_diff = subprocess.run([GIT_EXE,'diff','--staged','--stat'],
-        capture_output=True, text=True, encoding='utf-8', errors='replace')
-    if r_diff.stdout.strip():
-        print("Changes: " + r_diff.stdout.strip())
-        ts = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
-        git_email = os.environ.get('GIT_EMAIL', 'github-actions[bot]@users.noreply.github.com')
-        git_name = os.environ.get('GIT_NAME', 'github-actions[bot]')
-        subprocess.run([GIT_EXE,'config','--local','user.email', git_email], check=False)
-        subprocess.run([GIT_EXE,'config','--local','user.name', git_name], check=False)
-        subprocess.run([GIT_EXE,'commit','-m','chore: auto-update ' + ts], check=False)
-        print("Committed.")
-        r_push = subprocess.run([GIT_EXE,'push','origin','master'],
-            capture_output=True, text=True, encoding='utf-8', errors='replace')
-        if r_push.returncode == 0:
-            print("Pushed to master.")
-        else:
-            print("Push error: " + (r_push.stderr.strip() or r_push.stdout.strip()))
-    else:
-        print("No changes, skip")
-except Exception as e:
-    print("GitHub error: " + str(e))
-
-# ========== 2. Gist Sync ==========
-print("\n=== Gist Sync ===")
+# ========== Gist Sync ==========
+print("=== Gist Sync ===")
 if not os.path.exists('live_ok.txt'):
     print("live_ok.txt not found, skip")
+    sys.exit(0)
+
+with open('live_ok.txt', 'r', encoding='utf-8') as f:
+    content = f.read()
+lines = [l for l in content.splitlines() if l.strip() and ',#genre#' not in l]
+cnt = len(lines)
+ts = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+
+# 生成 sanitized 版本
+chan_count = sanitize_file('live_ok.txt', 'live_ok_git.txt')
+print("Sanitized: %d channels -> live_ok_git.txt" % chan_count)
+
+token = get_token()
+if not token:
+    print("No GIST_TOKEN found, skip")
+    sys.exit(0)
+
+gist_id = os.environ.get('GIST_ID', '')
+if not gist_id:
+    print("No GIST_ID found, skip")
+    sys.exit(0)
+
+import urllib.request
+# Gist API 走代理（github.com 国内不可直连）
+_proxy_url = os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY') or None
+if _proxy_url:
+    proxy_handler = urllib.request.ProxyHandler({'http': _proxy_url, 'https': _proxy_url})
 else:
-    with open('live_ok.txt', 'r', encoding='utf-8') as f:
-        content = f.read()
-    lines = [l for l in content.splitlines() if l.strip() and ',#genre#' not in l]
-    cnt = len(lines)
-    ts = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
-    token = get_token()
-    if not token:
-        print("No GIST_TOKEN found, skip")
-    else:
-        gist_id = os.environ.get('GIST_ID', '')
-        import urllib.request
-        # Gist API 走代理（github.com 国内不可直连）
-        _proxy_url = os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY') or None
-        if _proxy_url:
-            proxy_handler = urllib.request.ProxyHandler({'http': _proxy_url, 'https': _proxy_url})
-        else:
-            proxy_handler = urllib.request.ProxyHandler({})
-        opener = urllib.request.build_opener(proxy_handler)
-        urllib.request.install_opener(opener)
-        gist_files = {'IPTV.txt': {'content': content}}
-        payload = json.dumps({
-            'description': 'IPTV | %d channels | %s' % (cnt, ts),
-            'files': gist_files
-        }).encode()
-        req = urllib.request.Request(
-            'https://api.github.com/gists/' + gist_id,
-            data=payload,
-            headers={'Authorization': 'token ' + token,
-                     'Accept': 'application/vnd.github.v3+json',
-                     'Content-Type': 'application/json'})
-        try:
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                result = json.loads(resp.read())
-            print("Gist OK: %d channels" % cnt)
-        except Exception as e:
-            print("Gist error: " + str(e))
+    proxy_handler = urllib.request.ProxyHandler({})
+opener = urllib.request.build_opener(proxy_handler)
+urllib.request.install_opener(opener)
+
+gist_files = {'IPTV.txt': {'content': content}}
+payload = json.dumps({
+    'description': 'IPTV | %d channels | %s' % (cnt, ts),
+    'files': gist_files
+}).encode()
+
+req = urllib.request.Request(
+    'https://api.github.com/gists/' + gist_id,
+    data=payload,
+    headers={'Authorization': 'token ' + token,
+             'Accept': 'application/vnd.github.v3+json',
+             'Content-Type': 'application/json'})
+try:
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        result = json.loads(resp.read())
+    print("Gist OK: %d channels" % cnt)
+except Exception as e:
+    print("Gist error: " + str(e))
+    sys.exit(1)

@@ -50,7 +50,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/litywang/IPTV.git
           git add live_ok_git.txt live_ok.m3u .iptv_cache.json .iptv_stats.json 2>/dev/null || true
           if ! git diff --staged --quiet; then
             count=$(grep -c ',http' live_ok_git.txt 2>/dev/null || echo 0)

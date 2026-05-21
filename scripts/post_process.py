@@ -1,5 +1,5 @@
 import os
-if not os.path.exists('live_ok.txt'): 
+if not os.path.exists('live_ok.txt'):
     print("No file")
     exit(0)
 
@@ -35,13 +35,22 @@ for line in lines:
 if current_group is not None and current_channels:
     groups.append((current_group, list(current_channels.items())))
 
-# 写入文件
+# 原子写入：先写临时文件，再替换
 total_count = 0
-with open('live_ok.txt', 'w', encoding='utf-8') as f:
-    for group_name, channels in groups:
-        f.write(f'{group_name},#genre#\n')
-        for name, url in channels:
-            f.write(f'{name},{url}\n')
-            total_count += 1
-
-print(f'Post-process: {total_count} channels in {len(groups)} groups')
+tmp_file = 'live_ok.txt.tmp.' + str(os.getpid())
+try:
+    with open(tmp_file, 'w', encoding='utf-8') as f:
+        for group_name, channels in groups:
+            f.write(f'{group_name},#genre#\n')
+            for name, url in channels:
+                f.write(f'{name},{url}\n')
+                total_count += 1
+    # 原子替换
+    os.replace(tmp_file, 'live_ok.txt')
+    print(f'Post-process: {total_count} channels in {len(groups)} groups')
+except Exception as e:
+    # 清理临时文件
+    if os.path.exists(tmp_file):
+        os.remove(tmp_file)
+    print(f'Post-process error: {e}')
+    exit(1)

@@ -39,13 +39,14 @@ class StreamChecker:
     # 公开接口
     # ------------------------------------------------------------------
 
-    def check(self, line: str) -> Optional[Dict]:
+    def check(self, line: str) -> Optional[Channel]:
         """
-        检测单条直播源，返回结果字典或 None。
+        检测单条直播源，返回 Channel 或 None。
         一次 HTTP 请求同时完成：
           - 可用性判断（状态码 + 媒体特征）
           - 速度测量（下载 SPEED_CHECK_BYTES 字节计时）
           - 质量评分（Content-Length + 速度 + 媒体类型）
+        UDP/RTP/SRT 协议直接通过（无法 HTTP 探测）。
         """
         try:
             name, url = line.split(',', 1)
@@ -58,6 +59,14 @@ class StreamChecker:
             return None
 
         is_overseas = self._is_overseas_name(name)
+
+        # UDP/RTP/SRT 协议无法 HTTP 探测，直接标记为有效
+        if url.startswith(('udp://', 'rtp://', 'srt://')):
+            return Channel(
+                name=name, url=url, overseas=is_overseas,
+                quality=50, speed=0.0, delay=0.0
+            )
+
         timeout = Config.TIMEOUT_OVERSEAS if is_overseas else Config.TIMEOUT_CN
 
         result = self._check_with_http(url, timeout)

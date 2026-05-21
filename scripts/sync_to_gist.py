@@ -32,7 +32,7 @@ def clean_url(url):
         qs = parse_qs(parsed.query)
         clean_qs = {k: v for k, v in qs.items() if k.lower() not in SENSITIVE_PARAMS}
         return parsed._replace(query=urlencode(clean_qs, doseq=True)).geturl()
-    except:
+    except Exception:
         return url
 
 def sanitize_file(src, dst):

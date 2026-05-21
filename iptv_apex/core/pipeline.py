@@ -122,6 +122,9 @@ class IPTVChecker:
         domain_lines: Dict[str, List[str]] = defaultdict(list)
         lines_to_check: List[str] = []
 
+        # 0. 备份旧输出
+        self.backup_output(Config.OUTPUT_FILE)
+
         # 1. 本地文件
         if Config.ENABLE_LOCAL_CHECK:
             input_path = str(Config.INPUT_FILE)
@@ -293,9 +296,11 @@ class IPTVChecker:
             else:
                 cat_quota[cat] = OTHER_QUOTA
 
+        # 将剩余配额分配给第一个分类（确保不超出 output_limit）
         first_cat = next((c for c in Config.CATEGORY_ORDER if c in cat_quota), None)
         if first_cat:
-            cat_quota[first_cat] += output_limit - sum(cat_quota.values())
+            remainder = output_limit - sum(cat_quota.values())
+            cat_quota[first_cat] = max(0, cat_quota[first_cat] + remainder)
 
         _total_written = 0
         try:
@@ -352,8 +357,6 @@ class IPTVChecker:
                             cat_count += 1
                     self.stats['by_category'][cat] = cat_count
 
-            if _total_written > output_limit:
-                _total_written = output_limit
             # 原子替换（同卷 .replace() 为原子操作，无"文件缺失"窗口）
             _tmp.replace(_out)
             self.logger.info(f"✅ 写入: {_out} ({_total_written} 条)")

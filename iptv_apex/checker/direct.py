@@ -109,22 +109,24 @@ class DirectChecker:
             r = self.session.get(url, timeout=5, verify=False,
                                 stream=True, headers=headers,
                                 allow_redirects=True)
-            # 301/302/303/307/308: 跟随重定向后降级为 GET 验证实际内容
-            if r.status_code in (200, 206):
-                # 验证内容是否包含媒体特征（#EXTM3U/TS/FLV）
-                try:
-                    preview = r.raw.read(200) if hasattr(r.raw, 'read') else b''
-                    if preview:
-                        if b'#EXTM3U' in preview or b'\x47' in preview[:4] or b'FLV' in preview:
-                            return True
-                except Exception:
-                    pass
-                return True
-            return r.status_code < 500
+            try:
+                # 200/206: 验证内容是否包含媒体特征
+                if r.status_code in (200, 206):
+                    try:
+                        preview = r.raw.read(200) if hasattr(r.raw, 'read') else b''
+                        if preview:
+                            if b'#EXTM3U' in preview or b'\\x47' in preview[:4] or b'FLV' in preview:
+                                return True
+                    except Exception:
+                        pass
+                    return True
+                return r.status_code < 500
+            finally:
+                r.close()
         except Exception:
             return False
 
-    def filter_channels(self, cat_map: Dict[str, List[Dict]], max_workers: int = 80) -> Dict[str, List[Dict]]:
+    def filter_channels(self, cat_map: Dict[str, List[Channel]], max_workers: int = 80) -> Dict[str, List[Channel]]:
         """批量直连二验，返回过滤后的 cat_map"""
         # 收集所有频道
         all_channels = []

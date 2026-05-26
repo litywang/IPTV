@@ -1,0 +1,7 @@
+allowed_regions:
+  - CN
+  - HK
+  - TW
+cdn_proxy: {}
+ffprobe:
+  timeout_ms: 8000

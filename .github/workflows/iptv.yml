@@ -43,7 +43,10 @@ jobs:
           TQDM_DISABLE: 1
 
       - name: Generate M3U
-        run: python scripts/generate_m3u.py
+        run: |
+          python scripts/generate_m3u.py
+          # Ensure at least one channel was generated; otherwise fail the workflow
+          if [ -s live_ok.m3u ]; then echo "M3U generated"; else echo "M3U empty – likely all streams filtered"; exit 1; fi
         if: success()
 
       - name: Sanitize and sync to Gist
